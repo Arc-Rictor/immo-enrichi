@@ -2,6 +2,65 @@
 
 All notable project-level changes will be documented in this file.
 
+## [1.1.0] - 2025-11-28
+
+### Added - Complete Rebrand to Immo-Erichi & English Translation
+
+#### Overview
+Complete rebrand of marketing website from "Immobilier Matrix France" to "Immo-Erichi" with full bilingual support (French and English).
+
+#### Marketing Website Changes (`public_html/`)
+
+**New Files Created:**
+- `fr-changes.html` - Redesigned French landing page with new branding
+- `en-changes.html` - Full English translation of redesigned landing page
+- `changes-styles.css` - Updated stylesheet for new design
+
+**Branding Changes:**
+- "Immobilier Matrix France" → "Immo-Erichi" throughout
+- New text-based logo in header and footer
+- Updated hero messaging emphasizing agent collaboration
+
+**Design Updates:**
+- Navigation: Fixed menu spacing, added FR/EN language switcher with flag icons
+- Hero: Larger, bolder heading (54px serif font)
+- Features: 3-column responsive grid layout
+- Improved card styling and visual hierarchy
+
+**English Translation:**
+- Complete translation of all content sections
+- Navigation and menus
+- Hero section and CTAs
+- Features and testimonials
+- FAQ section (4 questions)
+- Footer links and sections
+- Property cards (location, description, bed/bath labels)
+- Price format localised: "€ 144.220,00" → "€ 144,220.00"
+
+**Status:** Under client review
+
+#### Version Control
+
+**Git Repository Initialised:**
+- Local git repository created at `E:\Laurens_Immo_Website`
+- Initial commit includes full project
+- Author: Arc_Rictor <arcrictor@home.com>
+
+#### Files Modified/Created
+
+```
+public_html/
+  - fr-changes.html (redesigned French page)
+  - en-changes.html (new English translation)
+  - changes-styles.css (updated styles)
+
+Documentation:
+  - README.md (updated)
+  - CHANGELOG.md (updated)
+```
+
+---
+
 ## [1.0.2] - 2025-11-15
 
 ### Changed - Marketing Website Branding Update

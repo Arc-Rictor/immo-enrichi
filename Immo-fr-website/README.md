@@ -10,7 +10,7 @@ This project consists of **two separate websites**:
    - **Purpose**: Public-facing marketing site
    - **Current Focus**: Agent-only promotion (as of Nov 2025)
    - **Technology**: HTML, CSS (SCSS), JavaScript
-   - **Files**: `en.html`, `fr.html`
+   - **Files**: `fr-changes.html` (French), `en-changes.html` (English) - under review
 
 2. **Laravel Application** (`app.immobiliermatrixfrance.fr/`) - Full SaaS platform
    - **Purpose**: Real estate management platform
@@ -119,24 +119,26 @@ php artisan serve
 
 ## Recent Changes
 
-### November 2025 - French Landing Page Content & Design Refresh (Latest)
+### November 2025 - Complete Rebrand to Immo-Erichi (Latest)
 **New Files Under Client Review:**
 - `public_html/fr-changes.html` - Completely redesigned French landing page
+- `public_html/en-changes.html` - English translation of redesigned landing page
 - `public_html/changes-styles.css` - Updated stylesheet for new design
 
 **Key Updates:**
 - **Branding**: "Immobilier Matrix France" → "Immo-Erichi"
-- **Navigation**: Fixed menu spacing and layout
+- **Navigation**: Fixed menu spacing and layout, language switcher (FR/EN flags)
 - **Hero**: Larger, bolder heading (54px serif font)
 - **Features**: 3-column responsive grid layout with improved cards
 - **Footer**: Text-based "Immo-Erichi" branding
 - **New Content**: Updated messaging emphasizing collaboration and agent network
-- **Status**: 🔄 Under client review via `fr-changes.html`
+- **Bilingual**: Both French and English versions fully translated
+- **Status**: 🔄 Under client review
 
 **Deployment Plan:**
-1. Client reviews and approves `fr-changes.html`
-2. Upon approval, update live `fr.html` and `styles.css`
-3. Clean up temporary `fr-changes.*` files
+1. Client reviews and approves both language versions
+2. Upon approval, update live `fr.html`, `en.html` and `styles.css`
+3. Clean up temporary `*-changes.*` files
 
 ### November 2025 - Marketing Site Branding Update
 **Removed from marketing site:**
@@ -178,7 +180,7 @@ php artisan serve
 - Marketing: `https://immobiliermatrixfrance.fr`
 - Application: `https://app.immobiliermatrixfrance.fr`
 
-**Not a Git repository**: This directory structure is a local copy from the production server. Version control is not currently implemented.
+**Version Control**: Git repository initialised (Nov 2025). Initial commit contains full project including rebranded landing pages.
 
 ## Quick Reference
 
@@ -198,7 +200,8 @@ For project-specific questions:
 
 ---
 
-**Last Updated**: November 2025  
-**Project Version**: 1.0.2  
-**Marketing Site**: Agent-focused, branding removed (Nov 2025)  
-**Backend**: Full multi-tenant support maintained
+**Last Updated**: November 28, 2025  
+**Project Version**: 1.1.0  
+**Marketing Site**: Rebranded to "Immo-Erichi", agent-focused (Nov 2025)  
+**Backend**: Full multi-tenant support maintained  
+**Version Control**: Git repository active
