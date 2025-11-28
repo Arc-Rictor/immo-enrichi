@@ -1,0 +1,273 @@
+AWSTATS DATA FILE 7.9 (build 20230108)
+# If you remove this file, all statistics for date 202509 will be lost/reset.
+# Last config file used to build this data file was /home/ddaeceeb/tmp/awstats/ssl/awstats.app.immobiliermatrixfrance.fr.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2064                
+POS_TIME 2725                
+POS_VISITOR 6435                
+POS_DAY 6867                
+POS_DOMAIN 3342                
+POS_LOGIN 3583                
+POS_ROBOT 3738                
+POS_WORMS 4213                
+POS_EMAILSENDER 4344                
+POS_EMAILRECEIVER 4487                
+POS_SESSION 7052                
+POS_FILESIZE 7301                
+POS_SIDER 7198                
+POS_FILETYPES 4622                
+POS_DOWNLOADS 4757                
+POS_OS 4805                
+POS_BROWSER 4891                
+POS_SCREENSIZE 5017                
+POS_UNKNOWNREFERER 5091                
+POS_UNKNOWNREFERERBROWSER 5178                
+POS_ORIGIN 5260                
+POS_SEREFERRALS 5391                
+POS_PAGEREFS 5554                
+POS_SEARCHWORDS 5702                
+POS_KEYWORDS 5854                
+POS_MISC 2389                
+POS_ERRORS 5913                
+POS_CLUSTER 3439                
+POS_SIDER_404 6014                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20251001060744 5 598 13049335141456
+FirstTime 0
+LastTime 20250926202918
+LastUpdate 20251001130714 5 0 4 0 0
+TotalVisits 8                   
+TotalUnique 8                   
+MonthHostsKnown 0                   
+MonthHostsUnknown 8                   
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+RealPlayerSupport 0 0 0
+QuickTimeSupport 0 0 0
+AddToFavourites 0 0 0
+PDFSupport 0 0 0
+FlashSupport 0 0 0
+TotalMisc 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+DirectorSupport 0 0 0
+JavascriptDisabled 0 0 0
+JavaEnabled 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 5 7 26543
+1 0 0 0 5 7 26540
+2 0 0 0 9 13 54207
+3 2 2 25874 9 11 16332
+4 0 0 0 2 18 130814
+5 0 0 0 3 19 57736
+6 0 0 0 7 11 39954
+7 1 1 12937 15 59 374138
+8 0 0 0 6 6 39453
+9 0 0 0 1 1 216
+10 0 0 0 12 18 87364
+11 1 1 12937 4 4 13579
+12 2 2 25878 2 13 108803
+13 0 0 0 2 2 2296
+14 0 0 0 3 4 13390
+15 0 0 0 0 13 95697
+16 0 0 0 9 24 150596
+17 0 0 0 0 1 24
+18 0 0 0 6 7 26756
+19 0 0 0 4 23 138255
+20 2 2 25878 1 2 2104
+21 0 0 0 1 2 12965
+22 1 1 12941 3 14 111295
+23 2 17 1057296 6 7 15875
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 2
+us 8 8 103504
+ip 3 18 1070237
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 9
+bingbot/ 122 904138 20250930065014 12
+Googlebot/ 50 299173 20250926103957 15
+Applebot/ 26 205065 20250929040100 2
+AhrefsBot/ 6 38895 20250925042621 3
+bot[\s_+:,\.\;\/\\-] 4 13009 20250923200554 3
+Googlebot\-Image/ 2 18174 20250923040804 0
+no_user_agent 2 25874 20250908075913 0
+YandexBot/ 2 12961 20250930143744 1
+unknown 1 0 20250911030158 1
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 4
+js 10 83377 0 0
+css 2 12509 0 0
+png 3 935536 0 0
+Unknown 11 142319 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 2
+win10 24 9
+linux 2 2
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 4
+chrome79.0.3945.130 2 2
+edge44 2 2
+chrome120.0.0.0 2 2
+chrome139.0.0.0 20 5
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 0
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 6 16
+From1 0 0
+From2 3 3
+From3 0 0
+From4 2 7
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 1
+www_google_com 3 3
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 2
+404 7 14560
+302 62 13083
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 4
+/.well-known/traffic-advice 2 -
+/wp-login.php 1 -
+/enhancecp 1 -
+//app.immobiliermatrixfrance.fr/dashboard' 3 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 8
+69.160.160.51 2 2 25878 20250911125725
+149.50.220.162 2 2 25878 20250926202918
+104.232.199.216 2 2 25874 20250911030200
+2a02:8440:b508:58c5:e931:6ce1:cb06:7bec 1 16 1044359 20250908232137
+164.92.227.252 1 1 12937 20250918074612
+2001:4860:7:170f::fe 1 1 12941 20250906221220
+2001:4860:7:20f::eb 1 1 12937 20250908232127
+143.198.129.226 1 1 12937 20250904113556
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 6
+20250904 1 1 12937 1
+20250906 1 1 12941 1
+20250908 2 17 1057296 2
+20250911 4 4 51752 2
+20250918 1 1 12937 1
+20250926 2 2 25878 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 1
+0s-30s 8
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 2
+/login 8 103496 7 5
+/register 3 38823 1 3
+END_SIDER
+
+# Payload Range - Payload Frequency
+BEGIN_FILESIZE 6
+2K-5K 23
+0-44 51
+44-100 12
+5K+ 85
+1K-2K 13
+100-500 128
+END_FILESIZE

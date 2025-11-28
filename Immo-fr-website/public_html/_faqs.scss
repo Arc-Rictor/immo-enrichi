@@ -1,0 +1,132 @@
+.faqs {
+    &-content {
+        padding-top: 109px;
+        padding-bottom: 100px; // 145
+        @include max_width(1024px) {
+            padding: $tab_padding;
+        }
+        @include max_width(767px) {
+            padding: $mob_padding;
+        }
+        .heading {
+            text-align: center;
+        }
+    }
+}
+
+.accordions {
+   padding-top: 70px;
+   @include max_width(767px) {
+    padding-top: 25px;
+   }
+    .accordion {
+    position: relative;
+    border-bottom: 1px solid $black;
+    &:first-of-type {
+        // .accordion__title {
+            
+        // }
+        .accordion__content {
+            display: block;
+        }
+    }
+    &:last-of-type {
+        .accordion__title {
+            border-bottom: none;
+        }
+    }
+    &__title {
+        font-family: $brand;
+        font-size: $faqs;
+        line-height: $line_faqs;
+        font-weight: 400;
+        color: $black;
+        position: relative;
+        color: black;
+        font-size: 25px;
+        line-height: 30px;
+        background: none;
+        padding: 45px 0;
+        cursor: pointer;
+        transition: 0.3s ease;
+        margin: 0;
+        // border-bottom: 1px solid $black;
+        padding-right: 100px;
+        @include max_width(768px) {
+            font-size: 18px;
+            padding-right: 80px;
+            padding: 25px 80px 25px 0;
+        }
+        // &.active {
+
+        // }
+        &:before {
+            content: '';
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 37px;
+            width: 2px;
+            height: 15px;
+            background: black;
+            transition: 0.3s ease;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 30px;
+            width: 15px;
+            height: 2px;
+            background: black;
+            transition: 0.3s ease;
+        }
+        &.active {
+            &:before {
+                opacity: 0;
+            }
+        }
+    }
+    &__content {
+        border-radius: 0 0 2px 2px;
+        position: relative;
+        padding: 0;
+        border-bottom: none;
+        margin-bottom: 30px;
+        display: none;
+        &:last-of-type {
+            padding-bottom: 0;
+            // margin-bottom: 0;
+        }
+        img {
+            &.alignleft,
+            &.alignnone,
+            &.alignright {
+                float: left;
+                width: 30%;
+                margin: 0 30px 30px 0;
+            }
+        }
+        p {
+            color: $black;
+            font-family: $brand_2;
+            margin: 0 0 15px 0;
+            font-size: 16px; // 18px
+            width: 92%;
+            line-height: 28px;
+            @include max_width(430px) {
+                font-size: 14px;
+            }
+        }
+        ul,
+        ol {
+            width: 100%;
+            li {
+                width: 100%;
+
+            }
+        }
+    }
+    }
+}

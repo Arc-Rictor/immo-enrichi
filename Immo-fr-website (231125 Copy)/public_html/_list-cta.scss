@@ -1,0 +1,152 @@
+.list-banner-cta {
+    background: $brand_orange_light;
+    padding-top: 144px;
+    padding-bottom: 171px;
+    @include max_width(1023px) {
+        padding: 100px 0;
+    }
+    @include max_width(767px) {
+        padding: 50px 0;
+    }
+    .list-banner {
+        display: flex;
+        justify-content: space-between;
+        @include max_width(767px) {
+            flex-direction: column-reverse;
+        }
+        .left {
+            width: 50%;
+            position: relative;
+            @include max_width(767px) {
+                width: 75%;
+                margin: auto;
+            }
+            img {
+                width: 100%;
+                // width: 92%;
+                object-fit: contain;
+                // max-width: 380px;
+            }
+        }
+        .right {
+            width: 41%;
+            @include max_width(1024px) {
+                width: 50%;
+            }
+            @include max_width(767px) {
+                width: 92%;
+                margin: auto;
+            }
+            .heading {
+                font-family: $brand;
+                font-weight: 400;
+                margin-bottom: 33px;
+                padding-top: 25px; // 62
+                width: 88%;
+                @include max_width(1400px) {
+                    width: 70%;
+                }
+                @include max_width(1024px) {
+                    padding-top: 0;
+                }
+                @include max_width(767px) {
+                    width: 68%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+            }
+            .sub-heading {
+                font-family: $brand_2;
+                font-weight: 400;
+                margin-bottom: 35px;
+                @include max_width(1400px) {
+                    width: 91%;
+                }
+                @include max_width(767px) {
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+            }
+            .sign-up {
+                @include max_width(767px) {
+                    text-align: center;
+                }
+                .btn {
+         
+                }
+            }
+            .registered {
+                display: flex;
+                font-size: 16px;
+                line-height: 40px;
+                font-family: $brand_2;
+                @include max_width(1023px) {
+                    font-size: 12px;
+                }
+                @include max_width(767px) {
+                    justify-content: center;
+                    margin-bottom: 30px;
+                }
+                a {
+                    margin-left: 5px;
+                    text-decoration: underline;
+                    color: #000;
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+.reverse-banner-cta {
+    background: #fff;
+    @include max_width(1023px) {
+        padding: 100px 0;
+    }
+    @include max_width(767px) {
+        padding: 50px 0;
+    }
+    .reverse {
+        display: flex;
+        flex-direction: row-reverse;
+        @include max_width(767px) {
+            flex-direction: column-reverse;
+        }
+        .right {
+            @include max_width(1400px) {
+                width: 50%;
+            }
+            @include max_width(767px) {
+                width: 92%;
+                margin: auto;
+            }
+            .heading {
+                @include max_width(1400px) {
+                    width: 75%;
+                }
+            }
+            .sub-heading {
+                @include max_width(1400px) {
+                    width: 92%;
+                }
+            }
+        }
+        .left {
+            text-align: end;
+        }
+        .registered {
+            a {
+                &:hover {
+                    color: $brand_orange !important;
+                }
+            }
+        }
+    }
+
+}

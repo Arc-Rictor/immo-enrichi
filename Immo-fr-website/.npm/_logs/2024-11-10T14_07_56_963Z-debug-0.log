@@ -1,0 +1,15 @@
+0 verbose cli /home/ddaeceeb/.nvm/versions/node/v18.20.4/bin/node /home/ddaeceeb/.nvm/versions/node/v18.20.4/bin/npm
+1 info using npm@10.7.0
+2 info using node@v18.20.4
+3 silly config:load:file:/home/ddaeceeb/.nvm/versions/node/v18.20.4/lib/node_modules/npm/npmrc
+4 silly config:load:file:/home/ddaeceeb/app.immobiliermatrixfrance.fr/.npmrc
+5 silly config:load:file:/home/ddaeceeb/.npmrc
+6 silly config:load:file:/home/ddaeceeb/.nvm/versions/node/v18.20.4/etc/npmrc
+7 verbose title npm run build
+8 verbose argv "run" "build"
+9 verbose logfile logs-max:10 dir:/home/ddaeceeb/.npm/_logs/2024-11-10T14_07_56_963Z-
+10 verbose logfile /home/ddaeceeb/.npm/_logs/2024-11-10T14_07_56_963Z-debug-0.log
+11 silly logfile start cleaning logs, removing 3 files
+12 silly logfile done cleaning log files
+13 verbose exit 0
+14 info ok

@@ -1,0 +1,42 @@
+.people-say {
+    background: $brand-off-white;
+    &-content {
+        padding-bottom: 181px;
+        @include max_width(767px) {
+            padding-bottom: 50px;
+        }
+        .heading {
+            text-align: center;
+            padding-top: 124px;
+            margin-bottom: 112px;
+            @include max_width(767px) {
+                padding: $mob_padding;
+                margin: 0;
+            }
+        }
+        .review-container {
+            font-family: $brand_2;
+            font-weight: 400;
+            .review-content {
+                padding: 38px 56px 34px 41px; // 26
+                background: $black;
+                color: $white;
+                border-radius: 10px;
+            }
+            .people-name {
+                margin-top: 20px;
+                margin-bottom: 5px;
+                font-size: $testimonial_names;
+                line-height: $line_testimonial_names;
+                font-weight: 500;
+                font-family: $brand_2;
+            }
+            .people-location {
+                font-size: $testimonial_names;
+                line-height: $line_testimonial_names;
+                font-weight: 400;
+                font-family: $brand_2;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+[20-Aug-2024 10:48:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_terminate() in /home/ddaeceeb/app.immobiliermatrixfrance.fr/vendor/symfony/process/Process.php:1465
+Stack trace:
+#0 /home/ddaeceeb/app.immobiliermatrixfrance.fr/vendor/symfony/process/Process.php(888): Symfony\Component\Process\Process->doSignal()
+#1 /home/ddaeceeb/app.immobiliermatrixfrance.fr/vendor/symfony/process/Process.php(213): Symfony\Component\Process\Process->stop()
+#2 [internal function]: Symfony\Component\Process\Process->__destruct()
+#3 {main}
+  thrown in /home/ddaeceeb/app.immobiliermatrixfrance.fr/vendor/symfony/process/Process.php on line 1465
+[20-Aug-2024 10:53:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Symfony\Component\Process\proc_terminate() in /home/ddaeceeb/app.immobiliermatrixfrance.fr/vendor/symfony/process/Process.php:1465
+Stack trace:
+#0 /home/ddaeceeb/app.immobiliermatrixfrance.fr/vendor/symfony/process/Process.php(888): Symfony\Component\Process\Process->doSignal()
+#1 /home/ddaeceeb/app.immobiliermatrixfrance.fr/vendor/symfony/process/Process.php(213): Symfony\Component\Process\Process->stop()
+#2 [internal function]: Symfony\Component\Process\Process->__destruct()
+#3 {main}
+  thrown in /home/ddaeceeb/app.immobiliermatrixfrance.fr/vendor/symfony/process/Process.php on line 1465

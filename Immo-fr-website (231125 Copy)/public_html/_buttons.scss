@@ -1,0 +1,109 @@
+.btn {
+    background: $black;
+    height: 60px;
+    padding: 0px 30px;
+    color: $white;
+    display: inline-block;
+    text-align: center;
+    font-size: $buttons;
+    line-height: 60px;
+    font-family: $brand_2;
+    font-weight: 600;
+    width: 100%;
+    max-width: fit-content;
+    // max-width: 249px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 30px;
+    @include max_width(1400px) {
+        font-size: 16px;
+    }
+    @include max_width(1024px) {
+        font-size: 14px;
+        max-width: fit-content;
+        // max-width: 200px;
+        height: 50px;
+        line-height: 50px;
+    }
+    @include max_width(767px) {
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+    }
+    &:hover {
+        background: $white;
+        color: $black;
+        transition: all ease 0.5s;
+        border: 1px solid $black;
+    }
+    &-header {
+        min-width: 141px;
+        max-width: 141px;
+        font-size: $text_links;
+        line-height: $line_text_links;
+        font-weight: 500;
+        font-family: $brand_2;
+        background: $black;
+        color: $white;
+        border-radius: 30px;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        transition: all ease 0.5s;
+        &:hover {
+            background: $white;
+            color: $black;
+            transition: all ease 0.5s;
+        }
+    }
+    &-large {
+        background: $white;
+        color: $black;
+        padding: 10px;
+        border-radius: 30px;
+        width: 100%;
+        cursor: pointer;
+        max-width: 403px;
+        display: inline-block;
+        font-family: $brand_2;
+        font-weight: 500;
+        font-size: $buttons;
+        line-height: $line-buttons;
+        text-decoration: none;
+        @include max_width(1400px) {
+            font-size: 16px;
+        }
+        @include max_width(1024px) {
+            font-size: 14px;
+            width: 250px;
+        }
+        &:hover {
+            background: $brand_orange;
+            color: $white;
+            transition: ease all 0.5s;
+        }
+    }
+    &-medium {
+        background: $black;
+        color: $white;
+        padding: 10px;
+        border-radius: 30px;
+        width: 100%;
+        cursor: pointer;
+        max-width: 273px;
+        display: inline-block;
+        font-family: $brand_2;
+        font-weight: 500;
+        font-size: $buttons;
+        line-height: $line-buttons;
+        text-decoration: none;
+        text-align: center;
+        &:hover {
+            background: $brand_orange;
+            color: $white;
+            transition: all ease 0.5s;
+        }
+    }
+}

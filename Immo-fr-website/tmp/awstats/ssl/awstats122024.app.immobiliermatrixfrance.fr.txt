@@ -1,0 +1,404 @@
+AWSTATS DATA FILE 7.8 (build 20200416)
+# If you remove this file, all statistics for date 202412 will be lost/reset.
+# Last config file used to build this data file was /home/ddaeceeb/tmp/awstats/ssl/awstats.app.immobiliermatrixfrance.fr.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2030                
+POS_TIME 2708                
+POS_VISITOR 8281                
+POS_DAY 10816               
+POS_DOMAIN 3453                
+POS_LOGIN 3780                
+POS_ROBOT 3935                
+POS_WORMS 4347                
+POS_EMAILSENDER 4478                
+POS_EMAILRECEIVER 4621                
+POS_SESSION 11517               
+POS_SIDER 11695               
+POS_FILETYPES 4756                
+POS_DOWNLOADS 4939                
+POS_OS 4987                
+POS_BROWSER 5128                
+POS_SCREENSIZE 5464                
+POS_UNKNOWNREFERER 5538                
+POS_UNKNOWNREFERERBROWSER 5858                
+POS_ORIGIN 5978                
+POS_SEREFERRALS 6115                
+POS_PAGEREFS 6259                
+POS_SEARCHWORDS 6407                
+POS_KEYWORDS 6559                
+POS_MISC 2372                
+POS_ERRORS 6618                
+POS_CLUSTER 3636                
+POS_SIDER_404 6746                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20250101010901 13 3065 14010239295227
+FirstTime 20241201183158
+LastTime 20241230183714
+LastUpdate 20250101121229 13 0 12 0 0
+TotalVisits 66                  
+TotalUnique 43                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 47                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+RealPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+JavaEnabled 0 0 0
+FlashSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+PDFSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+JavascriptDisabled 0 0 0
+QuickTimeSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 9 41 4832302 10 17 62330
+1 14 39 1636621 12 41 241181
+2 12 59 1844961 14 16 43260
+3 1 1 12937 4 5 9948
+4 1 1 13526 6 21 148108
+5 0 0 0 8 38 340766
+6 0 0 0 9 12 58272
+7 2 2 25874 14 16 42847
+8 0 0 0 2 3 14517
+9 12 17 105497 62 67 141406
+10 2 2 25874 10 12 7770
+11 2 7 1050838 11 18 41995
+12 4 9 967845 17 22 33338
+13 14 48 1531878 22 23 23614
+14 34 126 10820861 40 57 294735
+15 8 37 1235644 19 30 292336
+16 1 1 12937 12 15 24042
+17 27 91 5831399 23 34 131460
+18 9 12 120732 22 45 200715
+19 5 21 630433 13 13 12127
+20 4 10 51231 6 17 117994
+21 3 3 23442 4 4 13582
+22 10 22 134669 10 18 17275
+23 21 21 271725 3 9 25462
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 8
+ip 173 526 29853355
+us 15 15 194063
+de 2 14 121760
+ro 2 9 37701
+ru 1 3 939386
+pk 1 1 12937
+ca 1 1 12937
+gb 0 1 9087
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 7
+bingbot/ 182 1365374 20241231200912 13
+Googlebot/ 49 444232 20241229175408 6
+no_user_agent 6 130129 20241229072430 0
+facebookexternalhit/ 5 109480 20241223155419 0
+unknown 4 72 20241222072701 4
+Googlebot\-Image/ 2 18174 20241229110319 0
+Go\-http\-client/ 2 25874 20241214182511 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 6
+css 38 151551 0 0
+png 63 16492625 0 0
+Unknown 195 1891643 0 0
+jpg 34 10711870 0 0
+js 236 1282137 0 0
+webp 4 651400 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 6
+android10 33 3
+unix 3 1
+win10 453 162
+linux 2 2
+macosx15 68 19
+Unknown 11 8
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 15
+chrome125.0.0.0 3 1
+opera104.0.0.0 11 1
+chrome87.0.4280.88 19 19
+chrome130.0.0.0 65 18
+mozilla 8 5
+safari15.6.1 1 0
+Unknown 1 1
+chrome119.0.0.0 15 1
+firefox42.0 2 2
+firefox121.0 2 2
+chrome131.0.0.0 434 137
+chrome129.0.0.0 2 2
+safari17.2 1 1
+chrome120.0.0.0 4 3
+chrome79.0.3945.130 2 2
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 4
+python-requests/2.28.1 20241225090659
+Mozilla/5.0_(compatible;_CensysInspect/1.1;__https://about.censys.io/) 20241230183718
+Mozilla/5.0/Firefox/42.0_-_nbertaupete95(at)gmail.com 20241205025301
+Mozilla/5.0_(compatible) 20241226023552
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+python-requests/2.28.1 20241225090659
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 43 286
+From1 0 0
+From2 0 0
+From3 0 0
+From4 152 284
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 4
+500 47 97807
+404 51 104092
+302 196 41762
+419 1 2084
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 47
+/media-manager 1 -
+/ads.txt 2 -
+/back-office/ppid-filemanager 1 -
+/backend/laravel-filemanager 1 -
+/public/backend/laravel-filemanager 1 -
+/admin/laravel-filemanager 1 -
+/asset/laravel-filemanager 1 -
+/admin/filemanager 1 -
+/laravelfm 1 -
+/frontend-filemanager 1 -
+/public/admin/filemanager 1 -
+/_ignition/execute-solution 1 -
+/media/filemanager 1 -
+/public/asset/filemanager 1 -
+/public/file-manager 1 -
+/plugins/file-manager 1 -
+/backend/filemanager 1 -
+/public/backend/filemanager 1 -
+/sitemaps.xml 2 -
+/public/asset/laravel-filemanager 1 -
+/public/plugins/filemanager 1 -
+/fmanager 1 -
+/public/admin/laravel-filemanager 1 -
+/js/laravel-filemanager 1 -
+/user/file-manager 1 -
+/laravel-filemanager 1 -
+/images/files/event-files 1 -
+/media/laravel-filemanager 1 -
+/filemanager 1 -
+/public/plugins/file-manager 1 -
+/sitemap.txt 2 -
+/backoffice/fm 1 -
+/asset/filemanager 1 -
+/admin/file-manager 1 -
+/public/filemanager 1 -
+/user/filemanager 1 -
+/user/laravel-filemanager 1 -
+/fm 1 -
+/file-manager 1 -
+/plugins/laravel-filemanager 1 -
+/backend/file-manager 1 -
+/plugins/filemanager 1 -
+/public/plugins/laravel-filemanager 1 -
+/public/laravel-filemanager 1 -
+/admin/feature/filemanager 1 -
+/wp-login.php 2 -
+/js/filemanager 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 47
+2001:861:c51:3330:d155:b185:1465:be33 45 144 9175777 20241229202308
+2a05:6e02:113e:5710:2efa:8db5:4d0c:73f5 19 19 245851 20241220235112
+2a00:23c8:bda6:6700:bd9a:2c4:448c:908d 18 40 3194265 20241209172302
+2001:861:c51:3330:812b:8d62:f1bb:f83c 10 17 342994 20241230133559
+2a00:23cc:dd06:dd01:35ec:4a2f:62df:7547 9 49 5433844 20241216140105
+2001:861:c51:3330:38fc:36b7:e05d:356d 8 47 1693222 20241226090433
+2001:861:c51:3330:2dd3:90f4:7f23:e614 8 18 527390 20241219144138
+2001:861:c51:3330:3998:6258:c7c:5d3e 7 26 1489583 20241217174605
+2001:861:c51:3330:f9dd:9564:d8f0:ea77 6 6 60218 20241205012350
+2001:861:c51:3330:95c7:a130:86a7:42f7 6 7 72917 20241201221129
+2a00:23cc:dd06:dd01:7d7a:7b5b:711b:a627 5 5 32045 20241210090216
+2001:861:c51:3330:f83a:9b12:7fd9:ee8b 5 19 1072531 20241203021427
+2a00:23c8:bda6:6700:d5ec:ef8e:b65e:34e2 4 6 30208 20241216142801
+2001:861:c51:3330:65a8:e6ea:5576:1eef 4 10 1908409 20241207144410
+2001:861:c51:3330:1534:c43d:2293:31ec 3 3 23442 20241220145802
+2001:861:c51:3330:457b:5062:1a56:2c2b 3 3 38811 20241205185944
+2a00:23cc:dd06:dd01:4522:a836:9286:a67d 3 4 10166 20241210090307
+104.143.88.130 2 2 25874 20241206102905
+5.9.50.77 2 14 121760 20241225000507
+2a00:23c8:bda6:6700:5450:db88:1d4b:3c64 2 17 1057296 20241205154414
+2001:861:c51:3330:7a05:c7ec:2394:480b 2 18 135306 20241205131736
+69.160.160.57 2 2 25878 20241218010515
+172.121.221.241 2 2 25874 20241222072703
+178.156.138.112 1 1 12937 20241224014942
+104.248.12.8 1 1 12937 20241226023552
+81.153.227.136 0 1 9087 
+2602:80d:1006::62 0 1 9087 
+2001:861:c51:3330:b835:de4f:29ae:8fdc 1 1 12937 20241206121313
+2a00:23cc:dd06:dd01:2da2:befa:a131:f491 1 6 1037901 20241213110243
+178.156.152.220 1 8 24764 20241223135624
+3.91.60.138 1 1 12941 20241205025301
+142.93.100.213 1 1 12937 20241201195707
+2001:861:c51:3330:30fb:e90e:b67a:aa82 1 15 122868 20241205154342
+2602:80d:1006::63 0 1 9087 
+138.197.170.129 1 1 12937 20241212131259
+2a00:23c8:bda6:6700:b527:fae:bebb:8ef9 1 12 28482 20241213144322
+174.138.54.122 1 1 12937 20241203192040
+52.4.186.160 1 1 12937 20241204181603
+146.190.133.172 1 1 12937 20241205033408
+180.149.228.174 1 1 12937 20241225090659
+167.94.138.179 1 1 12937 20241223224325
+195.201.111.82 1 3 939386 20241225000535
+2001:861:c51:3330:b912:95fd:8ba5:e0be 1 15 1035272 20241214175631
+167.94.138.178 1 1 12937 20241230183714
+199.45.155.65 1 1 12937 20241220095947
+2001:861:c51:3330:b5a9:b058:a303:f346 1 16 1044359 20241212014437
+2602:80d:1004::11 0 1 9087 
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 28
+20241201 7 8 85854 3
+20241202 3 17 1054250 1
+20241203 7 14 71302 3
+20241204 12 30 3839573 3
+20241205 11 56 1384897 9
+20241206 3 3 38811 2
+20241207 4 10 1908409 1
+20241209 18 40 3194265 1
+20241210 8 10 51298 2
+20241212 2 17 1057296 2
+20241213 2 18 1066383 2
+20241214 1 15 1035272 1
+20241215 1 2 22024 1
+20241216 27 106 9897541 5
+20241217 14 43 1666489 4
+20241218 2 2 25878 1
+20241219 8 18 527390 2
+20241220 24 25 304254 4
+20241221 3 3 23442 1
+20241222 3 3 38811 2
+20241223 2 10 46788 2
+20241224 1 1 12937 1
+20241225 4 18 1074083 3
+20241226 9 48 1706159 4
+20241227 1 5 27012 1
+20241228 3 19 604559 1
+20241229 4 10 51231 1
+20241230 11 19 365018 3
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 4
+2mn-5mn 4
+30s-2mn 8
+5mn-15mn 1
+0s-30s 53
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 10
+/login 94 1048250 60 38
+/admin/users 32 229038 1 13
+/dashboard 20 136680 1 5
+/register 20 226015 4 4
+/search 14 74912 0 3
+/listings 7 144995 0 2
+/forgot-password 5 15028 0 1
+/listings/22306514 1 5819 0 0
+/listings/28718448 1 5817 0 0
+/listings/create 1 5089 0 0
+END_SIDER

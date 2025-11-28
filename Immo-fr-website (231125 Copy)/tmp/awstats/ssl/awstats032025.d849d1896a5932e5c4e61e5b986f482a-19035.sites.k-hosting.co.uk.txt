@@ -1,0 +1,454 @@
+AWSTATS DATA FILE 7.8 (build 20200416)
+# If you remove this file, all statistics for date 202503 will be lost/reset.
+# Last config file used to build this data file was /home/ddaeceeb/tmp/awstats/ssl/awstats.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2061                
+POS_TIME 2736                
+POS_VISITOR 8596                
+POS_DAY 12430               
+POS_DOMAIN 3487                
+POS_LOGIN 3965                
+POS_ROBOT 4120                
+POS_WORMS 4633                
+POS_EMAILSENDER 4764                
+POS_EMAILRECEIVER 4907                
+POS_SESSION 13071               
+POS_SIDER 13261               
+POS_FILETYPES 5042                
+POS_DOWNLOADS 5184                
+POS_OS 5232                
+POS_BROWSER 5503                
+POS_SCREENSIZE 6328                
+POS_UNKNOWNREFERER 6402                
+POS_UNKNOWNREFERERBROWSER 7107                
+POS_ORIGIN 7305                
+POS_SEREFERRALS 7441                
+POS_PAGEREFS 7621                
+POS_SEARCHWORDS 7799                
+POS_KEYWORDS 7951                
+POS_MISC 2399                
+POS_ERRORS 8010                
+POS_CLUSTER 3821                
+POS_SIDER_404 8127                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20250401003756 5 809 17103336398095
+FirstTime 20250301064854
+LastTime 20250331142504
+LastUpdate 20250401131816 5 0 4 0 0
+TotalVisits 96                  
+TotalUnique 89                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 89                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+TotalMisc 0 0 0
+RealPlayerSupport 0 0 0
+JavascriptDisabled 0 0 0
+FlashSupport 0 0 0
+DirectorSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+JavaEnabled 0 0 0
+AddToFavourites 0 36 0
+PDFSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 7 9 1239180 14 21 60300
+1 6 6 65267 15 35 1522401
+2 0 0 0 10 18 82650
+3 4 5 40500 5 6 2573
+4 2 2 19848 11 19 71743
+5 5 5 48734 13 20 19424
+6 19 49 11000972 29 40 113321
+7 3 19 5438999 9 17 404194
+8 6 21 5463766 13 26 77306
+9 6 22 5458847 14 21 124251
+10 4 4 38810 8 10 22855
+11 0 0 0 7 10 23681
+12 1 16 5418347 5 8 31497
+13 7 22 5482728 19 32 277401
+14 9 24 5496853 19 30 67528
+15 6 45 16025762 21 32 86441
+16 9 9 87544 19 33 432222
+17 10 56 16325313 10 21 247727
+18 2 2 25571 4 8 36435
+19 5 5 55343 11 19 418008
+20 3 18 5438195 8 16 52006
+21 1 1 9924 6 10 16259
+22 3 18 5438195 6 15 1489985
+23 12 27 5525739 29 49 171412
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 19
+us 74 126 18145183
+ip 22 127 38073745
+ru 5 12 5148971
+se 5 5 49620
+gb 5 51 16309142
+cn 4 19 5448119
+jp 2 2 19848
+fr 2 17 5428271
+pl 1 1 9924
+nl 1 1 9924
+ci 1 1 9038
+ua 1 1 9924
+be 1 1 15647
+cl 1 1 9924
+id 1 1 9924
+ca 1 1 9924
+it 1 1 9924
+za 1 1 9038
+eg 1 16 5418347
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 10
+bingbot/ 66 4832087 20250331140527 0
+Googlebot/ 32 174924 20250328131809 0
+Applebot/ 12 65172 20250330050905 0
+no_user_agent 8 110440 20250329085828 0
+bot[\s_+:,\.\;\/\\-] 4 44533 20250314090130 0
+crawl 4 38810 20250313232959 0
+scrapy 2 19848 20250319113053 0
+facebookexternalhit/ 2 19848 20250321125351 0
+YandexBot/ 2 18962 20250329045400 0
+YandexImages/ 1 4958 20250330161618 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 4
+Unknown 130 1255825 0 0
+css 15 90120 0 0
+js 19 15276 0 0
+png 221 92783216 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 15
+android 3 3
+winxp 1 1
+win10 115 40
+macosx 2 2
+macosx11 5 5
+ios_iphone 5 4
+win2000 3 3
+Unknown 57 37
+win8.1 2 2
+linux 39 7
+macosx15 109 12
+android10 23 8
+androidmarshmallow 16 1
+winlong 2 2
+linuxubuntu 3 3
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 41
+chrome101.0.4951.64 1 1
+chrome117.0.0.0 1 1
+firebird 3 3
+chrome60.0.3112.113 4 4
+firefox24.0 3 3
+chrome105.0.0.0 5 5
+iphone 2 2
+firefox135.0 2 2
+chrome134.0.0.0 33 3
+chrome131.0.0.0 19 4
+firefox111.0 2 2
+mozilla 38 21
+cloudflare 12 12
+chrome60.0.3112.90 1 1
+chrome118.0.0.0 1 1
+chrome126.0.0.0 21 6
+firefox121.0 3 3
+chrome132.0.0.0 18 3
+safari 2 1
+msie9.0 2 2
+chrome119.0.0.0 1 1
+chrome120.0.0.0 38 6
+safari17.2 2 2
+safari17.6 50 5
+firefox52.0 5 5
+chrome133.0.0.0 40 3
+netscape5.0 2 2
+Unknown 5 2
+chrome115.0.0.0 16 1
+chrome55.0.2883.87 2 2
+chrome127.0.0.0 1 1
+chrome124.0.0.0 2 2
+chrome104.0.0.0 1 1
+chrome91.0.4472.124 1 1
+chrome110.0.0.0 3 3
+chrome100.0.4896.75 1 1
+chrome99.0.4844.51 16 1
+chrome130.0.0.0 17 2
+safari18.1.1 1 1
+chrome78.0.3904.62 4 4
+chrome116.0.0.0 4 4
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 11
+Mozilla/5.0_(compatible;_Trance/1.0) 20250321150334
+Mozilla/5.0_(compatible;_CensysInspect/1.1;__https://about.censys.io/) 20250313134819
+Mozilla/5.0_(compatible) 20250327045141
+Mozilla/5.0_(compatible;_Dataprovider.com) 20250326181417
+Mozilla/5.0_(compatible;_SeoLyt/1.0;__https://seolyt.com) 20250321150739
+Python/3.11_aiohttp/3.11.11 20250325233951
+Mozilla/5.0_(compatible;_InternetMeasurement/1.0;__https://internet-measurement.com/) 20250314180853
+python-requests/2.27.1 20250322225108
+Mozilla/5.0_AppleWebKit/537.36_(KHTML 20250312131711
+Cloudflare-SSLDetector 20250314063703
+python-httpx/0.28.1 20250330033831
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 3
+python-httpx/0.28.1 20250330033831
+Python/3.11_aiohttp/3.11.11 20250325233951
+python-requests/2.27.1 20250322225108
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 92 112
+From1 0 0
+From2 2 2
+From3 2 2
+From4 34 269
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+www_bing_com 1 1
+www_google_com 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 1
+https://www.toutvendre.fr 2 2
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 3
+404 140 175140
+302 194 3620
+403 13 16146
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 6
+/robots.txt 123 -
+/wp-login.php 4 -
+/uploaded_script.php 5 www.google.com
+/ads.txt 4 -
+/@about 2 -
+/petites%20annonces%20gratuites 2 https://www.toutvendre.fr/
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 89
+2a06:98c0:360d:b493:87c9:a7a5:ca06:2d60 7 7 66810 20250314063703
+172.70.72.217 5 5 48734 20250314063703
+35.233.121.128 5 5 47848 20250325233951
+172.121.216.244 3 3 28886 20250309164041
+51.178.81.195 3 33 10846618 20250315171453
+3.235.198.205 3 6 32184 20250330033823
+104.194.196.120 3 3 28886 20250331050741
+104.143.88.10 3 3 28886 20250309164041
+68.69.184.202 3 20 5454767 20250321150739
+192.104.34.34 2 2 19848 20250321213756
+124.221.186.82 2 2 19848 20250315100519
+104.164.161.94 2 2 19848 20250331050746
+172.121.209.190 2 2 9924 20250310004449
+2a01:4f8:c013:64a0::1 2 2 19848 20250308144646
+104.168.124.48 2 2 9924 20250310004451
+104.232.39.53 2 2 9924 20250306082152
+2a00:c70:1:178:170:8:0:1440 2 2 19848 20250327140755
+15.204.182.106 2 2 19848 20250323032802
+2001:41d0:305:2100::587a 2 17 5428271 20250322231739
+43.143.60.88 2 2 19848 20250313011902
+104.164.161.7 2 2 9924 20250306092950
+77.74.177.114 2 2 19848 20250316163259
+37.65.160.66 2 17 5428271 20250315172524
+18.97.9.96 2 2 18962 20250312131711
+156.229.233.92 1 16 5418347 20250301065711
+154.28.229.46 1 1 9924 20250324014145
+199.45.154.133 1 1 9924 20250312062740
+62.252.232.8 1 16 5451796 20250306151338
+154.28.229.86 1 1 9924 20250321143456
+207.154.235.171 1 1 9924 20250308203928
+2a00:c70:1:185:246:84:179:1 1 16 5418347 20250322232351
+207.154.242.52 1 1 9924 20250326080604
+5.133.192.140 1 1 9924 20250331142504
+2001:861:c51:3330:49f5:7d5d:2dcc:de83 1 16 5418347 20250307222516
+154.28.229.251 1 1 9924 20250324005819
+164.92.150.159 1 1 9924 20250313010338
+35.93.160.140 1 3 1199484 20250310004513
+5.133.192.171 1 1 9924 20250316131323
+2a00:23c8:bda6:6700:3498:fd3e:a201:4e5f 1 16 5418347 20250312131715
+104.232.199.108 1 1 9924 20250310004521
+185.156.118.36 1 8 5109275 20250306151334
+35.94.228.32 1 16 5418347 20250306093000
+45.89.185.133 1 1 9924 20250316081053
+138.197.29.199 1 1 9924 20250318191659
+134.199.238.147 1 1 9924 20250324202507
+14.152.91.158 1 16 5418347 20250322172241
+2605:6400:20:1a8:f5f2:4a28:b5ed:931d 1 1 9924 20250301071248
+91.222.174.85 1 1 9924 20250331034435
+44.204.102.51 1 1 9924 20250309133724
+206.168.34.122 1 1 9924 20250306103755
+167.71.234.18 1 1 9924 20250312090800
+191.101.217.16 1 1 9924 20250301065415
+185.246.211.79 1 1 9924 20250322221258
+167.99.191.182 1 1 15647 20250322012937
+154.28.229.210 1 1 9924 20250324014145
+46.250.161.36 1 1 9924 20250307152128
+161.35.19.119 1 1 9924 20250327045141
+2605:6440:5000:1000:bada:6fd4:b22a:5bbc 1 1 9038 20250305101612
+93.158.91.32 1 1 9924 20250309063323
+24.199.121.54 1 1 15647 20250308082054
+2a01:cb00:90d0:f600:c055:4a7c:60ea:f512 1 16 5418347 20250320203849
+166.108.226.152 1 1 9924 20250310041308
+149.56.150.58 1 1 9924 20250326181417
+5.133.192.133 1 1 9924 20250302091057
+79.142.77.74 1 1 9924 20250322231740
+2a02:c7c:18c1:a800:3077:bcc8:a8fc:2fc4 1 16 5418347 20250304123504
+66.115.182.135 1 1 9924 20250315171303
+199.45.155.91 1 1 15647 20250301190654
+129.211.166.142 1 1 9924 20250322225108
+162.142.125.212 1 1 15647 20250313134819
+2a01:cb00:906:c600:3dd6:d7de:2fbe:4870 1 16 5418347 20250306140436
+93.158.91.13 1 1 9924 20250323145229
+213.136.115.173 1 1 9038 20250315063850
+163.172.161.207 1 2 10728 20250320172930
+93.159.230.84 1 1 9924 20250330160217
+2a00:16b0:1:243::7012:3117 1 1 9924 20250301065413
+13.38.84.72 1 1 9924 20250315171301
+35.85.35.138 1 1 9924 20250322232506
+101.44.184.98 1 1 9924 20250312162037
+102.129.153.186 1 1 9924 20250322231741
+84.17.42.22 1 1 9924 20250322232509
+34.76.5.143 1 1 9924 20250325233907
+196.127.66.200 1 1 9038 20250328143845
+136.36.101.211 1 1 9924 20250315172524
+164.90.211.75 1 1 9924 20250322191937
+54.201.44.198 1 16 5418347 20250306082202
+87.236.176.226 1 1 15647 20250314180853
+206.189.55.46 1 1 9924 20250316194538
+159.203.184.37 1 1 9924 20250314195303
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 26
+20250301 7 52 16300460 7
+20250302 2 2 19848 2
+20250304 1 16 5418347 1
+20250305 1 1 9038 1
+20250306 10 77 26845884 8
+20250307 2 17 5428271 2
+20250308 4 4 45419 3
+20250309 8 8 77620 4
+20250310 8 10 1249104 6
+20250312 6 21 5467081 5
+20250313 4 4 45419 3
+20250314 14 14 141115 4
+20250315 10 40 10915200 8
+20250316 4 4 39696 4
+20250318 1 1 9924 1
+20250320 2 18 5429075 2
+20250321 5 22 5474615 3
+20250322 12 43 10942461 12
+20250323 3 3 29772 2
+20250324 5 6 50424 5
+20250325 6 6 57772 2
+20250326 2 2 19848 2
+20250327 3 3 29772 2
+20250328 1 1 9038 1
+20250330 2 3 20652 2
+20250331 7 7 68582 4
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 5
+15mn-30mn 1
+5mn-15mn 1
+2mn-5mn 2
+0s-30s 91
+30s-2mn 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 2
+/fr 115 1120255 89 89
+/en 15 135570 7 7
+END_SIDER

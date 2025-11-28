@@ -1,0 +1,89 @@
+.french {
+    .homepage-hero {
+        .hero-heading {
+            width: 92%;
+            @include max_width(767px) {
+                width: 100%;
+            }
+        }
+    }
+    .info-banner-content {
+        width: 31%;
+        @include max_width(767px) {
+            width: 92%;
+        }
+    }
+    .cta-info {
+        .left {
+            width: 43%;
+            @include max_width(767px) {
+                width: 100%;
+            }
+        }
+    }
+    .list-banner-cta {
+        @include max_width(767px) {
+            padding-bottom: 0;
+        }
+        .list-banner {
+            .right {
+                width: 45%;
+                @include max_width(767px) {
+                    width: 92%;
+                }
+                .heading {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .btn-large {
+        width: fit-content;
+        padding: 10px 20px;
+        max-width: none;
+    }
+    #small-heading {
+        font-size: 49px;
+    }
+    @include max_width(1023px) {
+        #small-heading {
+            font-size: 28px;
+        }
+    }
+    @include max_width(767px) {
+        .registered {
+            justify-content: center;
+        }
+    }
+    .mob-language {
+        .change {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 90px;
+            z-index: 2;
+            top: 23px;
+            p {
+                color: $black;
+                margin-right: 5px;
+                font-family: $brand_2;
+            }
+         img {
+             width: 100%;
+             max-width: 40px;
+         }
+        }
+    }
+    .log-mob {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+        font-family: $brand_2;
+    }
+}

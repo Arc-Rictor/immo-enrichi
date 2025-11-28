@@ -1,0 +1,93 @@
+.cta-info {
+    margin-top: 124px;
+    margin-bottom: 157px;
+    @include max_width(1023px) {
+        margin: 100px 0;
+    }
+    @include max_width(767px) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .cta {
+        display: flex;
+        justify-content: space-between;
+        @include max_width(767px) {
+            flex-direction: column-reverse;
+        }
+        .left {
+            width: 41%;
+           @include max_width(1024px) {
+            width: 45%;
+           }
+           @include max_width(1023px) {
+            width: 46%;
+           }
+           @include max_width(767px) {
+            width: 100%;
+            margin-top: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           }
+            .heading {
+                margin-bottom: 33px;
+                padding-top: 62px;
+                width: 90%;
+                @include max_width(1024px) {
+                    padding-top: 0;
+                }
+                @include max_width(1023px) {
+                    margin-bottom: 15px;
+                }
+                @include max_width(767px) {
+                    margin-bottom: 20px;
+                }
+            }
+            .sub-heading {
+                font-weight: 400;
+                margin-bottom: 44px;
+                @include max_width(1400px) {
+                    width: 92%;
+                }
+                @include max_width(1023px) {
+                    margin-bottom: 20px;
+                }
+            }
+            .sign-up {
+                .btn {
+                    margin-bottom: 10px;
+                }
+            }
+            .registered {
+                display: flex;
+                font-size: 16px;
+                line-height: 40px;
+                font-family: $brand_2;
+                font-weight: 400;
+                @include max_width(1023px) {
+                    font-size: 12px;
+                }
+                a {
+                    margin-left: 5px;
+                    text-decoration: underline;
+                    color: $brand_orange;
+                    &:hover {
+                        color: $brand_orange_light;
+                    }
+                }
+            }
+        }
+        .right {
+            width: 50%;
+            position: relative;
+            @include max_width(767px) {
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                max-width: 582px;
+            }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+.homepage-hero {
+    text-align: center;
+    .hero-gradient {
+        background: rgb(189,132,233);
+        background: linear-gradient(90deg, rgba(189,132,233,1) 0%, rgba(245,231,255,1) 35%, rgba(255,234,227,1) 65%, rgba(254,115,69,1) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -2;
+        height: 100vh;
+    }
+    .hero-gradient-white {
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        height: 100vh;
+    }
+    .hero-heading {
+        font-size: $main_heading;
+        line-height: $line_main_heading;
+        font-family: $brand;
+        padding-top: 191px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px; //43
+        width: 60%;
+        text-shadow: 0px 2px 3px #ccc;
+        // display: none;
+        @include max_width(1400px) {
+            //  padding-top: 100px;
+             padding-top: 175px;
+             margin-bottom: 25px;
+        }
+         @include max_width(1023px) {
+            // padding-top: 75px;
+            padding-top: 150px;
+        }
+        @include max_width(767px) {
+            width: 92%;
+        }
+        &-content {
+            font-size: $main_heading;
+            line-height: $line_main_heading;
+            font-weight: 400;
+            @include max_width(1400px) {
+                font-size: $resp_main_heading;
+            }
+             @include max_width(1200px) {
+                 font-size: $tab_main_heading;
+                 line-height: $tab_line_main_heading;
+                }
+                @include max_width(1023px) {
+                 font-size: $mob_main_heading;
+                 line-height: $mob_line_main_heading;
+                }
+                @include max_width(767px) {
+                width: 100%;
+            }
+        }
+    }
+    .sub-heading {
+        margin-bottom: 34px;
+        font-size: $main_subheading;
+        h2 {
+            font-size: $main_subheading;
+            line-height: $line_main_subheading;
+            font-family: $brand_2;
+            width: 70%;
+            // max-width: 780px;
+            margin: auto;
+            font-weight: 400;
+            margin-bottom: 16px;
+            @include max_width(1400px) {
+                width: 60%;
+                // font-size: $resp_main_subheading;
+                // line-height: $resp_line_main_subheading;
+            }
+            @include max_width(1024px) {
+                width: 70%;
+            }
+            @include max_width(1023px) {
+                font-size: $tab_main_subheading;
+                line-height: $tab_line_main_subheading;
+            }
+            @include max_width(767px) {
+                width: 90%;
+                font-size: $mob_main_subheading;
+                line-height: $mob_line_main_subheading;
+            }
+        }
+    }
+    // .sign-up {
+    //     .btn {
+    //         margin-bottom: 50px;
+    //     }
+    // }
+    .registered {
+        font-family: $brand_2;
+        display: flex;
+        justify-content: center;
+        p {
+            font-size: $text_links;
+            line-height: $line_text_links;
+            @include max_width(1023px) {
+                font-size: $tab_text_links;
+                line-height: $tab_line_text_links;
+            }
+            @include max_width(767px) {
+                font-size: $mob_text_links;
+                line-height: $mob_line_text_links;
+            }
+        }
+        a {
+            margin-left: 5px;
+            color: $brand_orange;
+            font-size: $text_links;
+            line-height: $line_text_links;
+            text-decoration: underline;
+            &:hover {
+                color: $brand_orange_light;
+            }
+            @include max_width(1023px) {
+                font-size: $tab_text_links;
+                line-height: $tab_line_text_links;
+            }
+            @include max_width(767px) {
+                font-size: $mob_text_links;
+                line-height: $mob_line_text_links;
+            }
+        }
+    }
+    .hero-image {
+        margin-top: 80px;
+        margin-bottom: 43px;
+        padding-bottom: 20px;
+        @include max_width(767px) {
+            margin: 43px 0;
+            padding-bottom: 0;
+        }
+        img {
+            width: 100%;
+            max-width: 1179px;
+        }
+    }
+}

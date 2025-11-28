@@ -1,0 +1,6 @@
+[/home/ddaeceeb/public_html]
+htaccess_list = /home/ddaeceeb/public_html/.htaccess
+
+[/home/ddaeceeb/app.immobiliermatrixfrance.fr]
+htaccess_list = /home/ddaeceeb/app.immobiliermatrixfrance.fr/.htaccess,/home/ddaeceeb/app.immobiliermatrixfrance.fr/public/.htaccess
+

@@ -1,0 +1,722 @@
+AWSTATS DATA FILE 7.9 (build 20230108)
+# If you remove this file, all statistics for date 202506 will be lost/reset.
+# Last config file used to build this data file was /home/ddaeceeb/tmp/awstats/ssl/awstats.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2095                
+POS_TIME 2771                
+POS_VISITOR 14915               
+POS_DAY 19778               
+POS_DOMAIN 3581                
+POS_LOGIN 3989                
+POS_ROBOT 4144                
+POS_WORMS 4680                
+POS_EMAILSENDER 4811                
+POS_EMAILRECEIVER 4954                
+POS_SESSION 20540               
+POS_FILESIZE 21452               
+POS_SIDER 20733               
+POS_FILETYPES 5089                
+POS_DOWNLOADS 5302                
+POS_OS 5350                
+POS_BROWSER 5768                
+POS_SCREENSIZE 8555                
+POS_UNKNOWNREFERER 8629                
+POS_UNKNOWNREFERERBROWSER 9078                
+POS_ORIGIN 9398                
+POS_SEREFERRALS 9541                
+POS_PAGEREFS 9721                
+POS_SEARCHWORDS 11077               
+POS_KEYWORDS 11229               
+POS_MISC 2434                
+POS_ERRORS 11288               
+POS_CLUSTER 3845                
+POS_SIDER_404 11427               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20250701012749 7 1267 10781798609777
+FirstTime 20250601123244
+LastTime 20250630163549
+LastUpdate 20250701130931 7 0 6 0 0
+TotalVisits 256                 
+TotalUnique 112                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 119                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+RealPlayerSupport 0 0 0
+AddToFavourites 0 61 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+JavascriptDisabled 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+PDFSupport 0 0 0
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 13 13 197688 24 29 2134210
+1 31 41 533455 54 66 1496416
+2 24 24 317412 110 125 789570
+3 20 20 271214 31 40 689718
+4 31 44 5863776 58 66 69053
+5 17 48 11072406 29 31 12120
+6 40 59 690764 36 45 1495897
+7 39 39 526567 83 90 32593
+8 18 18 247944 29 37 42542
+9 14 14 207612 26 29 371778
+10 36 52 5939771 68 76 93661
+11 23 23 385729 41 46 33554
+12 23 25 229473 49 69 81725
+13 30 30 463687 53 57 38271
+14 24 24 337169 42 52 64089
+15 13 13 188723 26 37 84615
+16 39 39 566039 75 87 61783
+17 16 31 5634997 26 33 402382
+18 12 27 5577782 23 30 35663
+19 43 58 6105136 63 79 186455
+20 17 17 249641 25 34 45294
+21 21 21 245581 33 39 39993
+22 44 63 800517 79 85 58087
+23 18 33 5659791 26 27 48337
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 14
+us 548 671 35421971
+ip 16 61 16381931
+ca 12 12 213920
+gb 10 12 29197
+se 4 4 39696
+fr 3 3 28886
+ru 2 2 19848
+be 2 2 19848
+au 2 2 28042
+rs 2 2 75078
+gr 2 2 25571
+ua 1 1 9924
+za 1 1 9038
+ro 1 1 9924
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 11
+Googlebot/ 41 276338 20250630120616 0
+bingbot/ 39 7281989 20250630041430 0
+Applebot/ 10 66192 20250619121128 0
+crawl 4 38810 20250613230332 0
+bot[\s_+:,\.\;\/\\-] 2 9950 20250611152010 1
+unknown 2 52 20250602191732 2
+scrapy 1 12399 20250621030010 0
+survey 1 37533 20250607102011 0
+Go\-http\-client/ 1 9924 20250606023059 0
+YandexBot/ 1 9038 20250623005721 0
+facebookexternalhit/ 1 9924 20250617185327 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 8
+svg 8 15394 0 0
+Unknown 549 7874778 0 0
+html 39 509629 0 0
+png 134 43235622 0 0
+woff 15 340000 0 0
+js 10 8243 0 0
+xml 3 112599 0 0
+css 18 216609 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 26
+macosx11 7 7
+macosx12 1 1
+win7 5 5
+macosx14 7 7
+macosx9 2 2
+macos12 2 2
+win8 1 1
+macosx10 1 1
+Unknown 32 31
+win11 7 7
+macosx15 87 86
+androidmarshmallow 79 6
+macosx6 3 3
+macos11 3 3
+win10 164 90
+macosx8 1 1
+macosx 30 30
+winlong 1 1
+androidnougat 13 13
+linux 218 197
+linuxcentos 17 17
+win8.1 9 9
+linuxdebian 29 29
+linuxubuntu 53 53
+unix 2 2
+macosx13 2 2
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 154
+chrome58.0.3029.110 7 7
+safari17.10 2 2
+firefox98.0 1 1
+firefox91.0 1 1
+safari17.7 1 1
+firefox93.0 1 1
+mozilla 5 5
+chrome135.0.7049.114 32 2
+edge123 1 1
+safari17.0.1 2 2
+edge109 2 2
+firefox118.0 2 2
+safari16.5 2 2
+safari14.1.1 1 1
+chrome134.0.0.0 9 9
+safari11.1.2 1 1
+firefox89.0 2 2
+safari17.2.1 1 1
+chrome130.0.0.0 17 2
+firefox115.0 1 1
+firefox52.0 4 4
+safari6.0.2 1 1
+safari16.3.1 1 1
+firefox135.0 8 8
+firefox134.0 12 12
+safari15.6.1 4 4
+firefox123.0 9 9
+safari15.6.6 1 1
+safari16.2 1 1
+chrome91.0.4472.168 1 1
+chrome122.0.0.0 6 6
+firefox110.0 9 9
+safari15.6.3 1 1
+safari17.8.1 2 2
+chrome125.0.0.0 5 5
+edge129 1 1
+firefox97.0 3 3
+safari18.1 1 1
+netscape5.0 4 4
+firefox130.0 7 7
+firefox96.0 1 1
+chrome103.0.0.0 2 2
+chrome125.0.6422.60 27 8
+edge18 2 2
+firefox127.0 7 7
+firefox132.0 12 12
+cloudflare 12 12
+safari17.4.1 2 2
+safari14.0 3 3
+safari18.3 4 4
+firefox126.0 7 7
+chrome39.0.2171.99 2 2
+Unknown 13 12
+chrome83.0.4103.61 2 2
+safari15.6.7 1 1
+safari16.5.2 1 1
+chrome64.0.3282.140 2 2
+safari12.1.2 1 1
+chrome131.0.0.0 1 1
+edge120 3 3
+chrome133.0.0.0 9 9
+safari15.4 2 2
+safari15.5 1 1
+chrome115.0.0.0 1 1
+firefox100.0 1 1
+safari18.0.1 1 1
+safari15.0 1 1
+firefox121.0 7 7
+safari15.2 1 1
+edge119 1 1
+firefox24.0 1 1
+chrome137.0.0.0 22 7
+firefox102.0 2 2
+chrome104.0.0.0 3 3
+chrome98.0.4758.102 1 1
+safari5.1 2 2
+safari13.1.1 1 1
+chrome117.0.0.0 2 2
+safari18.4 2 2
+safari18.5 1 1
+edge12 3 3
+chrome99.0.4844.84 1 1
+firefox116.0 2 2
+safari10.1.2 1 1
+chrome76.0.3809.132 3 3
+firefox136.0 12 12
+safari14.0.1 1 1
+safari13.0.5 1 1
+safari18.3.1 1 1
+chrome116.0.0.0 6 6
+chrome135.0.0.0 20 20
+chrome132.0.0.0 9 9
+safari14.1.2 3 3
+chrome136.0.7103.113 47 4
+safari17.11 1 1
+safari16.1 3 3
+safari5.0.4 1 1
+chrome66.0.3359.181 3 3
+safari14.0.3 1 1
+safari5.0.3 1 1
+chrome124.0.0.0 7 7
+chrome120.0.0.0 16 16
+safari13.1 1 1
+chrome118.0.0.0 9 9
+safari18.2 5 5
+firefox131.0 5 5
+safari9.0.2 2 2
+safari9.1.1 1 1
+chrome119.0.0.0 9 9
+firefox107.0 1 1
+firefox111.0 2 2
+firefox128.0 6 6
+chrome127.0.0.0 22 7
+chrome134.0.6998.35 3 1
+safari17.2 1 1
+safari12.1.1 1 1
+safari12.0.2 1 1
+chrome60.0.3112.107 13 13
+safari15.6 1 1
+safari16.3 1 1
+chrome77.0.3865.75 1 1
+safari4.0 1 1
+firefox129.0 4 4
+chrome91.0.4472.124 2 2
+firefox124.0 11 11
+firefox125.0 10 10
+chrome126.0.0.0 15 15
+safari13.0.3 2 2
+safari 18 18
+firefox133.0 9 9
+safari17.0 3 3
+chrome123.0.0.0 11 11
+safari13.0.1 1 1
+safari17.3.56 1 1
+safari8.0 1 1
+chrome114.0.0.0 6 5
+safari17.5 5 5
+safari17.4 2 2
+firefox120.0 7 7
+chrome121.0.0.0 7 7
+safari13.1.2 1 1
+chrome128.0.0.0 4 4
+chrome110.0.0.0 4 4
+safari15.1 1 1
+chrome105.0.0.0 4 4
+safari17.8 1 1
+chrome129.0.0.0 17 17
+firefox137.0 5 5
+firefox122.0 8 8
+chrome88.0.4324.182 2 2
+firefox117.0 1 1
+chrome117.0.5938.132 41 12
+safari18.1.1 2 2
+safari17.3.1 2 2
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 10
+fasthttp 20250602191732
+\ 20250623101958
+Cpanel-HTTP-Client/1.0 20250606032724
+Mozilla/5.0 20250626014953
+Cloudflare-SSLDetector 20250614073704
+Python/3.10_aiohttp/3.11.11 20250601123244
+Python/3.11_aiohttp/3.12.13 20250618212821
+Mozilla/5.0_(compatible;_Dataprovider.com) 20250622084646
+python-requests/2.32.3 20250604155058
+python-httpx/0.28.1 20250603050142
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 7
+python-requests/2.32.3 20250604155058
+\ 20250623101958
+Python/3.11_aiohttp/3.12.13 20250618212821
+Cpanel-HTTP-Client/1.0 20250606032724
+python-httpx/0.28.1 20250603050142
+fasthttp 20250602191732
+Python/3.10_aiohttp/3.11.11 20250601123244
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 129 130
+From1 12 12
+From2 2 2
+From3 26 119
+From4 437 513
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+www_google_com 1 1
+www_bing_com 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 11
+https://cpanel.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk/cPanel_magic_revision_1648610195/unprotected/cpanel/fonts/open_sans/open_sans.min.css 9 9
+https://webmail.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk/cPanel_magic_revision_1648610195/unprotected/cpanel/fonts/open_sans/open_sans.min.css 6 6
+http://WEBMAIL.D849D1896A5932E5C4E61E5B986F482A-19035.SITES.K-HOSTING.CO.UK 4 4
+http://CPANEL.D849D1896A5932E5C4E61E5B986F482A-19035.SITES.K-HOSTING.CO.UK 4 4
+http://webmail.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk 2 2
+http://cpanel.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk 1 1
+https://cpanel.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk/cPanel_magic_revision_1692300325/unprotected/cpanel/style_v2_optimized.css 0 21
+https://webmail.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk 0 6
+https://cpanel.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk 0 9
+https://mail.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk/fr 0 45
+https://webmail.d849d1896a5932e5c4e61e5b986f482a-19035.sites.k-hosting.co.uk/cPanel_magic_revision_1692300325/unprotected/cpanel/style_v2_optimized.css 0 12
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 5
+406 2 1558
+404 166 207666
+401 87 3806
+403 4 4968
+302 886 17400
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 74
+/pages/920-quiz-823-copy/index.html 1 -
+/lander/corichneviy-gaz-tozhe_1727093102/index.html 1 -
+/pages/898-dupe-no-bb-2/index.html 1 -
+/pszmbeawqxtadkb/bot-5-gazprom-ny-2025-green-v2-2/index.html 1 -
+/lander/gazinvest-spy3voprosa-thankspidarasgaz/ 1 -
+/lander/viplata_prodag/images/SberInvest-Logo.svg 1 -
+/magento_version 1 -
+/lander/gazrusinvest_ru_land_blue-narodnoe-dostoyanie-sliderviplaty_obj_js_v2/ 1 -
+/pszmbeawqxtadkb/298-w--ny2025-3/index.html 1 -
+/lander/sber-chat-180---klimat/ 1 -
+/lander/gazinvest-prelanderbankomatsssrdayrussia1kanal-thankspidarasgazinvest/ 1 -
+/short/116903 1 -
+/lander/gazinvest-livetranslation_darimpribyl_voprosnavozrast-thanksdavid_nopoisk_pidargazinvest/index.php 1 -
+/.well-known/passkey-endpoints 1 -
+/lander/sberchat5v4_tds_newcrm_038-vnutr_1721815245/index.php 1 -
+/egfhncf6dcaynn5d/898-copy-gazinvest_2_1730725530/index.html 1 -
+/tinkoff-14/ 1 -
+/typo3/sysext/core/Resources/Public/Images/typo3_orange.svg 1 -
+/pages/masl-gazinvest_1/index.html 1 -
+/pages/997-duplicate/index.html 1 -
+/lander/sberchatick_1727164035/index.html 1 -
+/T8LMdb3N 1 -
+/lander/sber-quiz-new---ip-fix---p---328_old/index.html 1 -
+/lander/ru_gazinvest_1732269845/index.html 1 -
+/sitemap.xml 2 -
+/sber-ai-chat----sberq-v2-klmt-/ 1 -
+/pages/poiskovuy-bot-gazinvest-thanks-page-4/ 1 -
+/robots.txt 81 -
+/3vt4yTCT 1 -
+/lander/mod_26/index.php 1 -
+/lander/opros-tip33a3f11_1720019482/index.html 1 -
+/lander/gazinvest_ru_quiz20-srazu-voprosi-_obj_js_v2/ 1 -
+/lander/gzsdg6_1731705201/index.html 1 -
+/pages/298-w--ny2025-3/index.html 1 -
+/lander/1723016896/images/logo.svg 1 -
+/lander/tinkoff_new_kadam--no-email-/ 1 -
+/lander/sberchat5v4_tds_newcrm_028-vnutr/index.php 1 -
+/lander/test-land_1725520749/form.php 1 -
+/lander/-sa--sber_-cha50_1727774562/index.php 1 -
+/gazzar/ 2 -
+/tinkopros/ 1 -
+/pszmbeawqxtadkb/1015-duble-gazinvest-4/index.html 1 -
+/pages/poiskovuy-bot-gazinvest-thanks-page-4 1 -
+/config 1 -
+/wp-login.php 4 -
+/lander/kyoto-gazchat-test-video_1731945263/index.html 1 -
+/cms/wp-includes/wlwmanifest.xml 2 -
+/lander/gazinvest_short_land_obj_js_v2/ 1 -
+/lander/gasinvVIOLET_183945_92/ 1 -
+/lander/gazinvest_quiz20-ok-bg-politika-_obj_js_v2/ 1 -
+/ads.txt 4 -
+/lander/sber-hybrid-form--2q----papal----sberq-v2-papal-/index.html 1 -
+/lander/-w--sber-chat/ 1 -
+/main 1 -
+/uploaded_script.php 1 www.google.com
+/lander/noviy5--s-novoy-verstcoy-/ 1 -
+/@about 2 -
+/lander/fio-ebaka_1727957646/index.html 1 -
+/5/54/gazrusi/index.html 1 -
+/lander/gazinvest-livetranslationpoisk-thankssearchpidargazinvest/ 1 -
+/layouts/System/VisitorIdentification.aspx 1 -
+/lander/gazrusinvest_ru_land_blue-narodnoe-dostoyanie-bganim_obj_js_v2/index.php 1 -
+/lander/sm-crm-online-1/index.html 1 -
+/lander/cachalovo-noviy-diz-gaznivests-everyze-bez-mo_1721209764/ 1 -
+/lander/gazprom_land_1727276673/index.php 1 -
+/lander/sberchat5v4_tds_newcrm_017-vnutr/images/logo.svg 1 -
+/lander/fadfj55o9f/index.html 1 -
+/sitemap.xml.gz 2 -
+/lander/sberchat5v4_tds_newcrm_038-vnutr/ 1 -
+/lander/gazprom-leadforma-thankspidarasgaz/ 2 -
+/5/131/131-robot-abramov/index.html 1 -
+/lander/viplatca-novaya_1732100040/index.html 1 -
+/100k 1 -
+/pages/504-dupe-9th-of-may-2_1746004336-4/index.html 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 119
+207.244.239.105 420 420 6571740 20250629212017
+35.181.155.242 12 12 148792 20250614062128
+52.11.171.106 8 8 99181 20250625235156
+146.70.185.32 8 10 16736 20250601123835
+2a06:98c0:360b:3455:84ac:cc38:4211:534e 6 6 58658 20250614073703
+172.70.17.93 6 6 56886 20250614073704
+35.205.64.121 6 6 19848 20250618212821
+205.169.39.0 4 14 122430 20250603061014
+34.122.147.229 4 13 121299 20250602221122
+205.169.39.57 4 13 121300 20250603061006
+205.169.39.51 4 14 122432 20250624015929
+34.123.170.104 4 14 122430 20250602221122
+172.121.209.212 3 3 28886 20250627165350
+107.174.224.18 3 3 40442 20250603043701
+198.211.113.212 3 3 46941 20250629223243
+104.224.66.18 3 3 28886 20250610021825
+47.237.114.71 3 3 87775 20250602191732
+104.232.39.51 2 2 19848 20250627165346
+45.5.67.48 2 2 19848 20250610021836
+57.129.137.190 2 2 19848 20250624141528
+94.23.247.18 2 2 18962 20250609164318
+47.237.111.21 2 2 50247 20250602191730
+149.56.150.112 2 2 9924 20250622084646
+15.204.182.106 2 2 19848 20250603025743
+164.92.219.140 2 3 19766 20250614104835
+159.89.127.68 1 1 15647 20250603132645
+93.158.91.11 1 1 9924 20250630163549
+137.184.203.255 1 1 12398 20250602211724
+68.183.42.202 1 1 12398 20250604192403
+23.80.138.37 1 1 9924 20250623005940
+91.231.89.36 1 1 37533 20250603111206
+91.231.89.121 1 1 37545 20250603111828
+54.145.149.172 1 1 9924 20250604213810
+8.222.128.240 1 1 15647 20250602155014
+47.82.61.117 1 1 9038 20250603205655
+34.221.23.39 1 1 9924 20250617062938
+74.125.151.105 0 6 2566472 
+154.28.229.46 1 1 9924 20250601144914
+165.22.65.75 1 1 12395 20250606062227
+178.176.170.56 1 1 9924 20250605235758
+142.93.222.146 1 1 9924 20250606195025
+2406:3003:2007:629e:4c96:1ebb:829b:f199 1 1 9924 20250601140303
+193.17.44.106 1 1 9924 20250601123244
+77.72.2.41 1 1 64 20250606032724
+144.126.208.40 1 1 9924 20250605014236
+193.32.126.156 1 1 12397 20250602141632
+192.178.16.98 0 13 5856896 
+139.59.35.183 1 1 15647 20250605195109
+159.223.5.2 1 1 9924 20250604100116
+137.184.90.238 1 1 9924 20250607023226
+134.199.231.98 1 1 9924 20250604191553
+147.182.214.179 1 1 12394 20250606191156
+192.178.4.99 1 1 9924 20250604060205
+23.234.101.84 1 1 9924 20250602134601
+74.125.216.2 1 3 197128 20250613041658
+2a01:e0a:a8a:f360:64e4:35be:2005:535f 1 1 9924 20250624110305
+5.133.192.108 1 1 9924 20250621092537
+66.249.89.162 1 5 1387289 20250613101514
+2406:3003:2007:629e:386f:e44:d0f3:418d 1 1 9924 20250604155058
+159.223.133.31 1 1 15647 20250601210343
+149.56.150.111 1 1 9924 20250622084010
+139.59.178.196 1 1 12395 20250602204712
+107.172.0.189 1 1 9924 20250616030530
+154.28.229.88 1 1 9924 20250601234311
+157.245.108.0 1 1 15647 20250628100623
+104.248.16.16 1 1 15647 20250628050447
+164.92.210.22 1 1 9924 20250619070812
+178.128.231.204 1 1 9924 20250602195123
+54.202.143.140 1 1 9924 20250605032600
+165.232.71.141 1 1 9924 20250605074503
+47.82.60.246 1 1 9038 20250604085734
+74.125.151.104 1 3 2295251 20250612235645
+161.35.115.249 1 1 12394 20250604190730
+74.125.151.103 0 7 556624 
+35.93.103.34 1 1 9924 20250604045824
+137.184.193.38 1 1 12400 20250610160319
+64.23.180.237 1 1 15647 20250614150119
+2001:861:c51:3330:d155:b185:1465:be33 1 16 5418347 20250608190812
+68.183.71.145 1 1 15647 20250605193947
+154.28.229.195 1 1 9924 20250602030208
+91.196.152.86 1 1 9924 20250603112416
+178.157.64.230 1 1 9924 20250623101958
+23.234.102.149 1 1 9924 20250602140832
+178.128.225.24 1 1 15647 20250603204801
+5.133.192.127 1 1 9924 20250605170119
+3.38.42.64 1 2 16654 20250603050136
+147.182.204.132 1 1 15647 20250601204204
+2001:41d0:404:200::2aa 1 16 5418347 20250609170105
+205.169.39.252 1 1 12393 20250602221158
+87.89.48.69 1 1 9924 20250609185350
+23.234.70.83 1 1 12405 20250602150605
+66.249.89.163 0 3 1591606 
+2a05:6e02:113e:5710:20cf:55a9:aca3:c13b 1 1 9924 20250626014953
+2001:41d0:305:2100::587a 2 17 5427035 20250609184339
+2c0f:ecf0:6f0:2300:a97f:59ea:5374:831f 1 1 9924 20250620090538
+138.197.96.98 1 1 15647 20250614114744
+159.65.147.48 1 1 9924 20250603021551
+74.125.216.4 0 4 2780526 
+5.133.192.99 1 1 9924 20250613172348
+165.227.47.144 1 1 12398 20250602205456
+34.237.143.75 2 2 24804 20250617114400
+34.221.85.179 1 1 9924 20250624041845
+196.115.113.31 1 1 9038 20250629173830
+2406:3003:2007:629e:f546:8599:4af:4424 1 1 9924 20250603032226
+159.89.175.52 1 1 12403 20250624125020
+159.89.231.8 1 1 9924 20250618154736
+45.55.165.225 1 1 15647 20250603195353
+157.245.39.146 1 1 12400 20250620103406
+137.184.174.119 1 1 15647 20250611231509
+192.178.16.99 1 14 3539020 20250604055645
+52.90.77.225 1 1 9924 20250618043258
+165.22.183.100 1 1 15647 20250625032130
+192.178.16.100 1 5 1440778 20250604055648
+66.249.89.164 0 8 2439452 
+205.169.39.151 1 1 12397 20250602221156
+157.245.37.5 1 1 12399 20250606191426
+54.184.82.70 1 1 9924 20250613020448
+143.110.225.209 1 1 15647 20250605134326
+74.125.216.3 0 7 2433881 
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 30
+20250601 20 22 162113 9
+20250602 47 66 864863 24
+20250603 49 69 891573 24
+20250604 35 65 11305596 19
+20250605 32 32 472089 16
+20250606 29 29 422704 13
+20250607 25 25 385452 9
+20250608 26 41 5802913 10
+20250609 32 62 11287699 13
+20250610 30 30 436662 11
+20250611 25 25 391175 9
+20250612 25 40 5793875 9
+20250613 28 56 11225258 12
+20250614 52 53 690924 14
+20250615 24 24 375528 8
+20250616 19 19 291570 7
+20250617 3 3 34728 2
+20250618 8 8 39696 3
+20250619 1 1 9924 1
+20250620 2 2 22324 2
+20250621 1 1 9924 1
+20250622 3 3 19848 2
+20250623 2 2 19848 2
+20250624 9 19 174531 5
+20250625 3 3 40441 2
+20250626 4 4 56865 2
+20250627 26 26 377321 9
+20250628 26 26 406822 10
+20250629 19 19 290684 7
+20250630 1 1 9924 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 5
+30s-2mn 8
+5mn-15mn 67
+15mn-30mn 1
+2mn-5mn 31
+0s-30s 149
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 17
+/fr 524 7638904 218 219
+/ 39 509629 31 23
+/en 13 99418 5 5
+/cPanel_magic_revision_1648610195/unprotected/cpanel/fonts/open_sans/OpenSans-Semibold-webfont.woff 5 114540 0 0
+/cPanel_magic_revision_1648610195/unprotected/cpanel/fonts/open_sans/OpenSans-Bold-webfont.woff 5 112160 0 5
+/cPanel_magic_revision_1648610195/unprotected/cpanel/fonts/open_sans/OpenSans-Regular-webfont.woff 5 113300 0 0
+/sitemap.xml 3 112599 1 2
+/wordpress 2 24797 0 0
+/wp 2 24791 0 0
+/old 1 12400 0 0
+/backup 1 12403 0 0
+/blog 1 12403 0 1
+/webmail 1 12401 0 0
+/temp 1 12401 0 0
+/test 1 12399 0 0
+/.well-known/acme-challenge/XAUE7LKA89AO2DQWT1D0PE-3BCNWZBBX 1 64 1 1
+/new 1 12397 0 0
+END_SIDER
+
+# Payload Range - Payload Frequency
+BEGIN_FILESIZE 7
+2K-5K 21
+44-100 65
+100-500 18
+1K-2K 180
+500-1K 64
+5K+ 778
+0-44 959
+END_FILESIZE

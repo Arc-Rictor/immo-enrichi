@@ -1,0 +1,1 @@
+import{J as c,Q as i}from"./app-ae185ee3.js";function g(){const s=c({});function u(t,a={}){if(t===void 0)return;let l=t.toLowerCase(),n=i().props.language,r=Object.keys(n).reduce((e,o)=>l===o.toLowerCase()?n[o]:e,t);return Object.keys(a).forEach(e=>{r=r.replace(`:${e}`,a[e])}),r}return{...s,__:u}}export{g as u};

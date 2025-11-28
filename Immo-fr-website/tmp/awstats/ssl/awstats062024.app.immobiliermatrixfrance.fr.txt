@@ -1,0 +1,358 @@
+AWSTATS DATA FILE 7.8 (build 20200416)
+# If you remove this file, all statistics for date 202406 will be lost/reset.
+# Last config file used to build this data file was /home/ddaeceeb/tmp/awstats/ssl/awstats.app.immobiliermatrixfrance.fr.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2030                
+POS_TIME 2691                
+POS_VISITOR 9108                
+POS_DAY 10019               
+POS_DOMAIN 3334                
+POS_LOGIN 3636                
+POS_ROBOT 3791                
+POS_WORMS 4037                
+POS_EMAILSENDER 4168                
+POS_EMAILRECEIVER 4311                
+POS_SESSION 10400               
+POS_SIDER 10606               
+POS_FILETYPES 4446                
+POS_DOWNLOADS 4649                
+POS_OS 4697                
+POS_BROWSER 4819                
+POS_SCREENSIZE 4948                
+POS_UNKNOWNREFERER 5022                
+POS_UNKNOWNREFERERBROWSER 5171                
+POS_ORIGIN 5315                
+POS_SEREFERRALS 5452                
+POS_PAGEREFS 5596                
+POS_SEARCHWORDS 5744                
+POS_KEYWORDS 5896                
+POS_MISC 2355                
+POS_ERRORS 5955                
+POS_CLUSTER 3492                
+POS_SIDER_404 6112                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20240701112344 3 381 13992028003969
+FirstTime 0
+LastTime 20240629114952
+LastUpdate 20240701131350 3 0 2 0 0
+TotalVisits 21                  
+TotalUnique 17                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 17                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+JavascriptDisabled 0 0 0
+AddToFavourites 0 0 0
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+RealPlayerSupport 0 0 0
+FlashSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+PDFSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 0 0 0
+1 0 0 0 4 5 13786
+2 0 0 0 3 17 114593
+3 1 1 12046 3 3 645
+4 0 0 0 1 1 216
+5 0 0 0 3 3 12475
+6 0 0 0 3 3 12475
+7 0 0 0 0 0 0
+8 0 0 0 0 0 0
+9 48 115 13950488 14 14 13930
+10 33 42 2226899 12 182 435196
+11 59 184 22457922 20 54 69307
+12 25 86 5490584 16 43 206092
+13 0 0 0 0 0 0
+14 0 0 0 0 14 96451
+15 5 38 2130826 6 20 109576
+16 22 87 8335792 15 55 326214
+17 0 0 0 4 18 120781
+18 0 0 0 0 0 0
+19 2 2 24480 4 4 788
+20 2 3 33567 8 8 13479
+21 0 0 0 1 15 108508
+22 0 0 0 6 19 114722
+23 9 17 890454 12 12 14508
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 6
+ip 141 382 40735604
+gb 57 184 14735315
+us 5 5 36526
+ca 1 1 12046
+nl 1 1 12434
+au 1 2 21133
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 3
+bingbot/ 146 1063937 20240628160538 9
+Applebot/ 31 223631 20240613121830 2
+no_user_agent 8 96368 20240629053321 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 7
+png 54 13670406 0 0
+Unknown 206 1492461 0 0
+css 28 75152 0 0
+jpg 79 36392924 0 0
+webp 10 1322852 0 0
+js 193 1266298 0 0
+jpeg 5 1332965 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 4
+win10 318 72
+android10 14 6
+Unknown 2 2
+macosx15 241 126
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 4
+chrome121.0.0.0 8 7
+chrome125.0.0.0 390 153
+Unknown 2 2
+chrome126.0.0.0 175 44
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 1
+Stripe/1.0_(_https://stripe.com/docs/webhooks) 20240604232940
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+Stripe/1.0_(_https://stripe.com/docs/webhooks) 20240604232940
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 17 211
+From1 0 0
+From2 0 0
+From3 0 0
+From4 189 364
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 7
+405 2 1250
+419 2 90
+404 189 376488
+403 1 1154
+302 97 19198
+422 11 1131
+303 1 495
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 37
+/build/assets/ListingShow-a05549a2.css 3 https://app.immobiliermatrixfrance.fr/listings
+/storage/21/image-asset.jpeg 11 https://app.immobiliermatrixfrance.fr/listings
+/storage/8/800x600_4a4b56524f8cc63b833d96f6e38b94dd[1].jpg 25 -
+/build/assets/ListingEdit-e1664a90.js 3 -
+/storage/104/3f56be4095c515d8cd3640995805f8b162856f87.jpg 11 https://app.immobiliermatrixfrance.fr/listings
+/favicon.png 1 https://app.immobiliermatrixfrance.fr/listings
+/build/assets/SearchIndex-8a870f2e.css 2 https://app.immobiliermatrixfrance.fr/listings
+/storage/11/IMGP0045.JPG 1 https://app.immobiliermatrixfrance.fr/listings/72582035
+/build/assets/PropertyStats-366ac241.js 1 -
+/build/assets/TextAreaInput-745884ca.js 3 -
+/build/assets/DialogModal-eef6d14b.js 2 -
+/build/assets/ListingShow-1649de98.js 2 -
+/storage/10/IMGP0044.JPG 1 https://app.immobiliermatrixfrance.fr/listings/72582035
+/storage/80/3f56be4095c515d8cd3640995805f8b162856f87.jpg 11 https://app.immobiliermatrixfrance.fr/listings
+/storage/76/e0c5933a966650bb6820f0c74979a8ad80943a97.jpg 10 https://app.immobiliermatrixfrance.fr/listings
+/build/assets/Listing-506f9c47.js 1 -
+/storage/34/mission_impossible_dead_reckoning_partie_1.webp 1 https://app.immobiliermatrixfrance.fr/listings/46605939
+/build/assets/Dashboard-37685b55.js 1 -
+/build/assets/SelectInput-702df77a.js 3 -
+/storage/39/20220519_182341.jpg 11 https://app.immobiliermatrixfrance.fr/listings
+/storage/66/89174d30d2077f7656e1f3bcb396976e90fe8b61.webp 11 https://app.immobiliermatrixfrance.fr/listings
+/storage/78/3d33d8f61ef07f6ebd59dd703b5b5806a6ee4955.jpg 11 https://app.immobiliermatrixfrance.fr/listings
+/storage/15/IMGP0047.JPG 1 https://app.immobiliermatrixfrance.fr/listings/72582035
+/build/assets/SecondaryButton-f7269fa0.js 2 -
+/storage/82/9f0ae03e8272910be95308b2f036bf2884557a23-(1).jpg 11 https://app.immobiliermatrixfrance.fr/listings
+/storage/16/IMGP0047.JPG 1 https://app.immobiliermatrixfrance.fr/listings/72582035
+/storage/28/Screenshot-2024-01-26-155301.png 11 https://app.immobiliermatrixfrance.fr/listings
+/storage/32/Mission-Impossible-7-cast-194c971.jpg 1 https://app.immobiliermatrixfrance.fr/listings/46605939
+/build/assets/SectionTitle-45da59a4.js 3 -
+/storage/37/20220519_182341.jpg 14 https://app.immobiliermatrixfrance.fr/listings
+/build/assets/SearchSection-06978c1f.js 1 -
+/build/assets/FormSectionInputGroup-0ec8ee9b.js 3 -
+/build/assets/SearchIndex-99263710.js 1 -
+/build/assets/focus-management-b7e695de.js 1 -
+/storage/app/public/8/800x600_4a4b56524f8cc63b833d96f6e38b94dd[1].jpg 1 -
+/storage/14/IMGP0046.JPG 1 https://app.immobiliermatrixfrance.fr/listings/72582035
+/storage/63/house-2.webp 11 https://app.immobiliermatrixfrance.fr/listings
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 17
+2a00:23c8:891:2e01:2cda:7d76:bb16:586c 58 96 11861957 20240603123004
+193.237.248.86 48 169 12663247 20240629114952
+2a00:23c8:891:2e01:a01c:735d:67d4:bd29 48 115 13950488 20240606093519
+2001:861:c51:3330:d155:b185:1465:be33 21 98 8375139 20240621153310
+2001:861:c51:3330:ad07:f683:bedd:b70f 8 64 6439082 20240610161551
+86.148.156.238 8 14 2060022 20240603103021
+2a00:23c8:891:2e01:cc97:f8f9:c6fa:4c5c 5 8 96892 20240603105713
+161.35.121.254 1 1 12046 20240622232706
+159.89.124.90 1 1 12046 20240628193011
+54.187.174.169 1 1 0 20240603232940
+143.198.74.59 1 1 12046 20240627151333
+139.59.173.175 1 2 21133 20240624205143
+164.90.201.207 1 1 12434 20240602194108
+54.187.205.235 1 1 0 20240604232940
+188.166.147.98 1 1 12434 20240604201150
+2001:861:c51:3330:ed36:9cab:f775:fa60 1 1 12046 20240611160036
+167.172.60.237 1 1 12046 20240613031857
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 14
+20240602 1 1 12434 1
+20240603 78 133 14897279 5
+20240604 2 2 12434 2
+20240605 6 56 5420896 1
+20240606 61 137 15835152 2
+20240610 8 64 6439082 1
+20240611 1 1 12046 1
+20240613 1 1 12046 1
+20240621 2 20 1069579 1
+20240622 1 1 12046 1
+20240624 1 2 21133 1
+20240627 1 1 12046 1
+20240628 3 18 1061247 2
+20240629 40 138 10735638 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+2mn-5mn 2
+5mn-15mn 2
+30s-2mn 3
+0s-30s 11
+1h+ 1
+15mn-30mn 1
+30mn-1h 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 33
+/listings/create 27 125604 0 0
+/login 26 243545 14 10
+/listings 24 298297 2 1
+/_debugbar/open 22 197095 0 0
+/search 17 26579 0 0
+/dashboard 15 68983 0 1
+/register 9 56506 3 2
+/listings/53240307/edit 9 96297 0 0
+/listings/72582035 6 10894 0 0
+/listings/45677948/edit 5 5560 0 0
+/listings/84970076/edit 5 23287 0 0
+/listings/53240307 5 18088 0 0
+/listings/80181192 4 8112 0 0
+/media-library-pro/uploads 3 717 0 0
+/register/agent 3 9411 0 1
+/listings/78966009/edit 3 16352 0 0
+/listings/85020871 3 5355 0 0
+/forgot-password 2 688 0 0
+/listings/45677948 2 2248 0 1
+/listings/76854985/edit 2 9176 0 1
+/stripe/webhook 2 0 2 2
+/listings/46578326/edit 1 4767 0 1
+/user/profile 1 772 0 0
+/listings/76854985 1 1592 0 0
+/listings/46605939 1 1895 0 0
+/_debugbar/assets/stylesheets 1 125653 0 0
+/listings/96568810 1 2419 0 0
+/reset-password/a48fd6f1981e2f85f2f5ce72723ec34651a1639afe39ef46e9319d85ae165d09 1 8457 0 0
+/listings/38545898 1 1971 0 0
+/listings/80181192/edit 1 1188 0 0
+/listings/15941996 1 1656 0 1
+/admin/users 1 2217 0 0
+/_debugbar/assets/javascript 1 117080 0 0
+END_SIDER

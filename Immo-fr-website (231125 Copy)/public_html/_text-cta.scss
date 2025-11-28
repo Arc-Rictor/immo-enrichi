@@ -1,0 +1,27 @@
+.text-cta {
+    &-content {
+        padding-top: 149px;
+        padding-bottom: 111px;
+        @include max-width(1023px) {
+            padding: $tab_padding;
+        }
+        @include max_width(767px) {
+            padding: 0;
+            padding-top: 50px;
+        }
+        .heading {
+            width: 70%;
+            @include max_width(1400px) {
+                width: 67%;
+            }
+            @include max_width(1023px) {
+                width: 77%;
+            }
+            @include max_width(767px) {
+                width: 92%;
+                text-align: center;
+                margin: auto;
+            }
+        }
+    }
+}

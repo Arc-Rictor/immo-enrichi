@@ -1,0 +1,1 @@
+import{_ as s}from"./_plugin-vue_export-helper-c27b6911.js";import{o as e,e as r,r as c}from"./app-ae185ee3.js";const t={},n={class:"col-span-12 sm:col-span-2 sm:grid sm:grid-cols-12 space-x-2"};function a(o,l){return e(),r("div",n,[c(o.$slots,"default")])}const _=s(t,[["render",a]]);export{_ as F};

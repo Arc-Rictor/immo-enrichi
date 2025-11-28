@@ -1,0 +1,83 @@
+.properties {
+    margin-top: -185px;
+    &-content {
+        background: $black;
+        color: $white;
+        cursor: pointer;
+        border-radius: 10px;
+        .properties-image {
+            img {
+                width: 100%;
+            }
+        }
+        .properties-text {
+            padding: 31px 25px 25px 25px;
+            .price {
+                font-size: $ad_price;
+                line-height: $line_ad_price;
+                color: $brand_orange_light;
+                font-family: $brand;
+                font-weight: 400;
+                @include max_width(1400px) {
+                    font-size: $tab_ad_price;
+                    line-height: $tab_line_ad_price;
+                }
+            }
+            .location {
+               font-size: $ad_title;
+               line-height: $line_ad_title;
+               font-family: $brand_2;
+               font-weight: 400; 
+               margin-top: 12px;
+               margin-bottom: 16px;
+               @include max_width(1400px) {
+                font-size: $tab_ad_title;
+                line-height: $tab_line_ad_title;
+               }
+            }
+            .description {
+                font-size: $ad_info;
+                line-height: $line_ad_info;
+                font-family: $brand_2;
+                font-weight: 400;
+                margin-bottom: 26px;
+                @include max_width(1400px) {
+                    font-size: $tab_ad_info;
+                    line-height: $tab_line_ad_info;
+                }
+            }
+            .property-info {
+                display: flex;
+                align-items: center;
+                .baths {
+                    margin: 0 35px;
+                    @include max_width(1400px) {
+                        margin: 0 15px;
+                    }
+                }
+                .info {
+                    display: flex;
+                    align-items: center;
+                    p {
+                        font-size: $property_info;
+                        line-height: $line_property_info;
+                        font-weight: 400;
+                        font-family: $brand_2;
+                        @include max_width(1400px) {
+                            font-size: $tab_property_info;
+                            line-height: $tab_line_property_info;
+                        }
+                    }
+                }
+                img {
+                    width: 100%;
+                    max-width: 20px;
+                    min-height: 20px;
+                    max-height: 20px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
