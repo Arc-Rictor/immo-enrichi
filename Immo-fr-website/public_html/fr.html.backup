@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVPV61PVMB"></script>
@@ -13,14 +13,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immo-Erichi</title>
+    <title>Immobilier Matrix France</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unna:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="changes-styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <!-- header -->
@@ -37,28 +37,28 @@
             <div class="nav-links">
                
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#latest-props">Latest Properties</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#features">Fonctionnalités</a></li>
+                    <li><a href="#latest-props">Derniers biens</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
                     <li><a href="#faqs">FAQ</a></li>
-                    <li><a href="mailto:imf-info@mail.com?subject=Enquiry from website">Contact Us</a></li>
+                    <li><a href="mailto:imf-info@mail.com?subject=Demande depuis le site web">Contactez-nous</a></li>
                 </ul>
                
             </div>
             <!-- log in -->
             <div class="log-in">
                 <div class="language">
-                    <a href="fr-changes.html" class="change">
-                        <p>FR</p>
-                        <img class="flag" src="./france.png" alt="country flag" onclick="changeLanguage()">
+                    <a href="en" class="change">
+                        <p>EN</p>
+                        <img class="flag" src="./english.png" alt="country flag" onclick="changeLanguage()">
                         <img src="./arrow-down.png" alt="" class="arrow">
                     </a>
                 </div>
 
-                <a class="head-sign" href="https://app.immobiliermatrixfrance.fr/register">Sign Up</a>
+                <a class="head-sign" href="https://app.immobiliermatrixfrance.fr/register">S'inscrire</a>
 
-                <a href="https://app.immobiliermatrixfrance.fr/login" class="log btn-header">Log In</a>
+                <a href="https://app.immobiliermatrixfrance.fr/login" class="log btn-header">S'identifier</a>
             </div>
             <!-- log in -->
 
@@ -73,15 +73,15 @@
 
             <div class="mobile-nav-menu">
                 <ul class="header-mob-nav">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#latest-props">Latest Properties</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#features">Fonctionnalités</a></li>
+                    <li><a href="#latest-props">Derniers biens</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
                     <li><a href="#faqs">FAQ</a></li>
-                    <li><a href="mailto:imf-info@mail.com?subject=Enquiry from website">Contact Us</a></li>
+                    <li><a href="mailto:imf-info@mail.com?subject=Demande depuis le site web">Contactez-nous</a></li>
                     <div class="log-mob">
-                        <li><a href="https://app.immobiliermatrixfrance.fr/register">Sign Up</a></li>
-                        <li><a href="https://app.immobiliermatrixfrance.fr/login">Log In</a></li>
+                        <li><a href="https://app.immobiliermatrixfrance.fr/register">S'inscrire</a></li>
+                        <li><a href="https://app.immobiliermatrixfrance.fr/login">Se connecter</a></li>
                     </div>
                 </ul>
             </div>
@@ -93,7 +93,7 @@
 
 
 
-<body class="english">
+<body class="french">
     <div class="homepage-hero">
         <div class="hero-gradient"></div>
         <div class="hero-gradient-white"></div>
@@ -103,40 +103,44 @@
             </div>
     
             <div class="sub-heading">
-                <h1 class="sub-heading">The real estate network powered by the strength of its agents.</h1>
-                <h2>Here, collaboration replaces competition.</h2>
-                <h2></h2>
-                <h2>Welcome to Immo-Erichi</h2>
-                <h2>Our platform has been designed to help all real estate agents in France collaborate effectively, grow their business, and increase their professional opportunities. List as many properties as you wish, access the entire local market, and keep your client.</h2>
-                <h2>Our main objective is to bring together real estate professionals within a dynamic and innovative network, fostering cooperation between agencies and pooling resources for faster and more profitable transactions.</h2>
-                <h2>Being an IE agent means being part of a win-win community: Being an IE agent means everyone wins: agents earn more, buyers save time, and trust is built across the entire region.</h2>
+                <h1 class="sub-heading">Agents du Futur</h1>
+                <h2>Conçue pour tous les Agents en France, notre nouvelle plateforme est destinée à stimuler les ventes, à attirer les acheteurs et à obtenir de nouveaux mandats.</h2>
+                <h2>Notre concept innovant donne aux Agents immobiliers des clés pour satisfaire chaque nouvel acheteur qui passe leur porte.</h2>
+                <h2>Les Agents peuvent désormais montrer aux clients toute une série de biens : ceux de leur propre liste, mais aussi ceux d'autres Agents du secteur. Cela permet aux acheteurs d'avoir une vue d'ensemble sur tous les biens qui leur correspondent sans avoir à faire le tour des agences !</h2>
+                <h2>Bien que l'objectif reste que l'acheteur choisisse des biens qui figurent sur la liste de l'Agent qui les propose, ce dernier peut désormais proposer une expérience complète en présentant à l'acheteur toutes les options qui s'offrent à lui sur le marché, même dans des régions différentes.</h2>
+                <h2>De plus, avec notre système, si le bien vendu appartient à un autre Agent, notre Agent de départ touche tout de même une part de la commission, ce qui contribue à alimenter un esprit de collaboration dans lequel aucune vente n'est ratée.</h2>
             </div>
     
             <div class="sign-up">
                 <a href="https://app.immobiliermatrixfrance.fr/register" class="btn">
-                    Sign up today
+                    Inscrivez-vous dès aujourd'hui
                 </a>
     
                <div class="registered">
-                    <p>Already registered?</p>
-                    <a href="https://app.immobiliermatrixfrance.fr/login">Log in</a>
+                    <p>Déjà inscrit?</p>
+                    <a href="https://app.immobiliermatrixfrance.fr/login">Connectez-vous</a>
                </div>
             </div>
 
+ <div class="sub-heading">
+                <h2>En plus d'être un concept éprouvé qui entretient le dynamisme du marché, notre solution est abordable pour tous les Agents.</h2>
+                <h2>Chacun peut s'abonner à notre plateforme pour le prix imbattable de 365€ par an. Cet abonnement permet aux Agents de mettre en ligne un nombre illimité de biens.</h2>
+            </div>
             
             <div class="info-banner">
                 <div class="wrapper info" style="justify-content: center;">
                     <!-- repeater -->
                     <div class="info-banner-content">
                         <h3 class="info-title" id="title">
-                            Making sales easier for real estate agencies
+                            Pour les agents immobiliers
                         </h3>
         
                         <p class="info-text" id="paragraphs">
-                            With your personal control panel, you can upload an unlimited number of properties and grow your professional visibility on the Immo-Erichi platform. Collaboration opportunities are at your fingertips!
+                            Avec votre panneau de contrôle personnel, vous pouvez téléchargez un nombre illimité de propriétés et étendez votre vitrine pour les vendeurs et les acheteurs. Les opportunités sont là pour vous !
+                            <!-- Téléchargez un nombre illimité de biens afin d'élargir votre vitrine pour les vendeurs et les acheteurs.  -->
                         </p>
         
-                        <a href="https://app.immobiliermatrixfrance.fr/register" class="create">Create an account now</a>
+                        <a href="https://app.immobiliermatrixfrance.fr/register" class="create">Créez un compte dès maintenant</a>
                     </div>
                     <!-- repeater -->
                 </div>
@@ -150,14 +154,14 @@
     <!-- fifty fifty -->
         <div class="cta-info">
             <div class="wrapper cta">
-            <div class="left">
+                <div class="left">
         
                     <p class="sub-heading" id="paragraphs">
-Just 3 simple steps to list your properties online
+Les Agents abonnés bénéficient de leur propre interface de contrôle personnelle, qui leur permet de gérer leurs annonces en ajoutant et en supprimant des biens à leur gré, ou encore de rechercher des biens pour le compte de leurs acheteurs.
                     </p>
                     
                     <p class="sub-heading" id="paragraphs">
-  We have done everything possible to simplify the work of real estate agents. Each agent has a personal control panel allowing them to upload an unlimited number of properties and publish them online in just a few minutes. Thanks to the IE platform, agents can efficiently manage their listings, increase their visibility, and grow their professional network.
+  En haut à droite de l'interface de contrôle se trouve une Icône Alerte qui sert à notifier les Agents lorsqu'un vendeur cherche à se faire représenter. Pour l'Agent, il suffit alors de cliquer sur l'Icône Alerte, qui leur donne les coordonnées du vendeur. Vous pouvez ensuite contacter ce vendeur et planifier le rendez-vous habituel. Toutefois, étant donné que tous les Agents abonnés ont accès à cette fonctionnalité, il est capital d'agir vite pour être le premier à répondre et décrocher le mandat !
                                     </p>
         
                 </div>
@@ -172,20 +176,20 @@ Just 3 simple steps to list your properties online
     <div class="cta-info">
         <div class="wrapper cta">
             <div class="left">
-                <h2 class="heading" id="small-heading">Discover the platform that unites French agencies</h2>
+                <h2 class="heading" id="small-heading">Découvrez des biens proposés par toutes les agences françaises sur une seule et même plateforme</h2>
 
                 <p class="sub-heading" id="paragraphs">
-                    With over 50,000 real estate agents in France, the partnership possibilities are endless. Our unique platform connects real estate professionals on a centralised site, with a single annual subscription that simplifies management and promotes collective success.
+                    Avec plus de 50 000 agents en France, les opportunités sont infinies. Notre plateforme unique met en relation les agents sur un seul et même site, avec une cotisation annuelle unique. 
                 </p>
 
                 <div class="sign-up">
                     <a href="https://app.immobiliermatrixfrance.fr/register" class="btn">
-                        Sign up today
+                        Inscrivez-vous dès aujourd'hui
                     </a>
         
                    <div class="registered">
-                        <p>Already registered?</p>
-                        <a href="https://app.immobiliermatrixfrance.fr/login">Log in</a>
+                        <p>Déjà inscrit?</p>
+                        <a href="https://app.immobiliermatrixfrance.fr/login">Connectez-vous</a>
                    </div>
                 </div>
             </div>
@@ -201,26 +205,26 @@ Just 3 simple steps to list your properties online
     <div class="list-banner-cta reverse-banner-cta">
         <div class="wrapper list-banner reverse">
             <div class="left">
-                <img class="bg" src="./list2.png" alt="">
+                <img class="bg" src="./list2_fr.png" alt="">
             </div>
 
             <div class="right">
                 <h2 class="heading" id="small-heading">
-                    Access the latest properties on the market and real-time information
+                    Accédez aux derniers biens du marché et à des informations en temps réel
                 </h2>
 
                 <p class="sub-heading" id="paragraphs">
-                    Our property listings are continuously updated, giving you an instant view of the real estate market. With this up-to-date data, IE agents can react quickly, anticipate trends, and seize new opportunities as soon as they appear.
+                    Nos listes de biens sont mises à jour en temps réel. Ainsi, vous pouvez voir les nouveaux biens dès qu'ils sont disponibles, ce qui signifie que vous pouvez très bien être le premier à faire une offre sur un bien très demandé.
                 </p>
 
                 <div class="sign-up">
                     <a href="https://app.immobiliermatrixfrance.fr/register" class="btn">
-                        Sign up today
+                        Inscrivez-vous dès aujourd'hui
                     </a>
         
                    <div class="registered">
-                        <p>Already registered?</p>
-                        <a href="https://app.immobiliermatrixfrance.fr/login">Log in</a>
+                        <p>Déjà inscrit?</p>
+                        <a href="https://app.immobiliermatrixfrance.fr/login">Connectez-vous</a>
                    </div>
                 </div>
             </div>
@@ -232,21 +236,21 @@ Just 3 simple steps to list your properties online
     <div class="latest-cta" id="latest-props">
         <div class="wrapper latest-cta-content">
             <h2 class="heading" id="heading">
-                Some of the latest properties listed on our platform
+                Quelques-uns des derniers biens mis en ligne sur notre plateforme
             </h2>
 
             <p class="sub-heading" id="subheading-large">
-                Every day, new properties are added by agents who are members of the Immo-Erichi network. Our platform centralises thousands of properties from professionals across France, offering a complete view of the market in real time. Sign up today to publish your listings and join the IE network. Already registered? Log in
+                Nous avons de nombreux biens disponibles à la vente et recevons un nombre important de nouvelles annonces chaque jour. Ne manquez pas les dernières nouveautés. 
             </p>
 
             <div class="create">
                 <a href="https://app.immobiliermatrixfrance.fr/register" class="btn-large latest-btn">
-                    Start your search today
+                    Commencez vos recherches dès aujourd'hui
                 </a>
     
                <div class="registered" id="registered">
-                    <p>Already registered?</p>
-                    <a href="https://app.immobiliermatrixfrance.fr/login">Log in</a>
+                    <p>Déjà inscrit?</p>
+                    <a href="https://app.immobiliermatrixfrance.fr/login">Connectez-vous</a>
                </div>
             </div>
         </div>
@@ -270,7 +274,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -278,7 +282,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -308,7 +312,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -316,7 +320,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -346,7 +350,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -354,7 +358,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -384,7 +388,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -392,7 +396,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -422,7 +426,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -430,7 +434,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -460,7 +464,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -468,7 +472,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -497,7 +501,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -505,7 +509,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -535,7 +539,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -543,7 +547,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -572,7 +576,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -580,7 +584,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -609,7 +613,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -617,7 +621,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -648,7 +652,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -656,7 +660,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -686,7 +690,7 @@ Just 3 simple steps to list your properties online
         
                     <div class="properties-text">
                         <p class="price">
-                            € 144,220.00
+                            € 144.220,00
                         </p>
                         
                         <p class="location">
@@ -694,7 +698,7 @@ Just 3 simple steps to list your properties online
                         </p>
         
                         <p class="description">
-                            Situated close to the sought after village of Monléon-Magnoac, this property is...
+                            Situated close to the sought after village of Monleon Magnoac, the property is...
                         </p>
         
                         <div class="property-info">
@@ -726,7 +730,7 @@ Just 3 simple steps to list your properties online
     <div class="text-cta">
         <div class="wrapper text-cta-content">
             <h2 class="heading" id="heading">
-                The simplest platform to collaborate and manage your properties in France.
+                Le moyen le plus simple d'acheter, de vendre et de gérer des biens immobiliers sur le marché français
             </h2>
         </div>
     </div>
@@ -735,42 +739,44 @@ Just 3 simple steps to list your properties online
     <!-- image text info -->
     <div class="image-text-info">
         <div class="image-text-info-content">
-            <div class="features-grid">
-                <div class="feature-card">
+            <div class="left">
+                <img src="./laptop_fr.png" alt="">
+            </div>
+
+            <div class="right">
+                <div class="right-content">
                     <div class="image-container orange">
                         <img src="./house.png" alt="">
                     </div>
                     <div class="text">
-                        <h3 class="title" id="title">List and manage your properties</h3>
-                        <p class="content" id="paragraphs">In just a few minutes, create your account and access all the features of our professional platform.</p>
+                        <h3 class="title" id="title">Acheter ou vendre un bien</h3>
+                        <p class="content" id="paragraphs">Pour accéder à notre plateforme, quelques minutes suffisent pour créer votre compte.</p>
                     </div>
                 </div>
-
-                <div class="feature-card">
+                <div class="right-content right-content-middle">
                     <div class="image-container light-green">
                         <img src="./house.png" alt="">
                     </div>
                     <div class="text">
-                        <h3 class="title" id="title">Flexible and easy to use</h3>
-                        <p class="content" id="paragraphs">We have worked hard to offer a simple, modern, and intuitive interface, designed specifically for agencies and real estate agents. Manage your properties, track your performance, and collaborate with other professionals with ease.</p>
+                        <h3 class="title" id="title">Flexible et facile à utiliser</h3>
+                        <p class="content" id="paragraphs">Nous avons travaillé d'arrache-pied pour faire en sorte que notre plateforme soit facile à utiliser pour les agences.</p>
                     </div>
                 </div>
-
-                <div class="feature-card">
+                <div class="right-content">
                     <div class="image-container purple">
                         <img src="./house.png" alt="">
                     </div>
                     <div class="text">
-                        <h3 class="title" id="title">A single subscription</h3>
-                        <p class="content" id="paragraphs">Access to the platform is quick and transparent: simply pay a single annual subscription by bank card to enjoy all Immo-Erichi services.</p>
+                        <h3 class="title" id="title">Une cotisation unique</h3>
+                        <p class="content" id="paragraphs">Pour accéder à notre plateforme, rien de plus simple : il vous suffit de payer votre accès une fois par an par carte bancaire.</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="features-button">
-                <a href="https://app.immobiliermatrixfrance.fr/register" class="btn-medium create-btn">
-                    Create an account
-                </a>
+                <div class="create">
+                    <a href="https://app.immobiliermatrixfrance.fr/register" class="btn-medium create-btn">
+                        créer un compte
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -780,7 +786,7 @@ Just 3 simple steps to list your properties online
     <div class="people-say" id="testimonials">
         <div class="people-say-content">
             <h2 class="heading" id="heading">
-                What people are saying...
+                Ils parlent de nous...
             </h2>
 
 
@@ -793,7 +799,7 @@ Just 3 simple steps to list your properties online
                     <!-- Slides -->
                     <div class="swiper-slide review-content">
                         <p id="paragraphs">
-                            "This new platform is the solution we've been waiting for"
+                            "Cette nouvelle plateforme est la solution que nous attendions"
                         </p>
         
                         <p class="people-name">
@@ -806,7 +812,7 @@ Just 3 simple steps to list your properties online
 
                     <div class="swiper-slide review-content">
                         <p id="paragraphs">
-                       "It's clear, user-friendly, and exactly what we've needed for a long time."
+                       “C'est clair, convivial et exactement ce dont nous avions besoin depuis longtemps.”
                         </p>
         
                         <p class="people-name">
@@ -819,7 +825,7 @@ Just 3 simple steps to list your properties online
 
                     <div class="swiper-slide review-content">
                         <p id="paragraphs">
-                            "This new platform is a game changer. The look is both professional and welcoming."
+                            “Cette nouvelle plateforme change la donne. Le look est à la fois professionnel et accueillant.”
                         </p>
         
                         <p class="people-name">
@@ -831,40 +837,40 @@ Just 3 simple steps to list your properties online
                     </div>
     <div class="swiper-slide review-content">
                         <p id="paragraphs">
-                            "Finally, a platform that puts collaboration first. My sales have increased since joining."
+                            "Cette nouvelle plateforme est la solution que nous attendions"
                         </p>
                     
                         <p class="people-name">
-                            Marie Dupont,
+                            Hugo Lemaire,
                         </p>
                         <p class="people-location">
-                            Lyon, France
+                            Versailles, France
                         </p>
                     </div>
                     
                     <div class="swiper-slide review-content">
                         <p id="paragraphs">
-                       "The ability to share listings with other agents has transformed how I work with clients."
+                       “C'est clair, convivial et exactement ce dont nous avions besoin depuis longtemps.”
                         </p>
                     
                         <p class="people-name">
-                            Antoine Bernard,
+                            Théo Moreau,
                         </p>
                         <p class="people-location">
-                            Bordeaux, France
+                            Saint-Denis, France
                         </p>
                     </div>
                     
                     <div class="swiper-slide review-content">
                         <p id="paragraphs">
-                            "Simple to use, great support, and the network keeps growing. Highly recommended."
+                            “Cette nouvelle plateforme change la donne. Le look est à la fois professionnel et accueillant.”
                         </p>
                     
                         <p class="people-name">
-                            Sophie Martin,
+                            Chloé Rousseau,
                         </p>
                         <p class="people-location">
-                            Nice, France
+                            Montmartre, Paris
                         </p>
                     </div>
 
@@ -889,33 +895,33 @@ Just 3 simple steps to list your properties online
                 <div class="accordions">
                     <!-- start of accordion -->
                     <div class="accordion">
-                        <h4 class="accordion__title">How much does the subscription cost?</h4>
+                        <h4 class="accordion__title">Combien coûte l'abonnement?</h4>
                         <div class="accordion__content cf">
-                            <p>The subscription for agents costs €365 per year. It allows unlimited property listings, as well as access to searches on the platform.</p>
+                            <p>L'abonnement pour les agents coûte 365 € par an. Il permet la mise en ligne d'un nombre illimité de biens, ainsi que l'accès aux recherches sur la plateforme.</p>
                         </div>
                     </div>
                     <!-- end of accordion -->
                     <!-- start of accordion -->
                     <div class="accordion">
-                        <h4 class="accordion__title">How do I sign up?</h4>
+                        <h4 class="accordion__title">Comment s'inscrire?</h4>
                         <div class="accordion__content cf">
-                            <p>To sign up, simply click on the "Create an account" button. You will be asked to provide your details, then redirected to the payment page.</p>
+                            <p>Pour s'inscrire, il suffit de cliquer sur le bouton « Créer un compte ». Vous serez invité(e) à indiquer vos coordonnées, puis redirigé(e) vers la page de paiement.</p>
                         </div>
                     </div>
                     <!-- end of accordion -->
                     <!-- start of accordion -->
                     <div class="accordion">
-                        <h4 class="accordion__title">I am an agency with hundreds of properties - how does the platform work?</h4>
+                        <h4 class="accordion__title">Je suis une agence qui possède des centaines de biens immobiliers - comment fonctionne la plateforme?</h4>
                         <div class="accordion__content cf">
-                            <p>Since agents have their own portfolio of properties, each agent registered as such can subscribe to the platform. If you are an agency without agents, it is up to the agency to subscribe.</p>
+                            <p>Étant donné que les agents ont leur propre portefeuille de biens immobiliers, chaque agent déclaré en tant que tel peut s'abonner à la plateforme. Si vous êtes une agence sans agents, c'est à l'agence de s'abonner. </p>
                         </div>
                     </div>
                     <!-- end of accordion -->
                     <!-- start of accordion -->
                     <div class="accordion">
-                        <h4 class="accordion__title">Do I need to re-register every year?</h4>
+                        <h4 class="accordion__title">Dois-je me réinscrire chaque année?</h4>
                         <div class="accordion__content cf">
-                            <p>No. Renewal is automatic each year. If you no longer wish to be subscribed, you must notify us 28 days before the renewal date.</p>
+                            <p>Non. Le renouvellement est automatique chaque année. Si vous ne souhaitez plus être abonné(e), vous devez nous en informer 28 jours avant la date de renouvellement.</p>
                         </div>
                     </div>
                     <!-- end of accordion -->
@@ -932,22 +938,22 @@ Just 3 simple steps to list your properties online
         <div class="ready-to-join-content wrapper">
             <div class="left">
                 <h2 class="small-heading" id="small-heading">
-                    Ready to join us?
+                    Prêt à nous rejoindre?
                 </h2>
 
                 <p class="join-text" id="paragraphs">
-                    Sign up in seconds using your details to create your account and immediately access the Immo-Erichi platform.
+                    Enregistrez-vous simplement avec vos coordonnées pour créer un compte et accédez instantanément à la plateforme.
                 </p>
 
                 <div class="create">
                     <a href="https://app.immobiliermatrixfrance.fr/register" class="btn">
-                        Create an account
+                        Créer un compte
                     </a>
                 </div>
             </div>
 
             <div class="right">
-                <img src="./join.png" alt="">
+                <img src="./join_fr.png" alt="">
             </div>
         </div>
     </div>
@@ -963,17 +969,17 @@ Just 3 simple steps to list your properties online
                 <!-- support menu -->
                 <div class="footer-menu-content footer-support">
                     <p class="heading">
-                        Useful Links
+                        Liens utiles
                     </p>
 
                     <!-- menu to remove -->
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#latest-props">Latest Properties</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#features">Fonctionnalités</a></li>
+                        <li><a href="#latest-props">Derniers biens</a></li>
+                        <li><a href="#testimonials">Témoignages</a></li>
                         <li><a href="#faqs">FAQ</a></li>
-                        <li><a href="mailto:imf-info@mail.com?subject=Enquiry from website">Contact Us</a></li>
+                        <li><a href="mailto:imf-info@mail.com?subject=Demande depuis le site web">Contactez-nous</a></li>
                     </ul>
                     <!-- menu to remove -->
                 </div>
@@ -982,14 +988,14 @@ Just 3 simple steps to list your properties online
                 <!-- legal menu -->
                 <div class="footer-menu-content">
                     <p class="heading">
-                        Legal
+                        Questions juridiques
                     </p>
 
                     <!-- menu to remove -->
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
                         <li><a href="#">Cookies</a></li>
-                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Conditions générales d'utilisation</a></li>
                     </ul>
                     <!-- menu to remove -->
                 </div>
@@ -997,7 +1003,7 @@ Just 3 simple steps to list your properties online
 
                 <div class="footer-menu-content">
                     <p class="social-links heading">
-                        Follow Us
+                        Suivez-nous
                     </p>
 
                     <ul>
@@ -1023,8 +1029,9 @@ Just 3 simple steps to list your properties online
             </div>
 
             <div class="bottom-footer">
-                <h2 class="footer-brand">Immo-Erichi</h2>
-                <span>&copy 2024 Immo-Erichi<span></span></span>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 747.96 133.54"><defs><style>.cls-1{fill:#f15a24;}.cls-2{fill:#fff;}</style></defs><polygon class="cls-1" points="474.09 5.21 546.82 37.47 557.54 37.47 474.22 0 399.24 30.09 262.13 30.09 262.13 34.94 400.11 34.94 474.09 5.21"/><rect class="cls-2" x="2.5" y="59.95" width="3.88" height="23.16"/><path class="cls-2" d="m18.97,70.26c0-.22-.01-.72-.04-1.51-.03-.48-.04-.86-.04-1.14.19.58.4,1.1.64,1.56.23.45.48.85.74,1.18l7.58,9.75h.94l7.32-9.84c.19-.23.39-.58.61-1.04.22-.46.43-.99.64-1.59-.07.41-.13.83-.16,1.27-.04.44-.05.89-.05,1.36v12.84h3.33v-19.02h-3.33l-8.7,12.33-9.46-12.33h-2.96v19.02h2.96v-12.84Z"/><path class="cls-2" d="m51.46,70.26c0-.22-.01-.72-.04-1.51-.03-.48-.04-.86-.04-1.14.19.58.4,1.1.64,1.56.23.45.48.85.74,1.18l7.58,9.75h.94l7.32-9.84c.19-.23.39-.58.61-1.04.22-.46.43-.99.64-1.59-.07.41-.13.83-.16,1.27s-.05.89-.05,1.36v12.84h3.33v-19.02h-3.33l-8.7,12.33-9.46-12.33h-2.96v19.02h2.96v-12.84Z"/><path class="cls-2" d="m85.42,83.1h13.74c1.81,0,3.04-.31,3.69-.94.65-.63.98-1.81.98-3.55v-10.01c0-1.74-.33-2.92-.99-3.56-.66-.64-1.88-.95-3.68-.95h-13.74c-1.8,0-3.02.32-3.68.95-.66.63-.99,1.82-.99,3.56v10.01c0,1.75.32,2.94.96,3.56.64.62,1.88.93,3.7.93Zm-1.07-16.19h15.88v13.32h-15.88v-13.32Z"/><path class="cls-2" d="m130.57,82.18c.91-.61,1.36-1.55,1.36-2.8v-2.43c0-1.07-.29-1.92-.88-2.55-.58-.64-1.44-1.01-2.56-1.13,1.15-.13,1.99-.46,2.52-.97.53-.52.79-1.28.79-2.29v-2.19c0-1.3-.33-2.25-.99-2.84-.66-.59-1.72-.89-3.18-.89h-16.06v19.02h14.85c1.85,0,3.23-.31,4.14-.92Zm-15.4-15.31h11.02c.77,0,1.31.11,1.6.34.29.23.44.63.44,1.22v1.8c0,.58-.13.99-.39,1.2-.26.22-.81.33-1.64.33h-11.02v-4.88Zm0,13.45v-5.78h11.02c.8,0,1.37.16,1.69.48.32.32.48.88.48,1.67v1.49c0,.8-.16,1.36-.47,1.68-.31.31-.88.47-1.7.47h-11.02Z"/><rect class="cls-2" x="139.44" y="64.13" width="3.57" height="18.97"/><polygon class="cls-2" points="169.33 80.23 154.54 80.23 154.54 64.09 150.95 64.09 150.95 83.1 169.33 83.1 169.33 80.23"/><rect class="cls-2" x="175.69" y="64.13" width="3.57" height="18.97"/><polygon class="cls-2" points="206.52 80.32 190.79 80.32 190.79 74.62 200.17 74.62 200.17 71.8 190.79 71.8 190.79 66.91 206.34 66.91 206.34 64.09 187.2 64.09 187.2 83.1 206.52 83.1 206.52 80.32"/><path class="cls-2" d="m217.05,75.65h5.19l7.58,7.45h4.8l-8.39-7.45h2.52c1.42,0,2.44-.28,3.06-.85.62-.57.93-1.5.93-2.78v-4.25c0-1.3-.31-2.24-.93-2.82-.62-.58-1.64-.86-3.06-.86h-15.29v19.02h3.59v-7.45Zm0-8.78h10.12c.77,0,1.31.15,1.6.44.29.29.44.79.44,1.49v2.28c0,.76-.14,1.27-.42,1.53-.28.26-.82.39-1.62.39h-10.12v-6.13Z"/><polygon class="cls-2" points="588.54 73.77 598.9 73.77 598.9 70.68 588.54 70.68 588.54 63.1 606.7 63.1 606.7 59.95 584.66 59.95 584.66 83.1 588.54 83.1 588.54 73.77"/><path class="cls-2" d="m614.9,75.65h5.19l7.58,7.45h4.8l-8.39-7.45h2.52c1.42,0,2.44-.28,3.06-.85.62-.57.93-1.5.93-2.78v-4.25c0-1.3-.31-2.24-.93-2.82-.62-.58-1.64-.86-3.06-.86h-15.29v19.02h3.59v-7.45Zm0-8.78h10.12c.77,0,1.31.15,1.6.44.29.29.44.79.44,1.49v2.28c0,.76-.14,1.27-.42,1.53-.28.26-.82.39-1.62.39h-10.12v-6.13Z"/><path class="cls-2" d="m643.75,78.65h13.14l2.48,4.45h3.9l-11.26-19.02h-3.29l-11,19.02h3.59l2.43-4.45Zm6.55-11.79l5.06,9.05h-10.1l5.04-9.05Z"/><path class="cls-2" d="m704.08,83.1h11.17c1.81,0,3.04-.31,3.69-.94.65-.63.97-1.81.97-3.55v-2.23l-3.59-.68v4.53h-13.28v-13.32h13.28v4.07l3.59-.59v-1.8c0-1.74-.32-2.92-.97-3.56-.65-.64-1.88-.95-3.69-.95h-11.17c-1.8,0-3.02.31-3.66.93-.64.62-.96,1.82-.96,3.58v10.01c0,1.78.32,2.98.95,3.58.64.61,1.86.91,3.67.91Z"/><polygon class="cls-2" points="746.61 80.32 730.89 80.32 730.89 74.62 740.26 74.62 740.26 71.8 730.89 71.8 730.89 66.91 746.44 66.91 746.44 64.09 727.29 64.09 727.29 83.1 746.61 83.1 746.61 80.32"/><polygon class="cls-2" points="144.29 115.74 141.31 115.74 141.31 133.54 157.77 133.54 157.77 131.07 144.29 131.07 144.29 115.74"/><polygon class="cls-2" points="169.06 127.02 176.27 127.02 176.27 124.85 169.06 124.85 169.06 121.09 181.02 121.09 181.02 118.92 166.3 118.92 166.3 133.54 181.16 133.54 181.16 131.4 169.06 131.4 169.06 127.02"/><path class="cls-2" d="m201.47,124.88h-9.38v-3.79h10.26v1.92l2.51-.54v-.35c0-1.19-.26-2.02-.77-2.49-.52-.47-1.46-.71-2.81-.71h-8.14c-1.38,0-2.32.24-2.81.73-.49.49-.74,1.4-.74,2.74v1.38c0,1.35.25,2.26.74,2.74.49.48,1.43.72,2.81.72h9.42v4.11h-11.04v-2.17l-2.53.52v.4c0,1.35.25,2.26.75,2.74.5.48,1.45.72,2.84.72h8.9c1.39,0,2.33-.24,2.82-.72.49-.48.73-1.39.73-2.74v-1.75c0-1.35-.25-2.26-.75-2.74-.5-.48-1.43-.72-2.81-.72Z"/><path class="cls-2" d="m237.34,115.74l-9.72,17.81h2.93l2.27-4.38h12.05l2.27,4.38h3.27l-9.89-17.81h-3.18Zm-3.27,11.15l4.79-9.11,4.8,9.11h-9.59Z"/><path class="cls-2" d="m271.78,118.92h-9.91c-1.38,0-2.32.24-2.83.73-.51.49-.76,1.4-.76,2.74v7.7c0,1.35.25,2.26.75,2.74.5.48,1.45.72,2.84.72h9.91c1.39,0,2.34-.24,2.84-.72.5-.48.75-1.39.75-2.73v-4.72h-8.73v1.99h5.96v3.98h-11.56v-10.24h11.56v1.99l2.76-.47v-.42c0-1.21-.26-2.06-.77-2.54-.52-.48-1.45-.72-2.81-.72Z"/><polygon class="cls-2" points="286.64 127.02 293.85 127.02 293.85 124.85 286.64 124.85 286.64 121.09 298.6 121.09 298.6 118.92 283.88 118.92 283.88 133.54 298.74 133.54 298.74 131.4 286.64 131.4 286.64 127.02"/><path class="cls-2" d="m321.14,127.75c0,.48.02.95.06,1.4.04.45.1.89.18,1.33-.28-.42-.56-.79-.85-1.11-.29-.33-.59-.62-.9-.89l-10.73-9.55h-2.11v14.62h2.54v-9.08c0-.44-.02-.88-.05-1.31-.03-.44-.08-.87-.15-1.3.21.34.46.67.73.99s.6.66.99,1.02l10.95,9.69h1.89v-14.62h-2.54v8.83Z"/><path class="cls-2" d="m344.51,118.92h-8.59c-1.38,0-2.32.24-2.81.72-.49.48-.74,1.4-.74,2.75v7.7c0,1.37.24,2.29.73,2.75.49.47,1.43.7,2.82.7h8.59c1.39,0,2.34-.24,2.84-.72.5-.48.75-1.39.75-2.73v-1.72l-2.76-.52v3.49h-10.21v-10.24h10.21v3.13l2.76-.46v-1.38c0-1.34-.25-2.25-.75-2.74-.5-.49-1.45-.73-2.84-.73Z"/><polygon class="cls-2" points="359.24 127.02 366.45 127.02 366.45 124.85 359.24 124.85 359.24 121.09 371.2 121.09 371.2 118.92 356.48 118.92 356.48 133.54 371.34 133.54 371.34 131.4 359.24 131.4 359.24 127.02"/><path class="cls-2" d="m391.65,124.88h-9.38v-3.79h10.26v1.92l2.51-.54v-.35c0-1.19-.26-2.02-.77-2.49-.52-.47-1.46-.71-2.81-.71h-8.14c-1.38,0-2.32.24-2.81.73-.5.49-.74,1.4-.74,2.74v1.38c0,1.35.25,2.26.74,2.74.49.48,1.43.72,2.81.72h9.42v4.11h-11.04v-2.17l-2.53.52v.4c0,1.35.25,2.26.75,2.74s1.45.72,2.84.72h8.9c1.39,0,2.33-.24,2.82-.72s.73-1.39.73-2.74v-1.75c0-1.35-.25-2.26-.75-2.74s-1.43-.72-2.81-.72Z"/><path class="cls-2" d="m435.45,120.05c-.62-.38-1.4-.67-2.35-.85s-2.12-.28-3.51-.28h-8.42v14.62h8.42c3.04,0,5.31-.61,6.81-1.83s2.24-3.06,2.24-5.52c0-1.3-.28-2.5-.84-3.58s-1.34-1.94-2.34-2.57Zm-1.09,10.08c-1,.8-2.7,1.21-5.08,1.21h-5.36v-10.24h5.36c2.36,0,4.05.4,5.06,1.19s1.52,2.09,1.52,3.88-.5,3.16-1.51,3.97Z"/><path class="cls-2" d="m460.8,131.34h-10.68v-12.42h-2.76v11.17c0,1.34.25,2.25.75,2.73.5.48,1.45.72,2.84.72h9.06c1.39,0,2.34-.24,2.84-.72.5-.48.75-1.39.75-2.74v-11.17h-2.8v12.42Z"/><polygon class="cls-2" points="490.02 133.54 493 133.54 493 126.37 500.97 126.37 500.97 123.99 493 123.99 493 118.16 506.97 118.16 506.97 115.74 490.02 115.74 490.02 133.54"/><path class="cls-2" d="m526.66,131.34h-10.68v-12.42h-2.76v11.17c0,1.34.25,2.25.75,2.73.5.48,1.45.72,2.84.72h9.06c1.39,0,2.34-.24,2.84-.72s.75-1.39.75-2.74v-11.17h-2.8v12.42Z"/><polygon class="cls-2" points="537.02 121.09 543.93 121.09 543.93 133.54 546.67 133.54 546.67 121.09 553.61 121.09 553.61 118.92 537.02 118.92 537.02 121.09"/><path class="cls-2" d="m574.6,131.34h-10.68v-12.42h-2.76v11.17c0,1.34.25,2.25.75,2.73.5.48,1.45.72,2.84.72h9.06c1.39,0,2.34-.24,2.84-.72s.75-1.39.75-2.74v-11.17h-2.8v12.42Z"/><path class="cls-2" d="m598.01,127.82c1.09,0,1.87-.22,2.35-.66.48-.44.72-1.15.72-2.14v-3.27c0-1-.24-1.72-.72-2.17-.48-.44-1.26-.67-2.35-.67h-11.76v14.62h2.76v-5.73h3.99l5.83,5.73h3.69l-6.45-5.73h1.94Zm-9-2.04v-4.72h7.78c.6,0,1,.11,1.23.34.22.22.34.61.34,1.15v1.75c0,.58-.11.98-.32,1.18-.21.2-.63.3-1.25.3h-7.78Z"/><rect class="cls-2" y="102.74" width="747.96" height="2.88"/><path class="cls-2" d="m305.3,56.84v26.26h5.97v-38.94h-5.97l-17.64,25.34-18.93-25.34h-5.3v38.94h5.53v-26.26c0-1.37-.03-2.48-.07-3.31-.05-.83-.12-1.63-.22-2.39.49,1.47,1.3,2.98,2.43,4.53.1.15.16.23.18.26l15.47,21.07h1.66l14.88-21.66c.29-.42.63-.97,1.01-1.66.38-.69.82-1.53,1.31-2.54-.02.69-.08,1.73-.17,3.11-.09,1.39-.13,2.25-.13,2.6Z"/><path class="cls-2" d="m325.75,83.1h6.41l4.97-9.58h26.34l4.97,9.58h7.15l-21.62-38.94h-6.96l-21.25,38.94Zm35.07-14.55h-20.96l10.46-19.93,10.5,19.93Z"/><polygon class="cls-2" points="400.49 83.1 400.49 49.47 418.35 49.47 418.35 44.17 376.21 44.17 376.21 49.47 394 49.47 394 83.1 400.49 83.1"/><path class="cls-2" d="m469.72,66.14c1.29-1.19,1.93-3.1,1.93-5.73v-8.69c0-2.65-.64-4.57-1.93-5.76-1.29-1.19-3.39-1.79-6.32-1.79h-31.38v38.94h6.52v-15.18h11.46l15.84,15.18h9.65l-17.79-15.18h5.71c2.92,0,5.03-.6,6.32-1.79Zm-31.18-3.26v-13.67h22.32c1.6,0,2.7.3,3.3.9.6.6.9,1.64.9,3.11v5.67c0,1.47-.29,2.5-.88,3.09-.59.59-1.69.88-3.32.88h-22.32Z"/><rect class="cls-2" x="490.58" y="44.17" width="6.52" height="38.94"/><polygon class="cls-2" points="520.84 83.1 535.17 66.49 550.64 83.1 560 83.1 539.11 62.44 556.24 44.17 548.14 44.17 535.32 58.9 521.69 44.17 512.33 44.17 531.49 63.03 512.63 83.1 520.84 83.1"/><path class="cls-2" d="m673.03,71.29c0-.57-.02-1.14-.07-1.71-.04-.57-.11-1.13-.2-1.69.28.44.59.87.95,1.28s.78.86,1.28,1.33l14.24,12.6h2.45v-19.02h-3.31v11.48c0,.63.03,1.23.08,1.82s.13,1.16.23,1.73c-.37-.54-.73-1.02-1.11-1.45-.37-.42-.76-.81-1.17-1.16l-13.95-12.42h-2.74v19.02h3.31v-11.81Z"/></svg>
+                <!-- <p>&copy 2024 Immobilier Matrix</p> -->
+                <span>&copy 2024 Immobilier Matrix France<span></span></span>
             </div>
         </div>
     </footer>
