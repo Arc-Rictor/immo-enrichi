@@ -2,6 +2,77 @@
 
 All notable project-level changes will be documented in this file.
 
+## [1.2.0] - 2025-11-29
+
+### Deployed - Immo-Erichi Rebrand Live in Production
+
+#### Overview
+Deployed the complete Immo-Erichi rebrand to production. All marketing pages now live with new branding, bilingual support, and language persistence for authentication flows.
+
+#### Deployment Changes
+
+**Files Deployed:**
+- `fr-changes.html` → `fr.html` (replaced old French page)
+- `en-changes.html` → `en.html` (replaced old English page)
+- `changes-styles.css` → `styles.css` (replaced old stylesheet)
+
+**Backup Files Created:**
+- `fr.html.backup` - Original French page preserved
+- `en.html.backup` - Original English page preserved
+- `styles.css.backup` - Original stylesheet preserved
+
+**Link Updates:**
+- Updated CSS references in both HTML files: `changes-styles.css` → `styles.css`
+- Updated language switcher links: `-changes.html` → `.html` format
+- French page: Links to `en.html`
+- English page: Links to `fr.html`
+
+**Language Persistence Added:**
+- All registration links now include locale parameter: `?locale=fr` or `?locale=en`
+- All login links now include locale parameter: `?locale=fr` or `?locale=en`
+- Ensures Laravel app receives user's preferred language from marketing site
+- Applied to 6 locations per page (header, mobile menu, CTAs)
+
+#### Git Repository Maintenance
+
+**Cleanup:**
+- Removed corrupted `.nvm` folders causing git index errors
+- Fixed git status functionality
+
+**Commits:**
+- `31d49b40` - Deploy Immo-Erichi rebrand: Replace old pages with new design and English translation
+- `fb9f4090` - Remove corrupted .nvm folders that were causing git index errors  
+- `ae8bf970` - Add locale query parameters to all auth links for language persistence
+
+#### Files Modified
+
+```
+public_html/
+  - fr.html (deployed with locale parameters)
+  - en.html (deployed with locale parameters)
+  - styles.css (deployed)
+  - fr.html.backup (created)
+  - en.html.backup (created)
+  - styles.css.backup (created)
+
+Documentation:
+  - README.md (updated to reflect deployment)
+  - CHANGELOG.md (this entry)
+```
+
+#### Testing Completed
+
+- [x] French landing page displays correctly
+- [x] English landing page displays correctly
+- [x] Language switcher works bidirectionally
+- [x] All auth links include correct locale parameters
+- [x] CSS loaded correctly on both pages
+- [x] All internal links functional
+- [x] Backup files preserved
+- [x] Git repository clean and committed
+
+---
+
 ## [1.1.0] - 2025-11-28
 
 ### Added - Complete Rebrand to Immo-Erichi & English Translation

@@ -10,7 +10,8 @@ This project consists of **two separate websites**:
    - **Purpose**: Public-facing marketing site
    - **Current Focus**: Agent-only promotion (as of Nov 2025)
    - **Technology**: HTML, CSS (SCSS), JavaScript
-   - **Files**: `fr-changes.html` (French), `en-changes.html` (English) - under review
+   - **Files**: `fr.html` (French), `en.html` (English)
+   - **Branding**: Immo-Erichi (deployed Nov 29, 2025)
 
 2. **Laravel Application** (`app.immobiliermatrixfrance.fr/`) - Full SaaS platform
    - **Purpose**: Real estate management platform
@@ -119,11 +120,13 @@ php artisan serve
 
 ## Recent Changes
 
-### November 2025 - Complete Rebrand to Immo-Erichi (Latest)
-**New Files Under Client Review:**
-- `public_html/fr-changes.html` - Completely redesigned French landing page
-- `public_html/en-changes.html` - English translation of redesigned landing page
-- `public_html/changes-styles.css` - Updated stylesheet for new design
+### November 29, 2025 - Immo-Erichi Rebrand Deployed ✅ (Latest)
+**Status**: Live in production
+
+**Deployed Files:**
+- `public_html/fr.html` - Rebranded French landing page
+- `public_html/en.html` - English landing page with full translation
+- `public_html/styles.css` - Updated stylesheet for new design
 
 **Key Updates:**
 - **Branding**: "Immobilier Matrix France" → "Immo-Erichi"
@@ -133,12 +136,13 @@ php artisan serve
 - **Footer**: Text-based "Immo-Erichi" branding
 - **New Content**: Updated messaging emphasizing collaboration and agent network
 - **Bilingual**: Both French and English versions fully translated
-- **Status**: 🔄 Under client review
+- **Language Persistence**: All auth links include `?locale=fr` or `?locale=en` parameters to maintain user language preference when signing up or logging in
 
-**Deployment Plan:**
-1. Client reviews and approves both language versions
-2. Upon approval, update live `fr.html`, `en.html` and `styles.css`
-3. Clean up temporary `*-changes.*` files
+**Technical Implementation:**
+- Backup files preserved: `*.html.backup`, `*.css.backup`
+- All internal links updated to reference new filenames
+- CSS references corrected from `changes-styles.css` to `styles.css`
+- Language switcher links point to correct pages (`fr.html` ↔ `en.html`)
 
 ### November 2025 - Marketing Site Branding Update
 **Removed from marketing site:**
@@ -200,8 +204,8 @@ For project-specific questions:
 
 ---
 
-**Last Updated**: November 28, 2025  
-**Project Version**: 1.1.0  
-**Marketing Site**: Rebranded to "Immo-Erichi", agent-focused (Nov 2025)  
+**Last Updated**: November 29, 2025  
+**Project Version**: 1.2.0  
+**Marketing Site**: Immo-Erichi live in production (deployed Nov 29, 2025)  
 **Backend**: Full multi-tenant support maintained  
 **Version Control**: Git repository active

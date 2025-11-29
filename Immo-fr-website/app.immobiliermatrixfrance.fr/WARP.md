@@ -2,18 +2,15 @@
 
 This file contains development guidelines, conventions, and project-specific rules for working with the Immobilier Matrix France real estate platform.
 
-> **Marketing Site Updates (Nov 2025)**: 
+> **Marketing Site Updates (Nov 29, 2025)**: 
+> - **Immo-Erichi Rebrand DEPLOYED** ✅ - Live in production
 > - The public marketing website (`../public_html/`) now focuses exclusively on agents
-> - Logo and hero title branding have been removed from landing pages (structure preserved)
+> - Complete rebrand from "Immobilier Matrix France" to "Immo-Erichi"
+> - Bilingual support: French (`fr.html`) and English (`en.html`) versions live
+> - Language persistence: All auth links include `?locale=fr` or `?locale=en` parameters
+> - Users maintain their language preference when signing up/logging in
 > - While this Laravel application still supports all user types (Agents, Sellers, Buyers, Admins), the public-facing landing pages only promote agent features
-> 
-> **B2B SaaS Redesign (Nov 23, 2025)**: 
-> - New redesigned landing pages created: `../public_html/fr-redesign.html` and `../public_html/en-redesign.html`
-> - **Status**: 🔄 Under client review - Ready for feedback and iterations
-> - **Design Focus**: Professional B2B SaaS platform positioning (not consumer property search)
-> - **Key Changes**: Dashboard mockups, B2B messaging, three core benefits highlighted (Collaboration, Direct Leads, Shared Revenue)
-> - **Original files remain unchanged** for reference
-> - See `../public_html/CHANGELOG.md` for complete details
+> - See `../README.md` and `../CHANGELOG.md` for complete details
 
 ## Project Context
 
