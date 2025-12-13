@@ -38,10 +38,14 @@ Immo-fr-website/
 ├── CHANGELOG.md                       ← Project-level changes
 │
 ├── public_html/                       ← MARKETING WEBSITE (Static HTML)
-│   ├── en.html                       ← English landing page
-│   ├── fr.html                       ← French landing page
-│   ├── styles.css                    ← Compiled styles
+│   ├── en.html                       ← English landing page (LIVE)
+│   ├── fr.html                       ← French landing page (LIVE)
+│   ├── en-sandbox.html               ← English landing page (SANDBOX)
+│   ├── fr-sandbox.html               ← French landing page (SANDBOX)
+│   ├── styles.css                    ← Compiled styles (LIVE)
+│   ├── styles-sandbox.css            ← Compiled styles (SANDBOX)
 │   ├── *.scss                        ← Source SCSS files
+│   ├── Immo-Erichi_Logo1.png         ← Current Immo-Erichi logo (used in sandbox header/footer)
 │   ├── *.png, *.jpg                  ← Marketing images
 │   └── CHANGELOG.md                  ← Marketing site changes
 │
@@ -61,9 +65,28 @@ Immo-fr-website/
 ### For Marketing Site Changes
 The marketing site is **static HTML** hosted in `public_html/`.
 
-**To edit:**
+#### Sandbox workflow (recommended)
+When redesigning the landing pages, use the sandbox files first so the live pages remain untouched:
+- English sandbox: `public_html/en-sandbox.html`
+- French sandbox: `public_html/fr-sandbox.html`
+- Shared sandbox stylesheet (both pages): `public_html/styles-sandbox.css`
+
+Notes:
+- The sandbox pages are wired to each other via the top-right language switcher.
+- The sandbox pages currently include the new pricing panel section (`#pricing`) and updated navigation links.
+
+#### Go live (when approved)
+When you’re ready to publish:
+1. Back up the live files (keep a copy of `public_html/en.html`, `public_html/fr.html`, `public_html/styles.css`).
+2. Copy sandbox → live:
+   - `en-sandbox.html` → `en.html`
+   - `fr-sandbox.html` → `fr.html`
+   - `styles-sandbox.css` → `styles.css`
+
+#### Direct live edits (not recommended for redesign)
+If you must edit the live pages directly:
 1. Edit `public_html/en.html` or `public_html/fr.html`
-2. Changes are live immediately (no build process)
+2. Update `public_html/styles.css` (or SCSS sources if you rebuild CSS)
 3. Update `public_html/CHANGELOG.md` if significant
 
 **Accessible at:** `https://immobiliermatrixfrance.fr`
@@ -120,7 +143,20 @@ php artisan serve
 
 ## Recent Changes
 
-### November 29, 2025 - Immo-Erichi Rebrand Deployed ✅ (Latest)
+### December 13, 2025 - Landing Page Sandbox + Pricing Panel (In progress)
+**Status**: Sandbox only
+
+**Added sandbox files:**
+- `public_html/en-sandbox.html`
+- `public_html/fr-sandbox.html`
+- `public_html/styles-sandbox.css`
+
+**Key sandbox updates:**
+- Added a pricing panel section (`#pricing`) and updated nav links to match
+- Added Immo-Erichi logo to header and footer in sandbox pages
+- Improved header/footer link consistency between EN/FR sandbox pages
+
+### November 29, 2025 - Immo-Erichi Rebrand Deployed ✅
 **Status**: Live in production
 
 **Deployed Files:**
@@ -204,8 +240,8 @@ For project-specific questions:
 
 ---
 
-**Last Updated**: November 29, 2025  
-**Project Version**: 1.2.0  
-**Marketing Site**: Immo-Erichi live in production (deployed Nov 29, 2025)  
+**Last Updated**: December 13, 2025  
+**Project Version**: 1.2.1  
+**Marketing Site**: Immo-Erichi live in production (deployed Nov 29, 2025) + sandbox redesign in progress  
 **Backend**: Full multi-tenant support maintained  
 **Version Control**: Git repository active

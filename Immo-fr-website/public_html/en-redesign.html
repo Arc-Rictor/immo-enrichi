@@ -56,10 +56,20 @@
         }
 
         .home-logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #001f3f;
-            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-logo img {
+            display: block;
+            height: 44px;
+            width: auto;
+        }
+
+        @media (max-width: 768px) {
+            .home-logo img {
+                height: 36px;
+            }
         }
 
         .nav-links ul {
@@ -812,7 +822,9 @@
     <header>
         <div class="header">
             <div class="header-nav-container">
-                <div class="home-logo">IMF</div>
+                <div class="home-logo">
+                    <img src="./Immo-Erichi_Logo1.png" alt="Immo-Erichi" />
+                </div>
                 <nav class="nav-links">
                     <ul>
                         <li><a href="#features">Features</a></li>
