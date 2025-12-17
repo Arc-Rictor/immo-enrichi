@@ -3,11 +3,12 @@
 This file contains development guidelines, conventions, and project-specific rules for working with the Immobilier Matrix France real estate platform.
 
 > **Marketing Site Updates**: 
-> - **Nov 29, 2025**: Immo-Erichi rebrand deployed ✅ (live)
-> - **Dec 13, 2025**: Landing page sandbox created (work in progress)
+> - **Dec 17, 2025**: Brand name corrected to "Immo-Enrichi" + mobile logo enhanced (sandbox only)
+> - **Dec 13, 2025**: Landing page sandbox created with pricing panel
 >   - `../public_html/en-sandbox.html`
 >   - `../public_html/fr-sandbox.html`
 >   - `../public_html/styles-sandbox.css` (shared by both)
+> - **Nov 29, 2025**: Immo-Erichi rebrand deployed ✅ (live)
 > - The public marketing website (`../public_html/`) focuses exclusively on agents
 > - Language persistence: All auth links include `?locale=fr` or `?locale=en`
 > - See `../README.md` and `../CHANGELOG.md` for complete details

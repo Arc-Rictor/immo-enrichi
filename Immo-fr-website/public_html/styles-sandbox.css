@@ -2088,7 +2088,7 @@ footer .bottom-footer span a {
 }
 @media only screen and (max-width: 1023px) {
   .header .header-nav-container .home-logo img {
-    max-width: 100px;
+    max-width: 150px;
   }
 }
 .header .header-nav-container .nav-links {

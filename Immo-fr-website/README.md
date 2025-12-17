@@ -143,7 +143,25 @@ php artisan serve
 
 ## Recent Changes
 
-### December 13, 2025 - Landing Page Sandbox + Pricing Panel (In progress)
+### December 17, 2025 - Brand Name Correction & Mobile Logo Enhancement
+**Status**: Sandbox only
+
+**Brand Name Correction:**
+- Corrected brand name from "Immo-Erichi" to "Immo-Enrichi" throughout sandbox files
+- Updated in both English and French versions (20 occurrences total)
+- Locations updated: page titles, header/footer logos, welcome text, platform references, copyright notices
+
+**Mobile Logo Enhancement:**
+- Increased mobile logo size by 50% (from 100px to 150px)
+- Applied to screens under 1023px width
+- Improves visibility and branding on mobile devices
+
+**Files Modified:**
+- `public_html/en-sandbox.html`
+- `public_html/fr-sandbox.html`
+- `public_html/styles-sandbox.css`
+
+### December 13, 2025 - Landing Page Sandbox + Pricing Panel
 **Status**: Sandbox only
 
 **Added sandbox files:**
@@ -153,7 +171,7 @@ php artisan serve
 
 **Key sandbox updates:**
 - Added a pricing panel section (`#pricing`) and updated nav links to match
-- Added Immo-Erichi logo to header and footer in sandbox pages
+- Added Immo-Enrichi logo to header and footer in sandbox pages
 - Improved header/footer link consistency between EN/FR sandbox pages
 
 ### November 29, 2025 - Immo-Erichi Rebrand Deployed ✅
@@ -240,8 +258,8 @@ For project-specific questions:
 
 ---
 
-**Last Updated**: December 13, 2025  
-**Project Version**: 1.2.1  
-**Marketing Site**: Immo-Erichi live in production (deployed Nov 29, 2025) + sandbox redesign in progress  
+**Last Updated**: December 17, 2025  
+**Project Version**: 1.2.2  
+**Marketing Site**: Immo-Enrichi brand corrections applied to sandbox (Dec 17, 2025)  
 **Backend**: Full multi-tenant support maintained  
 **Version Control**: Git repository active

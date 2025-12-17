@@ -2,6 +2,67 @@
 
 All notable project-level changes will be documented in this file.
 
+## [1.2.2] - 2025-12-17
+
+### Changed - Brand Name Correction & Mobile Logo Enhancement (Sandbox)
+
+#### Overview
+Corrected brand name from "Immo-Erichi" to "Immo-Enrichi" throughout sandbox files and increased mobile logo size for better visibility.
+
+#### Brand Name Correction
+
+**Scope:**
+- Corrected all references from "Immo-Erichi" to "Immo-Enrichi"
+- Applied to both English and French sandbox pages
+- Total of 20 text occurrences updated
+
+**Locations Updated:**
+- Page titles (`<title>` tags)
+- Header logo `aria-label` and `alt` attributes
+- Welcome headings ("Welcome to Immo-Enrichi" / "Bienvenue chez Immo-Enrichi")
+- Info banner platform references
+- Latest properties section text
+- "Ready to join" section text
+- Footer logo `aria-label` and `alt` attributes
+- Copyright notices
+
+**Note:** Image file names (`Immo-Erichi_Logo1.png`) remain unchanged as physical files.
+
+#### Mobile Logo Enhancement
+
+**Change:**
+- Increased mobile logo size from 100px to 150px (50% increase)
+- Applied to screens under 1023px width via media query
+
+**Benefits:**
+- Improved visibility on mobile devices
+- Better brand presence on smaller screens
+- Enhanced mobile user experience
+
+#### Files Modified
+
+```
+public_html/
+  - en-sandbox.html (brand name corrected - 10 occurrences)
+  - fr-sandbox.html (brand name corrected - 10 occurrences)
+  - styles-sandbox.css (mobile logo size increased)
+
+Documentation:
+  - README.md (updated with latest changes)
+  - CHANGELOG.md (this entry)
+  - app.immobiliermatrixfrance.fr/WARP.md (updated marketing site status)
+```
+
+#### Status
+
+- [x] Brand name corrected in English sandbox
+- [x] Brand name corrected in French sandbox
+- [x] Mobile logo size increased
+- [x] Documentation updated
+- [ ] Changes not yet deployed to live (sandbox only)
+
+---
+
 ## [1.2.0] - 2025-11-29
 
 ### Deployed - Immo-Erichi Rebrand Live in Production
