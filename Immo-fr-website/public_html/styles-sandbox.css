@@ -792,7 +792,7 @@ html {
 
 .cta-info {
   margin-top: 124px;
-  margin-bottom: 157px;
+  margin-bottom: 80px;
 }
 @media only screen and (max-width: 1023px) {
   .cta-info {
@@ -910,7 +910,7 @@ html {
 
 .list-banner-cta {
   background: #FFA163;
-  padding-top: 144px;
+  padding-top: 80px;
   padding-bottom: 171px;
 }
 @media only screen and (max-width: 1023px) {

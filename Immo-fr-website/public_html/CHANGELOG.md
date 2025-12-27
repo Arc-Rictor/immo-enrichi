@@ -1,5 +1,102 @@
 # Changelog - Marketing Website (public_html)
 
+## [1.3.0] - 2025-12-27
+
+### Deployed - Property Carousel & Pricing Section Production Update
+
+#### Overview
+Major production deployment with updated property carousel featuring 4 real listings, new pricing section, restored content sections, and CSS optimizations.
+
+#### Property Carousel Updates
+
+**New Properties Added:**
+1. Villa in Terre-de-Haut 97137 - €890,000 (5 bed, 5 bath, 188M²)
+2. Maison in Parigné-l'Évêque 72250 - €455,000 (6 bed, 5 bath, 200M²)
+3. Maison in Vérines 17540 - €460,000 (6 bed, 5 bath, 155M²)
+4. Maison in La Chapelle-sur-Erdre 44240 - €540,000 (8 bed, 5 bath, 155M²)
+
+**Changes:**
+- Removed all placeholder properties (10+ duplicate entries)
+- Added property-specific descriptions for each listing
+- Full French translations for all property details
+- New property images: property1.png, property2.png, property3.png, property4.png
+
+#### Pricing Section Added
+
+**New Section Content:**
+- Title: "Simple and Transparent Pricing" / "Tarification simple et transparente"
+- Subtitle: "One plan, designed for all agents" / "Un plan, conçu pour tous les agents"
+- Annual Plan: €365/year (about €30/month)
+- Three benefit cards:
+  1. List and manage your properties
+  2. Flexible and easy to use
+  3. A single subscription
+- CTA: "Start Free Trial" button
+
+**CSS Added:**
+- ~230 lines of pricing-specific CSS
+- Responsive layout (3-column grid → single column on mobile)
+- Professional card design with shadow and hover effects
+- Large typography for price display
+
+#### Content Sections Restored
+
+**Between Carousel and Pricing:**
+1. "The simplest platform..." banner section
+2. Three feature cards (List/manage, Flexible, Single subscription)
+3. "Create an account" CTA button
+
+**Why Restored:**
+- Accidentally removed during carousel cleanup
+- Caused pricing section formatting errors
+- Required for proper page flow and structure
+
+#### CSS Optimizations
+
+**Spacing Reductions:**
+- Pricing section top padding: 140px → 50px (desktop)
+- Pricing section top padding: 100px → 40px (tablet)
+- Pricing section top padding: 50px → 30px (mobile)
+
+#### Cache Management
+
+**Cache-Busting Added:**
+- CSS link updated: `styles.css` → `styles.css?v=20251227`
+- Forces browser reload of updated stylesheet
+- Applied to both en.html and fr.html
+
+#### Bug Fixes
+
+**Footer Links:**
+- Fixed en.html: `en-sandbox.html` → `en.html`
+- Fixed fr.html: `fr-sandbox.html` → `fr.html`
+
+**Carousel Styling:**
+- Fixed property cards displaying with black backgrounds
+- Ensured main.js Swiper initialization working correctly
+
+#### Files Modified
+
+```
+- en.html (carousel, pricing, cache parameter, footer)
+- fr.html (carousel, pricing, cache parameter, footer)
+- styles.css (pricing CSS, spacing optimizations)
+- main.js (Swiper initialization confirmed)
+- property1.png (new)
+- property2.png (new)
+- property3.png (new)
+- property4.png (new)
+```
+
+#### Status
+- [x] Deployed to production
+- [x] Tested on desktop and mobile
+- [x] French translations verified
+- [x] All images loading correctly
+- [x] Carousel functionality confirmed
+
+---
+
 ## [1.2.0] - 2025-11-23
 
 ### Added - French Landing Page Content & Design Refresh (Under Review)

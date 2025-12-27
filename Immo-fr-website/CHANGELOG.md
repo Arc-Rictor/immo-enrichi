@@ -2,6 +2,178 @@
 
 All notable project-level changes will be documented in this file.
 
+## [1.3.0] - 2025-12-27
+
+### Deployed - Production Update: Property Carousel & Pricing Section
+
+#### Overview
+Major production deployment featuring updated property carousel with real listings, new pricing section, restored missing content sections, and CSS optimizations.
+
+#### Files Deployed
+
+**HTML Files:**
+- `public_html/en.html` - Property carousel updated, pricing section added, cache-busting CSS parameter, footer link fixes
+- `public_html/fr.html` - Property carousel updated (French translations), pricing section added, cache-busting CSS parameter, footer link fixes
+
+**Stylesheets:**
+- `public_html/styles.css` - Added complete pricing section CSS (~230 lines), optimized spacing
+
+**JavaScript:**
+- `public_html/main.js` - Updated Swiper carousel initialization
+
+**Images:**
+- `property1.png` - Villa in Terre-de-Haut 97137
+- `property2.png` - Maison in Parigné-l'Évêque 72250
+- `property3.png` - Maison in Vérines 17540
+- `property4.png` - Maison in La Chapelle-sur-Erdre 44240
+
+#### Property Carousel Updates
+
+**Replaced placeholder properties with 4 real listings:**
+
+1. **Villa in Terre-de-Haut 97137**
+   - Price: €890,000.00
+   - Details: 5 bed, 5 bath, 188M²
+   - Description: "Stunning 5-bedroom villa with pool and sea views..."
+   - French: "Superbe villa de 5 chambres avec piscine et vue mer..."
+
+2. **Maison in Parigné-l'Évêque 72250**
+   - Price: €455,000.00
+   - Details: 6 bed, 5 bath, 200M²
+   - Description: "Charming 6-bedroom family home..."
+   - French: "Charmante maison familiale de 6 chambres..."
+
+3. **Maison in Vérines 17540 · Quartier Loiré**
+   - Price: €460,000.00
+   - Details: 6 bed, 5 bath, 155M²
+   - Description: "Delightful single-story home with pool in Loiré..."
+   - French: "Charmante maison de plain-pied avec piscine à Loiré..."
+
+4. **Maison in La Chapelle-sur-Erdre 44240 · Quartier La Croix de Pierre**
+   - Price: €540,000.00
+   - Details: 8 bed, 5 bath, 155M²
+   - Description: "Spacious 8-bedroom family home nestled within a beautiful 3200m² park..."
+   - French: "Vaste maison familiale de 8 chambres nichée dans un magnifique parc de 3200m²..."
+
+**Technical Implementation:**
+- Removed all placeholder properties (originally 10+ duplicate entries)
+- Created separate Swiper instances for properties carousel and testimonials carousel
+- Configured responsive breakpoints for optimal viewing on all devices
+- All property descriptions fully translated for French version
+
+#### Pricing Section Added
+
+**New Section: "Simple and Transparent Pricing"**
+- Single-column centered layout with professional card design
+- Annual Plan: €365/year (about €30/month)
+- Three key highlights displayed as cards:
+  1. List and manage your properties
+  2. Flexible and easy to use
+  3. A single subscription
+- "Start Free Trial" CTA button
+- Responsive design (3 columns → 1 column on mobile)
+- French version: "Tarification simple et transparente"
+
+**CSS Implementation:**
+- Added ~230 lines of pricing-specific CSS to styles.css
+- Includes: .pricing-section, .pricing-card, .pricing-highlights, .pricing-btn, etc.
+- Responsive breakpoints for 1920px, 1600px, 1400px, 1024px, 768px, mobile
+- Custom styling for price display (large €365 typography)
+
+#### Content Sections Restored
+
+**Between Property Carousel and Pricing Section:**
+1. **"The simplest platform..." banner section**
+   - English: "The simplest platform to collaborate and manage your properties in France."
+   - French: "La plateforme la plus simple pour collaborer et gérer vos biens immobiliers en France."
+
+2. **Three feature cards section**
+   - List and manage your properties / Publier et gérer vos biens immobiliers
+   - Flexible and easy to use / Flexible et facile à utiliser
+   - A single subscription / Une cotisation unique
+   - "Create an account" button below cards
+
+**Why Restored:**
+- These sections were accidentally removed during previous carousel cleanup
+- Caused pricing section to appear immediately after carousel with formatting errors
+- Now properly positioned with correct HTML structure
+
+#### CSS Optimizations
+
+**Spacing Adjustments:**
+- Reduced pricing section top padding: 140px → 50px (desktop)
+- Reduced pricing section top padding: 100px → 40px (tablet)
+- Reduced pricing section top padding: 50px → 30px (mobile)
+- Improved visual flow between content sections
+
+#### Cache Management
+
+**Cache-Busting Parameter Added:**
+- Updated CSS link from `styles.css` to `styles.css?v=20251227`
+- Forces browsers to reload updated stylesheet
+- Prevents users from seeing cached version without CSS updates
+- Applied to both en.html and fr.html
+
+#### Bug Fixes
+
+**Footer Logo Links:**
+- Fixed en.html footer: `en-sandbox.html` → `en.html`
+- Fixed fr.html footer: `fr-sandbox.html` → `fr.html`
+- Ensures footer logo links to correct production page
+
+**Carousel Styling:**
+- Fixed property cards displaying with incorrect black backgrounds online
+- Ensured main.js properly initializes Swiper carousels
+- Verified all carousel CSS classes properly styled
+
+#### Files Modified
+
+```
+public_html/
+  - en.html (carousel updated, pricing added, cache parameter, footer fix)
+  - fr.html (carousel updated with French translations, pricing added, cache parameter, footer fix)
+  - styles.css (pricing CSS added, spacing optimized)
+  - main.js (Swiper initialization confirmed)
+  - property1.png (new image)
+  - property2.png (new image)
+  - property3.png (new image)
+  - property4.png (new image)
+
+Documentation:
+  - README.md (updated with Dec 27 changes)
+  - CHANGELOG.md (this entry)
+  - public_html/CHANGELOG.md (updated)
+```
+
+#### Testing Completed
+
+- [x] Property carousel displays 4 real listings correctly
+- [x] Property carousel cycles/swipes properly
+- [x] Pricing section displays with correct formatting
+- [x] Pricing section spacing optimized
+- [x] Missing content sections restored between carousel and pricing
+- [x] CSS cache-busting parameter working
+- [x] Footer logo links correct
+- [x] French translations accurate
+- [x] Responsive design functional on all breakpoints
+- [x] All images loading correctly
+- [x] Swiper carousels initializing properly
+
+#### Deployment Notes
+
+**Upload Order:**
+1. styles.css (updated with pricing section CSS)
+2. en.html (updated HTML with cache parameter)
+3. fr.html (updated HTML with cache parameter)
+4. main.js (Swiper initialization)
+5. property1.png, property2.png, property3.png, property4.png
+
+**Browser Cache:**
+- Users may need to perform hard refresh (Ctrl+Shift+R / Cmd+Shift+R)
+- Cache-busting parameter should force reload automatically
+
+---
+
 ## [1.2.2] - 2025-12-17
 
 ### Changed - Brand Name Correction & Mobile Logo Enhancement (Sandbox)

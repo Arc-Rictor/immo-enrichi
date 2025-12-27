@@ -792,7 +792,7 @@ html {
 
 .cta-info {
   margin-top: 124px;
-  margin-bottom: 157px;
+  margin-bottom: 80px;
 }
 @media only screen and (max-width: 1023px) {
   .cta-info {
@@ -910,7 +910,7 @@ html {
 
 .list-banner-cta {
   background: #FFA163;
-  padding-top: 144px;
+  padding-top: 80px;
   padding-bottom: 171px;
 }
 @media only screen and (max-width: 1023px) {
@@ -1379,6 +1379,236 @@ html {
 }
 .image-text-info-content .purple {
   background: #DED5FF;
+}
+
+.pricing-section {
+  background: #fff;
+  padding-top: 50px;
+  padding-bottom: 140px;
+}
+@media only screen and (max-width: 1023px) {
+  .pricing-section {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .pricing-section {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+}
+
+.pricing-content {
+  text-align: center;
+}
+
+.pricing-title {
+  font-family: "Unna", serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: -0.5px;
+}
+@media only screen and (max-width: 1023px) {
+  .pricing-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .pricing-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.pricing-subtitle {
+  margin-top: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #555;
+}
+
+.pricing-card {
+  margin: 50px auto 0 auto;
+  max-width: 900px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+  padding: 55px 70px;
+  text-align: left;
+}
+@media only screen and (max-width: 1023px) {
+  .pricing-card {
+    padding: 40px 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .pricing-card {
+    padding: 28px 22px;
+  }
+}
+
+.pricing-card-header {
+  text-align: center;
+}
+
+.pricing-plan {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.pricing-price {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #111;
+}
+
+.pricing-currency {
+  font-size: 28px;
+  line-height: 28px;
+  position: relative;
+  top: -12px;
+  margin-right: 4px;
+}
+
+.pricing-amount {
+  font-size: 74px;
+  line-height: 74px;
+}
+@media only screen and (max-width: 767px) {
+  .pricing-amount {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  .pricing-currency {
+    font-size: 22px;
+    line-height: 22px;
+    top: -10px;
+  }
+}
+
+.pricing-note {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #666;
+}
+
+.pricing-divider {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 34px 0;
+}
+
+.pricing-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+@media only screen and (max-width: 1023px) {
+  .pricing-highlights {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+.pricing-highlight {
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 28px 26px;
+  text-align: center;
+}
+
+.pricing-highlight-title {
+  font-family: "Unna", serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.pricing-highlight-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: #555;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 520px;
+}
+
+.pricing-features li {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 26px;
+  color: #111;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.pricing-features li::before {
+  content: "✓";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: rgba(250, 100, 0, 0.12);
+  color: #FA6400;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 1px;
+}
+
+.pricing-footer {
+  text-align: center;
+}
+
+.pricing-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 14px 34px;
+  border-radius: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  min-width: 220px;
+  border: 1px solid #000;
+  transition: all ease 0.3s;
+}
+
+.pricing-btn:hover {
+  background: #FA6400;
+  border-color: #FA6400;
+  color: #fff;
 }
 
 .people-say {

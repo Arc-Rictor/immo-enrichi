@@ -13,15 +13,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immo-Enrichi</title>
+    <title>Immo-Erichi</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unna:wght@400;700&display=swap" rel="stylesheet">
-    <!-- SANDBOX: share the same sandbox stylesheet as en-sandbox.html -->
-    <link rel="stylesheet" href="styles-sandbox.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <!-- header -->
@@ -32,15 +31,14 @@
     <div class="header">
         <div class="header-nav-container">
             <div class="home-logo">
-                <a href="fr-sandbox.html" aria-label="Immo-Enrichi accueil">
-                    <img src="./Immo-Erichi_Logo1.png" alt="Immo-Enrichi" />
-                </a>
+                <!-- Logo removed -->
             </div>
 
             <div class="nav-links">
                
                 <ul>
-                    <li><a href="#pricing">Tarifs</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#features">Fonctionnalités</a></li>
                     <li><a href="#latest-props">Derniers biens</a></li>
                     <li><a href="#testimonials">Témoignages</a></li>
                     <li><a href="#faqs">FAQ</a></li>
@@ -51,7 +49,7 @@
             <!-- log in -->
             <div class="log-in">
                 <div class="language">
-                    <a href="en-sandbox.html" class="change">
+                    <a href="en.html" class="change">
                         <p>EN</p>
                         <img class="flag" src="./english.png" alt="country flag" onclick="changeLanguage()">
                         <img src="./arrow-down.png" alt="" class="arrow">
@@ -75,7 +73,8 @@
 
             <div class="mobile-nav-menu">
                 <ul class="header-mob-nav">
-                    <li><a href="#pricing">Tarifs</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#features">Fonctionnalités</a></li>
                     <li><a href="#latest-props">Derniers biens</a></li>
                     <li><a href="#testimonials">Témoignages</a></li>
                     <li><a href="#faqs">FAQ</a></li>
@@ -107,7 +106,7 @@
                 <h1 class="sub-heading">Le réseau immobilier porté par la force de ses agents.</h1>
                 <h2>Ici, la collaboration remplace la concurrence.</h2>
                 <h2></h2>
-                <h2>Bienvenue chez Immo-Enrichi</h2>
+                <h2>Bienvenue chez Immo-Erichi</h2>
                 <h2>Notre plateforme a été conçue pour aider tous les agents immobiliers de France à collaborer efficacement, à développer leurs activités et à accroître leurs opportunités professionnelles. Publiez autant de biens que vous le souhaitez, accédez à l'ensemble du marché local et gardez votre client.</h2>
                 <h2>Notre objectif principal est de rassembler les professionnels de l'immobilier au sein d'un réseau dynamique et innovant, favorisant la coopération entre agences et la mutualisation des ressources pour des transactions plus rapides et plus rentables.</h2>
                 <h2>Être un agent IE, c'est faire partie d'une communauté gagnant-gagnant : Être agent IE, c'est faire gagner tout le monde : les agents gagnent mieux, les acheteurs gagnent du temps, et la confiance s'installe dans toute la région.</h2>
@@ -134,7 +133,7 @@
                         </h3>
         
                         <p class="info-text" id="paragraphs">
-                            Avec votre panneau de contrôle personnel, vous pouvez téléverser un nombre illimité de propriétés et développer votre visibilité professionnelle sur la plateforme Immo-Enrichi. Les opportunités de collaboration sont à portée de main !
+                            Avec votre panneau de contrôle personnel, vous pouvez téléverser un nombre illimité de propriétés et développer votre visibilité professionnelle sur la plateforme Immo-Erichi. Les opportunités de collaboration sont à portée de main !
                         </p>
         
                         <a href="https://app.immobiliermatrixfrance.fr/register?locale=fr" class="create">Créez un compte dès maintenant</a>
@@ -237,7 +236,7 @@ Seulement 3 petites étapes pour mettre en ligne vos biens immobiliers
             </h2>
 
             <p class="sub-heading" id="subheading-large">
-                Chaque jour, de nouvelles propriétés sont ajoutées par les agents membres du réseau Immo-Enrichi. Notre plateforme centralise des milliers de biens immobiliers provenant de professionnels partout en France, offrant une vue complète du marché en temps réel. Inscrivez-vous dès aujourd'hui pour publier vos annonces et rejoindre le réseau IE. Déjà inscrit ? Connectez-vous
+                Chaque jour, de nouvelles propriétés sont ajoutées par les agents membres du réseau Immo-Erichi. Notre plateforme centralise des milliers de biens immobiliers provenant de professionnels partout en France, offrant une vue complète du marché en temps réel. Inscrivez-vous dès aujourd'hui pour publier vos annonces et rejoindre le réseau IE. Déjà inscrit ? Connectez-vous
             </p>
 
             <div class="create">
@@ -723,49 +722,59 @@ Seulement 3 petites étapes pour mettre en ligne vos biens immobiliers
     </div>
     <!-- swiper of properties -->
 
-    <!-- pricing panel (sandbox) -->
-    <section class="pricing-section" id="pricing">
-        <div class="wrapper pricing-content">
-            <h2 class="pricing-title">Tarification simple et transparente</h2>
-            <p class="pricing-subtitle">Une formule, conçue pour tous les agents</p>
+    <!-- easiest banner -->
+    <div class="text-cta">
+        <div class="wrapper text-cta-content">
+            <h2 class="heading" id="heading">
+                La plateforme la plus simple pour collaborer et gérer vos biens immobiliers en France.
+            </h2>
+        </div>
+    </div>
+    <!-- easiest banner -->
 
-            <div class="pricing-card">
-                <div class="pricing-card-header">
-                    <p class="pricing-plan">Formule annuelle</p>
-                    <div class="pricing-price" aria-label="Trois cent soixante-cinq euros par an">
-                        <span class="pricing-currency">€</span><span class="pricing-amount">365</span>
+    <!-- image text info -->
+    <div class="image-text-info">
+        <div class="image-text-info-content">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="image-container orange">
+                        <img src="./house.png" alt="">
                     </div>
-                    <p class="pricing-note">par an (environ 30 €/mois)</p>
-                </div>
-
-                <hr class="pricing-divider">
-
-                <div class="pricing-highlights" aria-label="Avantages clés">
-                    <div class="pricing-highlight">
-                        <h3 class="pricing-highlight-title">Publier et gérer vos biens</h3>
-                        <p class="pricing-highlight-text">Publiez un nombre illimité de biens, gardez tout organisé et accédez au portefeuille partagé — depuis un seul tableau de bord professionnel.</p>
-                    </div>
-
-                    <div class="pricing-highlight">
-                        <h3 class="pricing-highlight-title">Flexible et facile à utiliser</h3>
-                        <p class="pricing-highlight-text">Une interface simple et moderne pensée pour les professionnels de l’immobilier, avec des alertes vendeurs en temps réel et une assistance prioritaire.</p>
-                    </div>
-
-                    <div class="pricing-highlight">
-                        <h3 class="pricing-highlight-title">Une cotisation unique</h3>
-                        <p class="pricing-highlight-text">Une formule annuelle avec partage des commissions et essai gratuit de 90 jours — des tarifs transparents, sans surprise.</p>
+                    <div class="text">
+                        <h3 class="title" id="title">Publier et gérer vos biens immobiliers</h3>
+                        <p class="content" id="paragraphs">En quelques minutes seulement, créez votre compte et accédez à toutes les fonctionnalités de notre plateforme professionnelle.</p>
                     </div>
                 </div>
 
-                <hr class="pricing-divider">
+                <div class="feature-card">
+                    <div class="image-container light-green">
+                        <img src="./house.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h3 class="title" id="title">Flexible et facile à utiliser</h3>
+                        <p class="content" id="paragraphs">Nous avons travaillé d'arrache-pied pour offrir une interface simple, moderne et intuitive, pensée spécialement pour les agences et les agents immobiliers. Gérez vos biens, suivez vos performances et collaborez avec d'autres professionnels en toute simplicité.</p>
+                    </div>
+                </div>
 
-                <div class="pricing-footer">
-                    <a class="pricing-btn" href="https://app.immobiliermatrixfrance.fr/register?locale=fr">Démarrer l’essai gratuit</a>
+                <div class="feature-card">
+                    <div class="image-container purple">
+                        <img src="./house.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h3 class="title" id="title">Une cotisation unique</h3>
+                        <p class="content" id="paragraphs">L'accès à la plateforme est rapide et transparent : il vous suffit de régler une cotisation annuelle unique par carte bancaire pour profiter de tous les services Immo-Erichi.</p>
+                    </div>
                 </div>
             </div>
+
+            <div class="features-button">
+                <a href="https://app.immobiliermatrixfrance.fr/register" class="btn-medium create-btn">
+                    créer un compte
+                </a>
+            </div>
         </div>
-    </section>
-    <!-- pricing panel (sandbox) -->
+    </div>
+    <!-- image text info -->
 
     <!-- What people say -->
     <div class="people-say" id="testimonials">
@@ -927,7 +936,7 @@ Seulement 3 petites étapes pour mettre en ligne vos biens immobiliers
                 </h2>
 
                 <p class="join-text" id="paragraphs">
-                    Inscrivez-vous en quelques secondes à l'aide de vos coordonnées pour créer votre compte et accéder immédiatement à la plateforme Immo-Enrichi.
+                    Inscrivez-vous en quelques secondes à l'aide de vos coordonnées pour créer votre compte et accéder immédiatement à la plateforme Immo-Erichi.
                 </p>
 
                 <div class="create">
@@ -959,7 +968,8 @@ Seulement 3 petites étapes pour mettre en ligne vos biens immobiliers
 
                     <!-- menu to remove -->
                     <ul>
-                        <li><a href="#pricing">Tarifs</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#features">Fonctionnalités</a></li>
                         <li><a href="#latest-props">Derniers biens</a></li>
                         <li><a href="#testimonials">Témoignages</a></li>
                         <li><a href="#faqs">FAQ</a></li>
@@ -1013,12 +1023,8 @@ Seulement 3 petites étapes pour mettre en ligne vos biens immobiliers
             </div>
 
             <div class="bottom-footer">
-                <div class="footer-brand">
-                    <a href="fr-sandbox.html" aria-label="Immo-Enrichi accueil">
-                        <img src="./Immo-Erichi_Logo1.png" alt="Immo-Enrichi" />
-                    </a>
-                </div>
-                <span>&copy 2024 Immo-Enrichi<span></span></span>
+                <h2 class="footer-brand">Immo-Erichi</h2>
+                <span>&copy 2024 Immo-Erichi<span></span></span>
             </div>
         </div>
     </footer>

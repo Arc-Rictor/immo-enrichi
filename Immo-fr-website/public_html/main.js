@@ -12,13 +12,52 @@ $(document).click(function(e) {
 	}
 });
 
-// Testimonials
+// Properties Carousel
+const propertiesSwiper = new Swiper('.properties .swiper', {
+    direction: 'horizontal',
+    loop: true,
+    loopAdditionalSlides: 2,
+    autoplay: {
+        delay: 5000,
+    },
+    breakpoints: {
+        1920: {
+            slidesPerView: 3.5,
+            spaceBetween: 116,
+            centeredSlides: false,
+        },
+        1600: {
+            slidesPerView: 3,
+            spaceBetween: 75,
+            centeredSlides: false,
+        },
+        1400: {
+            slidesPerView: 2.7,
+            spaceBetween: 50,
+            centeredSlides: false,
+        },
+        1024: {
+            slidesPerView: 2.2,
+            spaceBetween: 30,
+            centeredSlides: false,
+        },
+        768: {
+            slidesPerView: 1.5,
+            spaceBetween: 15,
+            centeredSlides: true,
+        },
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+        },
+    }
+});
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
+// Testimonials Carousel
+const testimonialsSwiper = new Swiper('.people-say .swiper', {
     direction: 'horizontal',
     centeredSlides: true,
-    // spaceBetween: 116,
     loop: true,
     autoplay: {
         delay: 5000,
@@ -27,7 +66,6 @@ const swiper = new Swiper('.swiper', {
         1920: {
             slidesPerView: 4.5,
             spaceBetween: 116,
-            // intialSlide: 1,
         },
         1600: {
             slidesPerView: 3.5,
@@ -45,13 +83,12 @@ const swiper = new Swiper('.swiper', {
             slidesPerView: 2.2,
             spaceBetween: 15,
             centeredSlides: true,
-           
         },
-        767: {
+        0: {
             slidesPerView: 1,
             spaceBetween: 30,
         },
-    }	
+    }
 });
 
 // FAQ Accordions

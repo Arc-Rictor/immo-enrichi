@@ -143,8 +143,40 @@ php artisan serve
 
 ## Recent Changes
 
+### December 27, 2025 - Production Deployment: Carousel Updates & Pricing Section
+**Status**: Live in production
+
+**Files Deployed:**
+- `public_html/en.html` - Updated with 4 new property carousel items, pricing section, and cache-busting CSS parameter
+- `public_html/fr.html` - Updated with 4 new property carousel items (French translations), pricing section, and cache-busting CSS parameter
+- `public_html/styles.css` - Added pricing section CSS and carousel styling fixes
+- `public_html/main.js` - Updated Swiper initialization for properties and testimonials carousels
+
+**Key Updates:**
+- **Property Carousel**: Replaced placeholder properties with 4 real listings:
+  - Villa in Terre-de-Haut 97137 (€890,000 - 5 bed, 5 bath, 188M²)
+  - Maison in Parigné-l'Évêque 72250 (€455,000 - 6 bed, 5 bath, 200M²)
+  - Maison in Vérines 17540 (€460,000 - 6 bed, 5 bath, 155M²)
+  - Maison in La Chapelle-sur-Erdre 44240 (€540,000 - 8 bed, 5 bath, 155M²)
+- **Pricing Section**: Added "Simple and Transparent Pricing" section with €365/year plan details
+- **Missing Sections Restored**: Added "The simplest platform..." banner and three feature cards between carousel and pricing
+- **CSS Optimizations**: Reduced gap spacing above pricing section (50px on desktop)
+- **Cache Management**: Added cache-busting parameter (?v=20251227) to CSS links
+- **Footer Links**: Fixed footer logo links from sandbox references to production files
+
+**Property Images:**
+- `property1.png` - Villa in Terre-de-Haut
+- `property2.png` - Maison in Parigné-l'Évêque  
+- `property3.png` - Maison in Vérines
+- `property4.png` - Maison in La Chapelle-sur-Erdre
+
+**Technical Implementation:**
+- Separate Swiper instances for properties and testimonials carousels
+- Responsive pricing card layout (3 columns on desktop, stacks on mobile)
+- All content fully translated in both English and French versions
+
 ### December 17, 2025 - Brand Name Correction & Mobile Logo Enhancement
-**Status**: Sandbox only
+**Status**: Sandbox only (superseded by Dec 27 production deployment)
 
 **Brand Name Correction:**
 - Corrected brand name from "Immo-Erichi" to "Immo-Enrichi" throughout sandbox files
@@ -258,8 +290,8 @@ For project-specific questions:
 
 ---
 
-**Last Updated**: December 17, 2025  
-**Project Version**: 1.2.2  
-**Marketing Site**: Immo-Enrichi brand corrections applied to sandbox (Dec 17, 2025)  
+**Last Updated**: December 27, 2025  
+**Project Version**: 1.3.0  
+**Marketing Site**: Production deployment with carousel fixes, pricing section, and CSS optimizations (Dec 27, 2025)  
 **Backend**: Full multi-tenant support maintained  
 **Version Control**: Git repository active
