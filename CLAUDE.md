@@ -204,10 +204,14 @@ test: Add tests for subscription workflow
 | `app.immobiliermatrixfrance.fr/README.md` | Laravel setup guide |
 | `app.immobiliermatrixfrance.fr/WARP.md` | Detailed dev guidelines, model schemas, code examples |
 
+## Repository
+
+**GitHub**: https://github.com/Arc-Rictor/immo-enrichi.git
+**Default branch**: `main`
+
 ## Known Gaps
 
 - No CI/CD pipeline configured
-- No `.gitignore` at repo root (only Laravel-level gitignores exist)
 - Test coverage missing for: subscriptions, search, favorites, media uploads, CSV imports
 - No error tracking/monitoring in production
 - No backup strategy documented
