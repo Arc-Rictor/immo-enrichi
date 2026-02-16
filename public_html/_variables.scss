@@ -1,0 +1,277 @@
+// Font Sizes
+$header: 18px;
+$header_btn: 16px;
+$main_heading: 90px; // 90
+$medium_heading: 70px;
+$small_heading: 50px;
+$main_subheading: 20px;
+$buttons: 18px;
+$hero_small: 16px;
+$titles: 30px;
+$paragraphs: 18px;
+$text_links: 16px;
+$testimonial_names: 14px;
+$faqs: 25px;
+$ad_price: 24px;
+$ad_title: 20px;
+$ad_info: 14px;
+$property_info: 14px;
+$footer_links: 18px;
+
+// Responsive font sizes start
+$resp_main_heading: 70px;
+$tab_main_heading: 60px;
+$mob_main_heading: 42px;
+
+$resp_medium_heading: 65px;
+$resp_medium_heading_small: 60px;
+$tab_medium_heading: 45px;
+$mob_medium_heading: 33px;
+
+$resp_small_heading: 45px;
+$tab_small_heading: 40px;
+$tab_small_heading_small: 30px;
+$mob_small_heading: 25px;
+
+
+$resp_main_subheading: 22px;
+$tab_main_subheading: 20px;
+$mob_main_subheading: 16px;
+
+$resp_titles: 26px;
+$tab_titles: 22px;
+
+$resp_paragraphs: 16px;
+$tab_paragraphs: 14px;
+
+$tab_text_links: 14px;
+$mob_text_links: 12px;
+
+$resp_footer_links: 16px;
+$mob_footer_links: 14px;
+
+$tab_ad_price: 20px;
+$tab_ad_title: 16px;
+$tab_ad_info: 12px;
+$tab_property_info: 12px;
+
+// Responsive font sizes end
+
+// Line Heights:
+$line_header: 55px;
+$line_main_heading: 90px;
+$line_medium_heading: 80px;
+$line_small_heading: 60px;
+$line_main_subheading: 38px;
+$line_buttons: 35px;
+$line_hero_small: 40px;
+$line_titles: 60px;
+$line_titles_small: 34px;
+$line_paragraphs_large: 40px;
+$line_paragraphs: 30px;
+$line_text_links: 40px;
+$line_testimonial_names: 22px;
+$line_faqs: 29px;
+$line_ad_price: 27px;
+$line_ad_title: 26px;
+$line_ad_info: 24px;
+$line_property_info: 26px;
+
+// Responsive line heights
+$resp_line_main_heading: 70px;
+$tab_line_main_heading: 70px;
+$mob_line_main_heading: 52px;
+
+$resp_line_medium_heading: 75px;
+$resp_line_medium_heading_small: 70px;
+$tab_line_medium_heading: 55px;
+$mob_line_medium_heading: 43px;
+
+$resp_line_small_heading: 55px;
+$tab_line_small_heading: 50px;
+$tab_line_small_heading_small: 40px;
+$mob_line_small_heading: 35px;
+
+
+$resp_line_main_subheading: 35px;
+$tab_line_main_subheading: 30px;
+$mob_line_main_subheading: 26px;
+
+$resp_line_titles: 40px;
+$tab_line_titles: 30px;
+
+$resp_line_paragraphs_large: 36px;
+$resp_line_paragraphs: 26px;
+$tab_line_paragraphs: 22px;
+$tab_line_paragraphs_large: 32px;
+
+$tab_line_text_links: 35px;
+$mob_line_text_links: 30px;
+
+$tab_line_ad_price: 24px;
+$tab_line_ad_title: 22px;
+$tab_line_ad_info: 22px;
+$tab_line_property_info: 24px;
+
+// Responsive line heights end
+
+// Font family
+$brand: 'Unna', serif;
+$brand_2: 'Inter', sans-serif;
+
+// Responsive Spacing Start
+$tab_padding: 100px 0;
+$mob_padding: 50px 0;
+$tab_margin: 100px 0;
+$mob_margin: 50px 0;
+// Responsive Spacing End
+
+
+// Margin reset
+$body_margin: 0;
+$heading_margin: 0;
+h1,h2,h3,h4,h5,h6 {
+    margin: $heading_margin;
+}
+p {
+    margin: $body_margin;
+}
+
+// Margin reset end
+.wrapper {
+    width: 92%;
+    max-width: 1181px;
+    margin: 0 auto;
+}
+
+#heading {
+    font-size: $medium_heading;
+    line-height: $line_medium_heading;
+    font-weight: 400;
+    font-family: $brand;
+    @include max_width(1400px) {
+        font-size: $resp_medium_heading;
+        line-height: $resp_line_medium_heading;
+    }
+    @include max_width(1024px) {
+        font-size: $resp_medium_heading_small;
+        line-height: $resp_line_medium_heading_small;
+    }
+    @include max_width(1023px) {
+        font-size: $tab_medium_heading;
+        line-height: $tab_line_medium_heading;
+    }
+    @include max_width(767px) {
+        font-size: $mob_medium_heading;
+        line-height: $mob_line_medium_heading;
+    }
+}
+
+#small-heading {
+    font-size: $small_heading;
+    line-height: $line_small_heading;
+    font-weight: 400;
+    font-family: $brand;
+    @include max_width(1400px) {
+        font-size: $resp_small_heading;
+        line-height: $resp_line_small_heading;
+    }
+    @include max_width(1024px) {
+        font-size: $tab_small_heading;
+        line-height: $tab_line_small_heading;
+    }
+    @include max_width(1023px) {
+        font-size: $tab_small_heading_small;
+        line-height: $tab_line_small_heading_small;
+    }
+    @include max_width(767px) {
+        font-size: $mob_small_heading;
+        line-height: $mob_line_small_heading;
+    }
+}
+
+#subheading-large {
+    font-family: $brand_2;
+    font-weight: 400;
+    font-size: $paragraphs;
+    line-height: $line-paragraphs_large;
+    @include max_width(1400px) {
+        font-size: $resp_paragraphs;
+        line-height: $resp_line_paragraphs_large;
+    }
+    @include max_width(1023px) {
+        font-size: $tab_paragraphs;
+        line-height: $tab_line_paragraphs_large;
+    }
+}
+
+#subheading {
+    font-family: $brand_2;
+    font-weight: 400;
+    font-size: $paragraphs;
+    line-height: $line-paragraphs;
+}
+
+#registered {
+    display: flex;
+    font-size: 16px;
+    line-height: 40px;
+    a {
+        color: $brand_orange;
+    }
+}
+
+#title {
+   font-family: $brand;
+   font-weight: 400;
+   font-size: $titles;
+   line-height: $line_titles_small; 
+   @include max_width(1400px) {
+    font-size: $resp_titles;
+    line-height: $resp_line_titles;
+   }
+   @include max_width(1023px) {
+        font-size: $tab_titles;
+        line-height: $tab_line_titles;
+   }
+}
+
+#paragraphs {
+    font-size: $paragraphs;
+    line-height: $line_paragraphs;
+    font-family: $brand_2;
+    @include max_width(1400px) {
+        font-size: $resp_paragraphs;
+        line-height: $resp_line_paragraphs;
+    }
+    @include max_width(1023px) {
+        font-size: $tab_paragraphs;
+        line-height: $tab_line_paragraphs;
+    }
+}
+
+img { 
+	transform: translateZ(0);
+	&.bg { 
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		object-fit: cover;
+		font-family: "object-fit: cover";	
+	}
+}
+
+.swiper {
+    @include max_width(767px) {
+        padding: 0 20px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

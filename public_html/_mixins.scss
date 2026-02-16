@@ -1,0 +1,128 @@
+// Example Usage - @include max_width(750px) { ... }
+@mixin max_width($breakpoint) {
+	@media only screen and (max-width: $breakpoint) { @content; }
+}
+
+// Example Usage - @include max_height(600px) { ... }
+@mixin max_height($breakpoint) {
+	@media only screen and (max-height: $breakpoint) { @content; }
+}
+
+// Example Usage - @include max_width(750px) { ... }
+@mixin min_width($breakpoint) {
+	@media only screen and (max-width: $breakpoint) { @content; }
+}
+
+// Example Usage - @include max_height(600px) { ... }
+@mixin min_height($breakpoint) {
+	@media only screen and (max-height: $breakpoint) { @content; }
+}
+
+// Example Usage - @include placeholder($brand, $weight_300);
+@mixin placeholder($color, $weight) {
+	::-webkit-input-placeholder {
+		color: $color;
+		font-weight: $weight;
+	}
+	:-moz-placeholder {
+		color: $color;
+		font-weight: $weight;
+	}
+	::-moz-placeholder {
+		color: $color;
+		font-weight: $weight;
+	}
+	:-ms-input-placeholder {
+		color: $color;
+		font-weight: $weight;
+	}
+}
+
+// Example Usage for center horizontal and vertical - @include center()
+// Example Usage for center horizontal - @include center('horizontal')
+// Example Usage for center vertical - @include center('vertical')
+@mixin center($position: absolute, $direction: both) {
+	position: absolute;
+	@if ($direction == 'horizontal') {
+		left: 50%;
+		transform: translate(-50%, 0);
+	} @else if ($direction == 'vertical') {
+		top: 50%;
+		transform: translate(0, -50%);
+	} @else {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+// Example Usage - @include columns(1, 3, 30px);
+@mixin columns($col, $sum, $gap: 0) {
+	&:nth-child(1n) {
+		float: left;
+		margin-right: $gap;
+		clear: none;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+	&:nth-child(#{$sum}n + 1) {
+		clear: both;
+	}
+	@if ($gap == 0) {
+		width: percentage($col/$sum);
+	} @else {
+
+		width: calc(99.999% * (#{$col} / #{$sum}) - (#{$gap} - #{$gap} * #{$col} / #{$sum}));
+		&:nth-child(#{$sum}n) {
+			margin-right: 0;
+			float: right;
+		}
+	}
+}
+
+// underline appears on hover
+@mixin underline_hover($background) {
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		background: $background;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		opacity: 0;
+		display: block;
+		transition: height 0.3s, opacity 0.3s, transform 0.3s;
+		transform: translateY(-5px);
+	}
+	&:hover {
+		&:after {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+// underline removed on hover
+@mixin underline($underline_colour) {
+	position: relative;
+	color: $underline_colour;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: $underline_colour;
+		transition: $ease;
+		opacity: 1;
+	}
+	&:hover {
+		&:after {
+			opacity: 0;
+		}
+	}
+}

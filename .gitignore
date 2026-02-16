@@ -1,0 +1,48 @@
+# Dependencies
+app.immobiliermatrixfrance.fr/node_modules/
+app.immobiliermatrixfrance.fr/vendor/
+public_html/node_modules/
+
+# Environment
+app.immobiliermatrixfrance.fr/.env
+
+# Laravel generated files
+app.immobiliermatrixfrance.fr/storage/*.key
+app.immobiliermatrixfrance.fr/storage/framework/cache/data/*
+app.immobiliermatrixfrance.fr/storage/framework/sessions/*
+app.immobiliermatrixfrance.fr/storage/framework/views/*
+app.immobiliermatrixfrance.fr/storage/logs/*
+app.immobiliermatrixfrance.fr/storage/debugbar/*
+app.immobiliermatrixfrance.fr/bootstrap/cache/*
+
+# Build output
+app.immobiliermatrixfrance.fr/public/build/
+app.immobiliermatrixfrance.fr/public/hot
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+.DS_Store
+
+# cPanel system dirs
+.cpanel/
+.cphorde/
+.npm/
+.config/
+.caldav/
+.cl.selector/
+.cagefs/
+.kapps/
+.softaculous/
+.spamassassin/
+etc/
+logs/
+lscache/
+mail/
+node/
+public_ftp/
+ssl/
+tmp/
