@@ -16,10 +16,12 @@ $(document).click(function(e) {
 const propertiesSwiper = new Swiper('.properties .swiper', {
     direction: 'horizontal',
     loop: true,
-    loopAdditionalSlides: 2,
+    loopAdditionalSlides: 4,
     autoplay: {
-        delay: 5000,
+        delay: 4000,
+        disableOnInteraction: false,
     },
+    speed: 800,
     breakpoints: {
         1920: {
             slidesPerView: 3.5,
