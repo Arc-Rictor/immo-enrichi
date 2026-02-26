@@ -202,6 +202,15 @@ test: Add tests for subscription workflow
 - Swiper carousel: needs `loopAdditionalSlides: 4` and `disableOnInteraction: false` for smooth auto-sliding with few slides
 - SCSS source files (`_*.scss`) exist but compiled CSS is committed directly
 
+### CSS Typography Architecture
+- **No base font-size on body** — every element has individual `px` font-sizes; global text changes require updating each selector
+- **Font families**: `"Unna", serif` = headings; `"Inter", sans-serif` = body text, buttons, nav, UI
+- **Key text selectors** (in `styles.css`): `#heading`, `#small-heading`, `#title`, `#subheading-large`, `#subheading`, `#paragraphs`, `#registered`
+- **Responsive breakpoints**: 1400px, 1024px, 1023px, 767px, 430px — each has separate font-size overrides
+- **French-specific overrides**: `.french #small-heading` etc. at bottom of `styles.css` — must update separately
+- **Google Fonts link** (in both `en.html` + `fr.html`): must include required font variants (e.g., `ital,wght@0,400;...;1,400` for italic)
+- `styles-new.css` has its own font-sizes for: hero stats, math cards, objection blocks, ROI calc, promise block
+
 ## Existing Documentation
 
 | File | Purpose |
