@@ -23,7 +23,9 @@ Real estate SaaS platform with two components:
 - **Code Style**: Laravel Pint (PSR-12)
 
 ### Marketing Site
-- Static HTML5, CSS3/SCSS, jQuery, Swiper.js
+- Static HTML5, CSS3/SCSS, jQuery, Swiper.js (v9)
+- **CSS**: `styles.css` (base/legacy) + `styles-new.css` (new sections: math cards, objections, ROI calc, promise block)
+- **Fonts**: Unna (serif, headings) + Inter (sans-serif, body)
 
 ## Project Structure
 
@@ -31,8 +33,11 @@ Real estate SaaS platform with two components:
 Immo-fr-website/
 ├── public_html/                        # Marketing website (static HTML)
 │   ├── en.html, fr.html                # Live pages
+│   ├── en-old-*.html, fr-old-*.html    # Backups of previous versions
 │   ├── en-sandbox.html, fr-sandbox.html # Sandbox pages
-│   ├── styles.css, styles-sandbox.css  # Stylesheets
+│   ├── styles.css                      # Base stylesheet (compiled from SCSS)
+│   ├── styles-new.css                  # Additional styles (math, objections, ROI, promise)
+│   ├── styles-sandbox.css              # Sandbox stylesheet
 │   ├── _*.scss                         # SCSS source files
 │   └── main.js                         # Swiper carousel init
 │
@@ -192,6 +197,9 @@ test: Add tests for subscription workflow
 - Always update BOTH French and English pages identically
 - Auth links must include `?locale=fr` or `?locale=en` for language persistence
 - Use cache-busting parameter on CSS: `styles.css?v=YYYYMMDD`
+- Both `styles.css` AND `styles-new.css` must be deployed together
+- FR page uses `list2_fr.png` and `join_fr.png`; EN page uses `list2.png` and `join.png`
+- Swiper carousel: needs `loopAdditionalSlides: 4` and `disableOnInteraction: false` for smooth auto-sliding with few slides
 - SCSS source files (`_*.scss`) exist but compiled CSS is committed directly
 
 ## Existing Documentation
@@ -208,6 +216,12 @@ test: Add tests for subscription workflow
 
 **GitHub**: https://github.com/Arc-Rictor/immo-enrichi.git
 **Default branch**: `main`
+
+### Git Gotchas
+- Repo is inside a cPanel home directory — **never stage cPanel system files** (`.bash_*`, `.cpanel/`, `.ssh/`, `.ftpquota`, etc.)
+- Always stage specific files by name, never use `git add .` or `git add -A`
+- `.gitignore` excludes `node_modules/`, `vendor/`, `.env`, Laravel cache/logs, build output, and cPanel dirs
+- May need `git config --global --add safe.directory` if dubious ownership error occurs on Windows
 
 ## Known Gaps
 
