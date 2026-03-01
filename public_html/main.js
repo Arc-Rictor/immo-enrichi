@@ -12,45 +12,6 @@ $(document).click(function(e) {
 	}
 });
 
-// Properties Carousel
-const propertiesSwiper = new Swiper('.properties .swiper', {
-    direction: 'horizontal',
-    loop: true,
-    loopAdditionalSlides: 2,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
-    speed: 800,
-    centeredSlides: true,
-    breakpoints: {
-        1920: {
-            slidesPerView: 2,
-            spaceBetween: 116,
-        },
-        1600: {
-            slidesPerView: 2,
-            spaceBetween: 75,
-        },
-        1400: {
-            slidesPerView: 2,
-            spaceBetween: 50,
-        },
-        1024: {
-            slidesPerView: 1.8,
-            spaceBetween: 30,
-        },
-        768: {
-            slidesPerView: 1.5,
-            spaceBetween: 15,
-        },
-        0: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-        },
-    }
-});
-
 // Testimonials Carousel
 const testimonialsSwiper = new Swiper('.people-say .swiper', {
     direction: 'horizontal',
