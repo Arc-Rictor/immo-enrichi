@@ -928,7 +928,7 @@ html {
 }
 .list-banner-cta .list-banner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 @media only screen and (max-width: 767px) {
   .list-banner-cta .list-banner {
@@ -950,11 +950,12 @@ html {
   object-fit: contain;
 }
 .list-banner-cta .list-banner .right {
-  width: 41%;
+  width: 70%;
+  text-align: center;
 }
 @media only screen and (max-width: 1024px) {
   .list-banner-cta .list-banner .right {
-    width: 50%;
+    width: 80%;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -967,6 +968,8 @@ html {
   font-family: "Unna", serif;
   font-weight: 400;
   margin-bottom: 33px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 25px;
   width: 88%;
 }
@@ -2400,7 +2403,7 @@ footer .bottom-footer span a {
   }
 }
 .french .list-banner-cta .list-banner .right {
-  width: 45%;
+  width: 70%;
 }
 @media only screen and (max-width: 767px) {
   .french .list-banner-cta .list-banner .right {
