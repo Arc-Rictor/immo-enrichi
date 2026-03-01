@@ -22,7 +22,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Unna:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=20260226">
-    <link rel="stylesheet" href="styles-new.css?v=20260226">
+    <link rel="stylesheet" href="styles-new.css?v=20260301">
 </head>
 
 <!-- header -->
@@ -43,7 +43,7 @@
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#latest-props">Properties</a></li>
                     <li><a href="#faqs">FAQ</a></li>
-                    <li><a href="mailto:imf-info@mail.com?subject=Enquiry from website">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
 
             </div>
@@ -78,7 +78,7 @@
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#latest-props">Properties</a></li>
                     <li><a href="#faqs">FAQ</a></li>
-                    <li><a href="mailto:imf-info@mail.com?subject=Enquiry from website">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <div class="log-mob">
                         <li><a href="https://app.immobiliermatrixfrance.fr/register?locale=en">Sign Up</a></li>
                         <li><a href="https://app.immobiliermatrixfrance.fr/login?locale=en">Log In</a></li>
@@ -770,6 +770,47 @@
     </div>
     <!-- END FAQs -->
 
+    <!-- CONTACT FORM -->
+    <div class="contact-section" id="contact">
+        <div class="contact-inner wrapper">
+            <h2>Get in Touch</h2>
+            <p class="contact-subtitle">Have a question? We'd love to hear from you.</p>
+
+            <form class="contact-form" id="contactForm" novalidate>
+                <input type="hidden" name="locale" value="en">
+
+                <div class="form-group">
+                    <label for="contactName">Name *</label>
+                    <input type="text" id="contactName" name="name" placeholder="Your full name" required maxlength="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Email *</label>
+                    <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactPhone">Phone</label>
+                    <input type="tel" id="contactPhone" name="phone" placeholder="+33 6 00 00 00 00">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactMessage">Message *</label>
+                    <textarea id="contactMessage" name="message" placeholder="How can we help you?" required maxlength="2000"></textarea>
+                </div>
+
+                <!-- Honeypot -->
+                <div class="hp-field">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off">
+                </div>
+
+                <button type="submit" class="contact-submit">Send Message</button>
+                <div class="contact-message" id="contactMsg"></div>
+            </form>
+        </div>
+    </div>
+    <!-- END CONTACT FORM -->
+
     <!-- ready to join -->
     <div class="ready-to-join">
         <div class="ready-to-join-content wrapper">
@@ -850,5 +891,37 @@
     <!-- footer -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
+    <script>
+    $(function() {
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault();
+            var $form = $(this);
+            var $btn = $form.find('.contact-submit');
+            var $msg = $('#contactMsg');
+
+            $btn.prop('disabled', true).text('Sending...');
+            $msg.hide().removeClass('success error');
+
+            $.ajax({
+                url: '/contact.php',
+                method: 'POST',
+                data: $form.serialize(),
+                dataType: 'json',
+                success: function(res) {
+                    $msg.addClass('success').text(res.message).fadeIn();
+                    $form[0].reset();
+                },
+                error: function(xhr) {
+                    var res = xhr.responseJSON || {};
+                    var text = res.message || 'Something went wrong. Please try again.';
+                    $msg.addClass('error').text(text).fadeIn();
+                },
+                complete: function() {
+                    $btn.prop('disabled', false).text('Send Message');
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
