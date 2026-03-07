@@ -1158,6 +1158,8 @@ html {
   color: #fff;
   cursor: pointer;
   border-radius: 10px;
+  overflow: hidden;
+  max-width: 280px;
 }
 .properties-content .properties-image img {
   width: 100%;
@@ -1239,6 +1241,27 @@ html {
   min-height: 20px;
   max-height: 20px;
   margin-right: 5px;
+}
+
+/* Properties Static Grid */
+.properties-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.properties-grid .properties-content {
+  width: 280px;
+  flex-shrink: 0;
+}
+@media only screen and (max-width: 767px) {
+  .properties-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .properties-grid .properties-content {
+    width: 260px;
+  }
 }
 
 .text-cta-content {

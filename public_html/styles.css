@@ -1164,6 +1164,8 @@ html {
   color: #fff;
   cursor: pointer;
   border-radius: 10px;
+  overflow: hidden;
+  max-width: 280px;
 }
 .properties-content .properties-image img {
   width: 100%;
