@@ -1643,12 +1643,27 @@ html {
 .people-say-content .review-container {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 .people-say-content .review-container .review-content {
-  padding: 38px 56px 34px 41px;
+  padding: 38px 40px 34px 40px;
   background: #000;
   color: #fff;
   border-radius: 10px;
+  width: 280px;
+  flex-shrink: 0;
+}
+@media only screen and (max-width: 767px) {
+  .people-say-content .review-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .people-say-content .review-container .review-content {
+    width: 260px;
+  }
 }
 .people-say-content .review-container .people-name {
   margin-top: 20px;
