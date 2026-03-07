@@ -23,9 +23,10 @@ Real estate SaaS platform with two components:
 - **Code Style**: Laravel Pint (PSR-12)
 
 ### Marketing Site
-- Static HTML5, CSS3/SCSS, jQuery, Swiper.js (v9)
-- **CSS**: `styles.css` (base/legacy) + `styles-new.css` (new sections: math cards, objections, ROI calc, promise block)
+- Static HTML5, CSS3/SCSS, jQuery
+- **CSS**: `styles.css` (base/legacy) + `styles-new.css` (new sections: math cards, objections, ROI calc, promise block, testimonials grid, properties grid, back-to-top)
 - **Fonts**: Unna (serif, headings) + Inter (sans-serif, body)
+- **Note**: Swiper.js was removed in Mar 2026 — all carousels replaced with static grids
 
 ## Project Structure
 
@@ -39,7 +40,8 @@ Immo-fr-website/
 │   ├── styles-new.css                  # Additional styles (math, objections, ROI, promise)
 │   ├── styles-sandbox.css              # Sandbox stylesheet
 │   ├── _*.scss                         # SCSS source files
-│   └── main.js                         # Swiper carousel init
+│   ├── main.js                         # Nav toggle, FAQ accordions, language switcher
+│   └── contact.php                     # Contact form handler (email via PHP mail())
 │
 ├── app.immobiliermatrixfrance.fr/      # Laravel application
 │   ├── app/
@@ -65,7 +67,8 @@ Immo-fr-website/
 │
 ├── README.md                          # Project overview
 ├── CHANGELOG.md                       # Version history
-└── CLAUDE.md                          # This file
+├── CLAUDE.md                          # This file
+└── HUBSPOT-INTEGRATION.md             # HubSpot CRM integration report/proposal
 ```
 
 ## Development Commands
@@ -199,8 +202,12 @@ test: Add tests for subscription workflow
 - Use cache-busting parameter on CSS: `styles.css?v=YYYYMMDD`
 - Both `styles.css` AND `styles-new.css` must be deployed together
 - FR page uses `list2_fr.png` and `join_fr.png`; EN page uses `list2.png` and `join.png`
-- Swiper carousel: needs `loopAdditionalSlides: 4` and `disableOnInteraction: false` for smooth auto-sliding with few slides
 - SCSS source files (`_*.scss`) exist but compiled CSS is committed directly
+
+### CSS deployment gotcha
+- **Git push to GitHub does NOT auto-deploy to cPanel** — CSS files on the server can be stale even when HTML is current
+- For layout-critical styles (flex grids, card widths), use **inline styles** on HTML elements as a fallback — this guarantees the layout works even if CSS files aren't deployed
+- The `.wrapper` class constrains width to `92%` / `max-width: 1181px` — flex grids with fixed-width items must account for this at smaller viewports (use `flex-wrap: wrap`)
 
 ### CSS Typography Architecture
 - **No base font-size on body** — every element has individual `px` font-sizes; global text changes require updating each selector
@@ -220,6 +227,7 @@ test: Add tests for subscription workflow
 | `public_html/CHANGELOG.md` | Marketing site changes |
 | `app.immobiliermatrixfrance.fr/README.md` | Laravel setup guide |
 | `app.immobiliermatrixfrance.fr/WARP.md` | Detailed dev guidelines, model schemas, code examples |
+| `HUBSPOT-INTEGRATION.md` | HubSpot CRM integration proposal (3 tiers) |
 
 ## Repository
 
@@ -234,7 +242,8 @@ test: Add tests for subscription workflow
 
 ## Known Gaps
 
-- No CI/CD pipeline configured
+- No CI/CD pipeline configured — git push to GitHub does not deploy to cPanel server
 - Test coverage missing for: subscriptions, search, favorites, media uploads, CSV imports
 - No error tracking/monitoring in production
 - No backup strategy documented
+- No CRM integration — contact form emails only, no lead tracking (see `HUBSPOT-INTEGRATION.md` for proposal)
