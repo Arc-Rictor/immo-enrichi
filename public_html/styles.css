@@ -397,12 +397,6 @@ img.bg {
   font-family: "object-fit: cover";
 }
 
-@media only screen and (max-width: 767px) {
-  .swiper {
-    padding: 0 20px;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }

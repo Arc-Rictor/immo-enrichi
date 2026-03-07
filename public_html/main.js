@@ -12,43 +12,6 @@ $(document).click(function(e) {
 	}
 });
 
-// Testimonials Carousel
-const testimonialsSwiper = new Swiper('.people-say .swiper', {
-    direction: 'horizontal',
-    centeredSlides: true,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-    },
-    breakpoints: {
-        1920: {
-            slidesPerView: 4.5,
-            spaceBetween: 116,
-        },
-        1600: {
-            slidesPerView: 3.5,
-            spaceBetween: 75,
-        },
-        1400: {
-            slidesPerView: 3.7,
-            spaceBetween: 50,
-        },
-        1024: {
-            slidesPerView: 3.2,
-            spaceBetween: 30,
-        },
-        768: {
-            slidesPerView: 2.2,
-            spaceBetween: 15,
-            centeredSlides: true,
-        },
-        0: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-        },
-    }
-});
-
 // FAQ Accordions
 if ($('.accordions').length) {
     var allPanels = $('.accordion > .accordion__content').hide();

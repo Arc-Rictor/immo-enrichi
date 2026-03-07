@@ -515,6 +515,29 @@
 }
 
 /* ========================
+   TESTIMONIALS STATIC GRID
+   ======================== */
+.review-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.review-grid .review-content {
+    width: 280px;
+    flex-shrink: 0;
+}
+@media only screen and (max-width: 767px) {
+    .review-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .review-grid .review-content {
+        width: 260px;
+    }
+}
+
+/* ========================
    PROPERTIES STATIC GRID
    ======================== */
 .properties-grid {
