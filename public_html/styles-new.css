@@ -559,3 +559,23 @@
         width: 260px;
     }
 }
+
+/* ========================
+   BACK TO TOP
+   ======================== */
+.back-to-top {
+    text-align: right;
+    padding: 20px 0;
+}
+.back-to-top a {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+.back-to-top a:hover {
+    color: #FFA163;
+}
