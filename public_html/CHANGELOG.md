@@ -1,5 +1,51 @@
 # Changelog - Marketing Website (public_html)
 
+## [1.4.0] - 2026-03-08
+
+### Removed - Properties Grid & Testimonials Sections
+
+#### Overview
+Removed the "Latest Properties" grid section and "What people are saying" testimonials section from both EN and FR landing pages. Applied Solution Banner centering fix exposed by the removal.
+
+#### Sections Removed
+
+**Latest Properties (lines 440–544):**
+- Intro heading ("Some of the latest properties listed on our platform" / "Quelques-uns des derniers biens mis en ligne sur notre plateforme")
+- "Start your search today" / "Commencez vos recherches" CTA button
+- Property cards grid (Villa in Terre-de-Haut €890,000 + Maison in Vérines €460,000)
+- Associated back-to-top link
+
+**Testimonials (lines 546–595):**
+- "What people are saying..." / "Ils parlent de nous..." heading
+- Three review cards: Chloé Rousseau (Paris), Marie Dupont (Lyon), Sophie Martin (Nice)
+
+**Navigation cleanup:**
+- Removed "Properties" / "Biens" nav link from desktop nav, mobile nav, and footer (3 locations per page)
+
+#### Solution Banner Centering Fix
+
+The Solution Banner ("Your 20 listings become 200...") used a two-column flex layout (`.list-banner`) but only contained a `.right` div (no `.left` image column). After section removal this misalignment became more visible. Fixed with inline styles:
+- `justify-content: center` on `.wrapper.list-banner`
+- `width: 70%; text-align: center` on `.right`
+- `text-align: center` on `.sign-up`
+- `justify-content: center` on `.registered`
+
+#### Files Modified
+
+```
+- en.html (nav links, properties section, testimonials section, Solution Banner fix)
+- fr.html (nav links, properties section, testimonials section, Solution Banner fix)
+```
+
+#### Page Flow After Changes
+Pricing → FAQs → Contact → Ready to Join → Footer
+
+#### Status
+- [x] Sandbox tested and approved
+- [ ] Deployed to production (manual cPanel upload required)
+
+---
+
 ## [1.3.0] - 2025-12-27
 
 ### Deployed - Property Carousel & Pricing Section Production Update

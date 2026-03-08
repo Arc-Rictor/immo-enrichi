@@ -24,9 +24,10 @@ Real estate SaaS platform with two components:
 
 ### Marketing Site
 - Static HTML5, CSS3/SCSS, jQuery
-- **CSS**: `styles.css` (base/legacy) + `styles-new.css` (new sections: math cards, objections, ROI calc, promise block, testimonials grid, properties grid, back-to-top)
+- **CSS**: `styles.css` (base/legacy) + `styles-new.css` (new sections: math cards, objections, ROI calc, promise block, back-to-top)
 - **Fonts**: Unna (serif, headings) + Inter (sans-serif, body)
 - **Note**: Swiper.js was removed in Mar 2026 — all carousels replaced with static grids
+- **Note**: Properties grid and testimonials sections were removed from HTML in Mar 2026 (CSS may still contain unused selectors for `.properties-grid`, `.people-say`, `.review-content`)
 
 ## Project Structure
 
@@ -217,6 +218,7 @@ test: Add tests for subscription workflow
 - **French-specific overrides**: `.french #small-heading` etc. at bottom of `styles.css` — must update separately
 - **Google Fonts link** (in both `en.html` + `fr.html`): must include required font variants (e.g., `ital,wght@0,400;...;1,400` for italic)
 - `styles-new.css` has its own font-sizes for: hero stats, math cards, objection blocks, ROI calc, promise block
+- **Solution Banner** (`.list-banner-cta`): uses inline styles for centering (`justify-content: center` on `.list-banner`, `width: 70%` on `.right`) since the `.left` image column was removed — do not remove these inline styles
 
 ## Existing Documentation
 

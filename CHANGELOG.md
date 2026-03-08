@@ -2,6 +2,24 @@
 
 All notable project-level changes will be documented in this file.
 
+## [1.4.0] - 2026-03-08
+
+### Removed - Properties Grid & Testimonials Sections
+
+#### Overview
+Removed "Latest Properties" grid and "What people are saying" testimonials from both EN/FR landing pages. Cleaned up associated nav links and fixed Solution Banner centering.
+
+#### Files Modified
+- `public_html/en.html` — Removed properties grid, testimonials, nav links; added Solution Banner centering inline styles
+- `public_html/fr.html` — Same changes (French content)
+- `CLAUDE.md` — Updated to reflect section removals and Solution Banner inline styles
+- `public_html/CHANGELOG.md` — Added v1.4.0 entry
+
+#### Deployment
+Manual cPanel upload required for `en.html` and `fr.html`. No CSS changes needed.
+
+---
+
 ## [1.3.0] - 2025-12-27
 
 ### Deployed - Production Update: Property Carousel & Pricing Section
