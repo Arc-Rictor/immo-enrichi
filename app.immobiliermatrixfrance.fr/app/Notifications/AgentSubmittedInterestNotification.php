@@ -44,8 +44,8 @@ class AgentSubmittedInterestNotification extends Notification
     {
         $locale = \Session::get('locale');
         return match ($locale) {
-            'fr' => "Bonjour. Belle opportunité ! Un agent d'Immobilier Matrix France est intéressé à promouvoir votre propriété. Cliquez ci-dessous pour vous connecter et discuter de comment ils peuvent efficacement mettre en marché votre maison auprès d'acheteurs sérieux.",
-            default => "Hello. Great opportunity! An Immobilier Matrix France Agent is interested in promoting your property. Click below to connect and discuss how they can effectively market your home to serious buyers."
+            'fr' => "Bonjour. Belle opportunité ! Un agent d'Immo-Enrichi est intéressé à promouvoir votre propriété. Cliquez ci-dessous pour vous connecter et discuter de comment ils peuvent efficacement mettre en marché votre maison auprès d'acheteurs sérieux.",
+            default => "Hello. Great opportunity! An Immo-Enrichi Agent is interested in promoting your property. Click below to connect and discuss how they can effectively market your home to serious buyers."
         };
     }
 

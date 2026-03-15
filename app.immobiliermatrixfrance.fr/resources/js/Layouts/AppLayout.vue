@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Head title="Immobilier Matrix France"/>
+        <Head title="Immo-Enrichi"/>
 
         <Banner/>
 

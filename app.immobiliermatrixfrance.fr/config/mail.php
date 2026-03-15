@@ -100,7 +100,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'noreply@immobiliermatrixfrance.fr'),
-        'name' => env('MAIL_FROM_NAME', 'Immobilier Matrix France'),
+        'name' => env('MAIL_FROM_NAME', 'Immo-Enrichi'),
     ],
 
     /*
