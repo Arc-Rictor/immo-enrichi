@@ -1,0 +1,55 @@
+.latest-cta {
+    background: $black;
+    color: $white;
+    &-content {
+        padding-top: 140px;
+        padding-bottom: 309px;
+        @include max_width(1023px) {
+            padding-top: 100px;
+        }
+        @include max_width(767px) {
+            padding-top: 50px;
+            padding-bottom: 225px;
+        }
+        .heading {
+            font-family: $brand;
+            font-weight: 400;
+            width: 73%;
+            text-align: center;
+            margin: auto;
+            @include max_width(1024px) {
+                width: 79%;
+            }
+            @include max_width(1023px) {
+                width: 92%;
+            }
+        }
+        .sub-heading {
+            width: 100%;
+            max-width: 780px;
+            margin: auto;
+            text-align: center;
+            margin-top: 22px;
+        }
+        .create {
+           text-align: center;
+           margin-top: 40px;
+           .latest-btn {
+            margin-bottom: 10px;
+           }
+           .registered {
+            justify-content: center;
+            font-size: $text_links;
+            line-height: $line_text_links;
+            font-family: $brand_2;
+            a {
+                margin-left: 5px;
+                text-decoration: underline;
+                &:hover {
+                    color: $brand_orange_light !important;
+                }
+            }
+            }
+        }
+    }
+}

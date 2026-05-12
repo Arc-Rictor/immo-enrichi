@@ -1,0 +1,209 @@
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    .header-nav-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 60px 0 60px;
+        @include max_width(767px) {
+            padding: 25px 25px 0 25px;
+        }
+        .home-logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            svg {
+                width: 100%;
+                max-width: 287px;
+                height: 51px;
+                @include max_width(1024px) {
+                    max-width: 200px;
+                    height: 100%;
+                }
+                @include max_width(1023px) {
+                    max-width: 150px;
+                    height: 100%;
+                }
+            }
+            img {
+                width: 100%;
+                max-width: 287px;
+                @include max_width(1024px) {
+                    max-width: 200px;
+                }
+                @include max_width(1023px) {
+                    max-width: 125px;
+                }
+            }
+        }
+        .nav-links {
+            width: 45%; // 33
+            @include max_width(1300px) {
+                display: none;
+            }
+            ul {
+               display: flex;
+               justify-content: space-around;
+               list-style-type: none;
+               li {
+                    font-size: $header;
+                    line-height: $line_header;
+                    font-family: $brand_2;
+                    a {
+                        color: $black;
+                        &:hover {
+                            color: $brand_orange;
+                        }
+                    }
+               }
+            }
+        }
+        .log-in {
+            display: flex;
+            align-items: center;
+            @include max_width(1300px) {
+                //    display: none;
+                position: absolute;
+                right: 90px;
+                top: 36px;
+                @include max_width(1024px) {
+                    top: 28px;
+                }
+                @include max_width(900px) {
+                    top: 23px;
+                }
+                @include max_width(767px) {
+                    right: 50px;
+                    top: 28px;
+                }
+            }
+         
+            .language {
+                display: flex;
+                align-items: center;
+                margin-right: 25px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: $black;
+                    text-decoration: none;
+                    p {
+                        font-size: 12px;
+                        height: 19px;
+                        display: flex;
+                        margin-right: 5px;
+                        align-items: center;
+                        font-family: $brand_2;
+                        font-weight: 400;
+                        text-decoration: none;
+                    }
+                }
+             
+                .flag {
+                    width: 100%;
+                    max-width: 27px;
+                }
+                .arrow {
+                    width: 100%;
+                    max-width: 7px;
+                    margin-left: 5px;
+                    @include max_width(1300px) {
+                        display: none;
+                    }
+                }
+            }
+            .head-sign {
+                $font-size: $header;
+                text-decoration: none;
+                font-family: $brand_2;
+                color: $black;
+                margin-left: 10px;
+                @include max_width(1300px) {
+                    display: none;
+                }
+                &:hover {
+                    color: $brand_orange;
+                }
+                &::before {
+                    content: '|';
+                    position: relative;
+                    left: -15px;
+                    height: 20px;
+                }
+            }
+            .log {
+                margin-left: 24px;
+                min-height: 55px;
+                @include max_width(1300px) {
+                    display: none;
+                }
+            }
+        }
+        .mobile-nav-container {
+            display: none;
+            @include min_width(1300px) {
+                display: block;
+                margin-left: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            .nav-toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 16px;
+                width: 40px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                span {
+                    display: block;
+                    width: 29px;
+                    height: 2px;
+                    background-color: $black;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .mobile-nav-menu {
+            @media only screen and (min-width: 1301px) {
+                display: none;
+            }
+            .header-mob-nav {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgb(189,132,233);
+                background: linear-gradient(90deg, rgba(189,132,233,1) 0%, rgba(245,231,255,1) 35%, rgba(255,234,227,1) 65%, rgba(254,115,69,1) 100%);
+                font-family: $brand_2;
+                color: $black;
+                z-index: 10;
+                overflow: auto;
+                padding-top: 25%;
+                @include max_width(1023px) {
+                    padding-top: 40%;
+                }
+                @include max_width(767px) {
+                    padding-top: 50%;
+                }
+                li {
+                    font-size: 24px;
+                    margin: 30px 0;
+                    text-align: center;
+                    a {
+                        color: $black;
+                        &:hover {
+                            color: $brand_orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

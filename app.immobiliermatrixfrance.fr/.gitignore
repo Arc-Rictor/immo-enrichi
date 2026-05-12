@@ -1,0 +1,48 @@
+# Environment & credentials
+.env
+.env.backup
+.env.production
+.env.*.local
+auth.json
+*.key
+*.pem
+
+# Logs
+*.log
+error_log
+storage/logs/*
+!storage/logs/.gitignore
+
+# Laravel runtime caches
+storage/framework/cache/data/*
+!storage/framework/cache/data/.gitignore
+storage/framework/sessions/*
+!storage/framework/sessions/.gitignore
+storage/framework/views/*
+!storage/framework/views/.gitignore
+storage/framework/testing/*
+!storage/framework/testing/.gitignore
+storage/debugbar/*
+storage/psysh/*
+storage/*.key
+
+# Dependencies (regenerated from composer.json / package.json)
+/node_modules
+/vendor
+
+# Build artefacts
+/public/hot
+/public/storage
+/public/build
+.phpunit.result.cache
+
+# OS & editor
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+.fleet
+
+# npm/yarn debug
+npm-debug.log
+yarn-error.log

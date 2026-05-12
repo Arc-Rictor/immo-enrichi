@@ -1,0 +1,16 @@
+@import "../../vendor/spatie/laravel-medialibrary-pro/resources/js/media-library-pro-styles";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+.shadow-main-container {
+    border-radius: 25px;
+    box-shadow: 0px -1px 23px 4px rgba(0,0,0, 0.055266);
+    opacity: 1;
+    background-color: rgba(255,255,255, 1);
+}
+
