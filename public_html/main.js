@@ -77,3 +77,66 @@ function changeLanguage() {
 if ( $('.loading_screen').length > 0 ) {
     $('.loading_screen').delay(2500).fadeOut(500);
 }
+// Client-review preview safety
+(function () {
+    'use strict';
+
+    var isFrench = document.documentElement.lang === 'fr';
+    var previewMessage = isFrench
+        ? "Cette action est d&eacute;sactiv&eacute;e dans la pr&eacute;visualisation client."
+        : 'This action is disabled in the client review preview.';
+    var formMessage = isFrench
+        ? "Pr&eacute;visualisation uniquement : votre message n'a pas &eacute;t&eacute; envoy&eacute;."
+        : 'Preview only: your message was not sent.';
+    var messageTimer;
+
+    function showPreviewMessage(message) {
+        var actionMessage = document.getElementById('previewActionMsg');
+        if (!actionMessage) {
+            return;
+        }
+
+        window.clearTimeout(messageTimer);
+        actionMessage.innerHTML = message;
+        actionMessage.style.display = 'block';
+        messageTimer = window.setTimeout(function () {
+            actionMessage.style.display = 'none';
+        }, 4000);
+    }
+
+    document.querySelectorAll('a[href*="app.immobiliermatrixfrance.fr"]').forEach(function (link) {
+        link.classList.add('preview-disabled-action');
+        link.setAttribute('aria-description', previewMessage);
+    });
+
+    document.addEventListener('click', function (event) {
+        var link = event.target.closest('a[href*="app.immobiliermatrixfrance.fr"]');
+        if (!link) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        showPreviewMessage(previewMessage);
+    }, true);
+
+    document.addEventListener('submit', function (event) {
+        if (!event.target.matches('#contactForm')) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        if (!event.target.checkValidity()) {
+            event.target.reportValidity();
+            return;
+        }
+
+        var contactMessage = document.getElementById('contactMsg');
+        contactMessage.classList.remove('error');
+        contactMessage.classList.add('success');
+        contactMessage.innerHTML = formMessage;
+        contactMessage.style.display = 'block';
+    }, true);
+})();

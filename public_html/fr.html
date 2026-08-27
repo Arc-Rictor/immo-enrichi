@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVPV61PVMB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EVPV61PVMB');
-</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive">
     <title>Immo-Enrichi | Une collaboration qui renforce chaque agent</title>
     <meta name="description" content="Plateforme priv&eacute;e r&eacute;serv&eacute;e aux agents o&ugrave; vos 20 annonces deviennent 200. Publiez vos biens, recherchez dans le r&eacute;seau, concluez plus de transactions ensemble. Essai gratuit de 90 jours.">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -24,6 +16,7 @@
     <link rel="stylesheet" href="styles-new.css?v=20260307">
 </head>
 
+<body class="french">
 <!-- header -->
 <header>
 
@@ -90,7 +83,10 @@
 
 
 
-<body class="french">
+    <aside class="client-preview-banner" aria-label="Avis de pr&eacute;visualisation client">
+        Pr&eacute;visualisation client &mdash; les services interactifs sont d&eacute;sactiv&eacute;s et aucune donn&eacute;e de formulaire ne sera envoy&eacute;e.
+    </aside>
+    <div class="preview-action-message" id="previewActionMsg" role="status" aria-live="polite"></div>
     <!-- HERO SECTION -->
     <div class="homepage-hero">
         <div class="hero-gradient"></div>
@@ -612,37 +608,5 @@
     </footer>
     <!-- footer -->
     <script src="main.js"></script>
-    <script>
-    $(function() {
-        $('#contactForm').on('submit', function(e) {
-            e.preventDefault();
-            var $form = $(this);
-            var $btn = $form.find('.contact-submit');
-            var $msg = $('#contactMsg');
-
-            $btn.prop('disabled', true).text('Envoi en cours...');
-            $msg.hide().removeClass('success error');
-
-            $.ajax({
-                url: '/contact.php',
-                method: 'POST',
-                data: $form.serialize(),
-                dataType: 'json',
-                success: function(res) {
-                    $msg.addClass('success').text(res.message).fadeIn();
-                    $form[0].reset();
-                },
-                error: function(xhr) {
-                    var res = xhr.responseJSON || {};
-                    var text = res.message || 'Une erreur est survenue. Veuillez réessayer.';
-                    $msg.addClass('error').text(text).fadeIn();
-                },
-                complete: function() {
-                    $btn.prop('disabled', false).text('Envoyer le message');
-                }
-            });
-        });
-    });
-    </script>
 </body>
 </html>

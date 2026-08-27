@@ -1,0 +1,26 @@
+services:
+  - type: web
+    runtime: static
+    name: immo-enrichi-client-preview
+    branch: client-preview
+    rootDir: public_html
+    buildCommand: sh build-preview.sh
+    staticPublishPath: ./preview-dist
+    autoDeployTrigger: commit
+    routes:
+      - type: rewrite
+        source: /fr
+        destination: /fr.html
+      - type: rewrite
+        source: /en
+        destination: /en.html
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow, noarchive
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin

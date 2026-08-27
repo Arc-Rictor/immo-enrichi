@@ -585,3 +585,56 @@
 .back-to-top a:hover {
     color: #FFA163;
 }
+
+/* ========================
+   CLIENT REVIEW PREVIEW
+   ======================== */
+.client-preview-banner {
+    position: relative;
+    z-index: 1000;
+    padding: 10px 20px;
+    color: #f8f4ec;
+    background: #173b31;
+    border-bottom: 2px solid #ffa163;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.preview-action-message {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1100;
+    display: none;
+    max-width: 360px;
+    padding: 14px 18px;
+    color: #173b31;
+    background: #fff7ef;
+    border: 1px solid #ffa163;
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.preview-disabled-action {
+    cursor: not-allowed;
+}
+
+@media only screen and (max-width: 767px) {
+    .client-preview-banner {
+        padding: 9px 14px;
+        font-size: 11px;
+    }
+
+    .preview-action-message {
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        max-width: none;
+    }
+}

@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVPV61PVMB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EVPV61PVMB');
-</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive">
     <title>Immo-Enrichi | Collaboration That Strengthens Every Agent</title>
     <meta name="description" content="Private agent-only platform where your 20 listings become 200. List properties, search the network, close more deals together. 90-day free trial.">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -24,6 +16,7 @@
     <link rel="stylesheet" href="styles-new.css?v=20260307">
 </head>
 
+<body class="english">
 <!-- header -->
 <header>
 
@@ -90,7 +83,10 @@
 
 
 
-<body class="english">
+    <aside class="client-preview-banner" aria-label="Client preview notice">
+        Client review preview &mdash; interactive services are disabled and no form data will be sent.
+    </aside>
+    <div class="preview-action-message" id="previewActionMsg" role="status" aria-live="polite"></div>
     <!-- HERO SECTION -->
     <div class="homepage-hero">
         <div class="hero-gradient"></div>
@@ -612,37 +608,5 @@
     </footer>
     <!-- footer -->
     <script src="main.js"></script>
-    <script>
-    $(function() {
-        $('#contactForm').on('submit', function(e) {
-            e.preventDefault();
-            var $form = $(this);
-            var $btn = $form.find('.contact-submit');
-            var $msg = $('#contactMsg');
-
-            $btn.prop('disabled', true).text('Sending...');
-            $msg.hide().removeClass('success error');
-
-            $.ajax({
-                url: '/contact.php',
-                method: 'POST',
-                data: $form.serialize(),
-                dataType: 'json',
-                success: function(res) {
-                    $msg.addClass('success').text(res.message).fadeIn();
-                    $form[0].reset();
-                },
-                error: function(xhr) {
-                    var res = xhr.responseJSON || {};
-                    var text = res.message || 'Something went wrong. Please try again.';
-                    $msg.addClass('error').text(text).fadeIn();
-                },
-                complete: function() {
-                    $btn.prop('disabled', false).text('Send Message');
-                }
-            });
-        });
-    });
-    </script>
 </body>
 </html>
