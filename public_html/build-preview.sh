@@ -5,6 +5,7 @@ dist_dir="preview-dist"
 
 rm -rf "$dist_dir"
 mkdir -p "$dist_dir"
+mkdir -p "$dist_dir/demo"
 
 for file in \
     index.html \
@@ -26,5 +27,8 @@ for file in \
 do
     cp "$file" "$dist_dir/$file"
 done
+
+cp property1.png property2.png property3.png property4.png "$dist_dir/"
+cp demo/index.html demo/demo.css demo/demo.js "$dist_dir/demo/"
 
 echo "Static client preview prepared in $dist_dir"

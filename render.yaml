@@ -9,6 +9,9 @@ services:
     autoDeployTrigger: commit
     routes:
       - type: rewrite
+        source: /demo
+        destination: /demo/index.html
+      - type: rewrite
         source: /fr
         destination: /fr.html
       - type: rewrite
