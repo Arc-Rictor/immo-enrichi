@@ -3,6 +3,7 @@ app.immobiliermatrixfrance.fr/node_modules/
 app.immobiliermatrixfrance.fr/vendor/
 public_html/node_modules/
 public_html/preview-dist/
+public_html/preview-app/
 
 # Environment
 app.immobiliermatrixfrance.fr/.env

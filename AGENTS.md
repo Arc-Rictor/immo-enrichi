@@ -39,6 +39,7 @@ The genuine Laravel application remains under `app.immobiliermatrixfrance.fr`. I
 - `app.immobiliermatrixfrance.fr/resources/js/preview/fixtures.js` supplies fixed objects shaped like the existing Inertia controller/resource props.
 - `app.immobiliermatrixfrance.fr/resources/js/preview/inertia.js` is a small compatibility layer for `Head`, `Link`, `router`, `usePage`, and `useForm`.
 - `app.immobiliermatrixfrance.fr/resources/css/preview.css` mirrors the real `resources/css/app.css` but omits the unavailable Spatie media-library CSS import.
+- `app.immobiliermatrixfrance.fr/resources/js/preview/PersonaChooser.vue` and `PreviewToolbar.vue` are preview-only chrome for switching persona.
 
 The component map in `preview.js` covers the real pages:
 
@@ -73,21 +74,27 @@ Completed:
 7. Verified the locked-dependency build with `npm ci` and `vite v4.3.9`.
 8. Mounted all 21 mapped routes in a temporary headless DOM check. The check covered authentication, dashboard, search, listing pages, forms, profile, admin, API tokens, and legal pages.
 9. Pushed the source-faithful implementation in commit `9a96777c`.
+10. **Fixed locale switching** (commit `032fd3c3`): Added locale state in `preview.js` with localStorage persistence, updated `route()` helper to preserve hash with locale param, `router.get()` detects locale changes, and `loadPage()` rebuilds shared props + triggers re-render. LanguageSelector now works on all pages.
+11. **Added persona switching** (buyer/seller/agent/admin). An earlier attempt edited the real `AppLayout.vue` and added `Components/Navigation/UserTypeSelector.vue` to the application tree; it was reverted because it modified genuine application source and never worked (the component called `router.get()` without importing `router`, and `loadPage()` resolved the user from a hardcoded `baseUser` constant, so `user.type` could never change). Replaced with preview-only chrome:
+    - `preview/PersonaChooser.vue` — entry screen, shown when no persona is stored. It reproduces the application's own account-type screen: the frame from `Pages/Auth/Register.vue` and the cards from `Components/RegisterOptions.vue`, reusing the same markup, classes, icons and translation keys. It differs only in making the buyer card selectable (the real one is marked "Coming Soon") and adding an administrator card, both required so every perspective can be reviewed.
+    - `preview/PreviewToolbar.vue` — fixed switcher, rendered as a sibling of the page component so no application component is touched.
+    - `preview.js` — `PERSONAS`, `personaProfiles`, `baseUserForType()`, and `choosePersona()`/`clearPersona()`; persona persists in `localStorage.previewPersona`.
+12. **Fixed preview asset paths** in `build-faithful-preview.sh`. Vite rewrites absolute CSS `url()` references against `base: '/demo/'`, so `/images/*.png` was requested as `/demo/images/*.png` and 404ed (login, dashboard and layout backgrounds). Root-level public assets (`en.png`, `fr.png`, `favicon.png`) were also never copied, breaking the `LanguageSelector` flag. Both are now published.
+
+## Persona switching
+
+The real application branches on `user.type`, so the persona genuinely changes what the client sees:
+
+- `Components/Navigation/Sidebar.vue` hides "My Properties" from buyers and shows "Users" only to admins.
+- `Pages/Dashboard/Dashboard.vue` shows agent-only banners.
+- `Pages/Listing/ListingCreate.vue` and `ListingEdit.vue` gate sections, a tab, and publish controls on agent/admin.
+- `Pages/Listing/ListingIndex.vue` has seller-specific behaviour.
+
+Keep persona chrome in `resources/js/preview/`. Do not add demo-only controls to real application components.
 
 ## Current known issue / work in progress
 
-The application pages currently render in French because `preview.js` always exposes `resources/lang/fr/fr.json` as `page.props.language`. The real `LanguageSelector.vue` calls `router.get(route('locale.update', locale))`, but the preview compatibility router does not yet persist or apply that locale change.
-
-The next developer should complete the locale adapter:
-
-1. Add a small preview locale state in `preview.js`, defaulting to `fr` (or a stored locale).
-2. Expose French translations for `fr` and an empty translation object for `en`; the real `useTranslate()` returns the original English key when no translation exists.
-3. Make the preview `route('locale.update', locale)` preserve the current hash and include the requested locale.
-4. Make the preview `router.get()` detect that locale and update the preview locale state.
-5. Ensure `loadPage()` rebuilds shared props with the selected `locale` and `language` while staying on the same page.
-6. Test the selector on dashboard, search, listing detail, create/edit, profile, and auth pages. The flag should change from French to English and the component text should update without leaving the page.
-
-Do not change `useTranslate.js` or `LanguageSelector.vue`; the preview adapter should satisfy their existing contracts.
+None. Verified in a local static server: all four personas across all 21 mapped routes (84 combinations) render with no console errors, and the sidebar/dashboard gating changes correctly per persona.
 
 ## Validation commands
 
@@ -114,6 +121,12 @@ git status --short --branch
 ```
 
 The temporary headless runtime checker used during development lives outside the repository under the Codex visualization workspace. It must not be committed. Browser visual QA may be unavailable in the Windows desktop sandbox; if so, report that limitation rather than claiming a screenshot review occurred.
+
+## Project documentation
+
+`AGENTS.md` (this file) is the single source of truth for project information and
+progress. `CLAUDE.md` is only a pointer to it. Record new decisions, progress and
+known issues here.
 
 ## Safety and scope
 
