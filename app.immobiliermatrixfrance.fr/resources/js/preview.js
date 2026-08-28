@@ -1,7 +1,7 @@
 import './bootstrap';
 import '../css/preview.css';
 import {createApp, h, reactive} from 'vue';
-import {page, router, setPageProps} from './preview/inertia.js';
+import {page, resolvePreviewTarget, router, setPageProps} from './preview/inertia.js';
 import translations from '../lang/fr/fr.json';
 import {features, listing, listingCollection, listingInterest, propertyStats, secondListing, users} from './preview/fixtures.js';
 import PersonaChooser from './preview/PersonaChooser.vue';
@@ -230,5 +230,20 @@ preview.config.globalProperties.route = window.route;
 // and useTranslate() reads usePage().props.language.
 loadPage();
 preview.mount('#app');
+
+// Safety net for plain <a href="/..."> elements that do not go through Link,
+// such as ListingCreate.vue's "/download-template". On a static host those
+// leave the preview and 404, so map the known ones onto their preview hash and
+// make the rest inert. External links are left alone.
+document.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey) return;
+    const anchor = event.target?.closest?.('a[href]');
+    if (!anchor) return;
+    const href = anchor.getAttribute('href');
+    if (!href || !href.startsWith('/') || href.includes('#')) return;
+    const target = resolvePreviewTarget(href);
+    event.preventDefault();
+    if (target) window.location.hash = target.slice(1);
+}, true);
 
 window.addEventListener('hashchange', loadPage);
