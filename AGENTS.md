@@ -2,18 +2,57 @@
 
 ## Goal
 
-This branch provides a safe, review-only deployment of the ImmoAllié application (the repository and Render service still carry the former Immo-Enrichi name) for a client. The client must be able to visit the public marketing pages and then navigate through the application pages to review their layout, content, and wording. The preview does not need production functionality, authentication, a database, payments, email, uploaded media, analytics, or persistent data.
+This branch provides a safe, review-only deployment of the ImmoAllié application
+for a client. The main site is not yet online, so the client needs somewhere to
+review and approve the content, look and feel, and to experience how each page
+behaves from each user's perspective.
 
-The preview must remain as faithful as possible to the existing Laravel/Vue codebase. Do not replace the genuine application pages with hand-written mock screens or redesigns. Use the existing Vue pages, layouts, components, Tailwind classes, translations, and image assets whenever possible. Only backend responses and integrations that cannot run on a static host should be substituted.
+The preview does not need production functionality, authentication, a database,
+payments, email, uploaded media, analytics, or persistent data.
+
+The preview must remain as faithful as possible to the existing Laravel/Vue
+codebase. Do not replace the genuine application pages with hand-written mock
+screens or redesigns. Use the existing Vue pages, layouts, components, Tailwind
+classes, translations, and image assets whenever possible. Only backend
+responses and integrations that cannot run on a static host should be
+substituted.
+
+## Hard constraints
+
+Read these before changing anything.
+
+1. **The application source is read-only.** Nothing under
+   `app.immobiliermatrixfrance.fr/resources/js/Pages`, `/Layouts`,
+   `/Components`, `/resources/lang`, `/app`, `/routes`, or `/config` may be
+   modified on this branch. `main` must never be edited from here.
+2. **Everything demo-specific lives in `resources/js/preview/` or
+   `public_html/`.** When a real component needs to behave differently, use a
+   Vite alias or a build-time transform in `vite.preview.config.js` — never an
+   edit to the component.
+3. **`client-preview` is a deploy branch, not a merge candidate.** The fixtures,
+   the inert Inertia shim, the persona chooser and the account-type restriction
+   are all demo-only. Nothing here should be merged back to `main`.
+
+Verify constraint 1 before every commit:
+
+```sh
+git status --porcelain -- app.immobiliermatrixfrance.fr/resources/js/Pages app.immobiliermatrixfrance.fr/resources/js/Layouts app.immobiliermatrixfrance.fr/resources/js/Components app.immobiliermatrixfrance.fr/resources/lang app.immobiliermatrixfrance.fr/app app.immobiliermatrixfrance.fr/routes
+```
+
+Empty output means the invariant holds. It has held across every commit on this
+branch so far.
 
 ## Repository and branch
 
 - This folder is a clone of `https://github.com/Arc-Rictor/immo-enrichi`.
 - Work on the `client-preview` branch only.
-- The clone is nested inside another unrelated Git repository. Run Git commands from this folder and do not stage or commit the parent repository.
+- The clone is nested inside another unrelated Git repository, which has no
+  `.gitignore`. Run Git commands from this folder and never stage the parent.
 - The deployed branch is `origin/client-preview`.
-- The Render service is `immo-enrichi-client-preview`, created from the repository Blueprint in `render.yaml`.
-- Render deploys automatically on every commit pushed to `client-preview`.
+- The Render service is `immo-enrichi-client-preview`, from the Blueprint in
+  `render.yaml`. Render deploys automatically on every commit pushed.
+- The repository, remote and Render service keep the former `immo-enrichi`
+  name. **Do not rename them** — renaming the service breaks the deployment.
 
 ## Render deployment
 
@@ -25,143 +64,217 @@ The preview must remain as faithful as possible to the existing Laravel/Vue code
 - rewrites for `/fr`, `/en`, and `/demo`
 - no-index/security response headers
 
-`public_html/build-faithful-preview.sh` copies the public marketing files, runs `npm ci` in `app.immobiliermatrixfrance.fr`, builds the alternate Vite entry with `vite.preview.config.js`, and copies the generated application assets into `public_html/preview-dist/demo` plus the genuine application images into `public_html/preview-dist/images`.
+`public_html/build-faithful-preview.sh` copies the marketing files, runs
+`npm ci`, builds the alternate Vite entry, and assembles `preview-dist`.
 
-Do not restore the old `build-preview.sh` or the old hand-written `public_html/demo` prototype. Those files were deliberately removed because they did not accurately represent the application.
+Two asset details the script handles, both of which caused 404s before:
+
+- Vite rewrites absolute CSS `url()` references against `base: '/demo/'`, so
+  images are published at both `/images/` and `/demo/images/`.
+- Root-level public assets the app requests directly (`en.png`, `fr.png`,
+  `favicon.png`, used by `LanguageSelector`) are copied to the dist root.
+
+Do not restore the old `build-preview.sh` or the hand-written `public_html/demo`
+prototype. They were removed deliberately for not representing the application.
 
 ## Source-faithful preview architecture
 
-The genuine Laravel application remains under `app.immobiliermatrixfrance.fr`. It is not booted as Laravel on Render. Instead, the preview uses a separate Vite entry:
+The Laravel application is never booted. The preview uses a separate Vite entry:
 
-- `app.immobiliermatrixfrance.fr/preview.html` is the static HTML entry.
-- `app.immobiliermatrixfrance.fr/vite.preview.config.js` builds that entry to the Render bundle.
-- `app.immobiliermatrixfrance.fr/resources/js/preview.js` imports and mounts the real page components.
-- `app.immobiliermatrixfrance.fr/resources/js/preview/fixtures.js` supplies fixed objects shaped like the existing Inertia controller/resource props.
-- `app.immobiliermatrixfrance.fr/resources/js/preview/inertia.js` is a small compatibility layer for `Head`, `Link`, `router`, `usePage`, and `useForm`.
-- `app.immobiliermatrixfrance.fr/resources/css/preview.css` mirrors the real `resources/css/app.css` but omits the unavailable Spatie media-library CSS import.
-- `app.immobiliermatrixfrance.fr/resources/js/preview/PersonaChooser.vue` and `PreviewToolbar.vue` are preview-only chrome for switching persona.
+| File | Role |
+| --- | --- |
+| `preview.html` | Static HTML entry. Also loads Inter (see Branding). |
+| `vite.preview.config.js` | Builds that entry; holds the aliases and the rebrand transform. |
+| `resources/js/preview.js` | Mounts the real page components; persona and locale state. |
+| `preview/fixtures.js` | Fixed objects shaped like the real Inertia props. |
+| `preview/inertia.js` | Shim for `Head`, `Link`, `router`, `usePage`, `useForm`. |
+| `resources/css/preview.css` | Mirrors `app.css`, minus the Spatie media-library import. |
+| `preview/PersonaChooser.vue` | Entry screen. |
+| `preview/PreviewToolbar.vue` | Persona switcher. |
+| `preview/PersonaUnavailableDialog.vue` | "Coming Soon" dialog. |
+| `preview/personas.js` | Which personas exist and which are active. |
+| `preview/ApplicationLogoPreview.vue` | The ImmoAllié logo. |
 
-The component map in `preview.js` covers the real pages:
-
-- Authentication: login, register, forgotten/reset password, confirm password, two-factor, email verification, and agent registration completion.
-- Application: dashboard, property search, listing index, listing detail, listing create/edit, available listings, and agent interest.
-- Account/admin: profile, users, API tokens, privacy policy, and terms of service.
-
-Navigation is hash-based only inside the static preview. The route helper maps the application’s named routes to hashes such as `#dashboard`, `#search`, `#listings`, `#property`, and `#profile`.
+`preview.js` maps 21 routes: authentication (login, register, forgotten/reset
+password, confirm password, two-factor, email verification, agent registration),
+application (dashboard, search, listing index/detail/create/edit, available
+listings, agent interest), and account/admin (profile, users, API tokens,
+privacy policy, terms).
 
 ## Deliberate static substitutions
 
-These are compatibility substitutions, not new product UI:
+Compatibility substitutions, not new product UI:
 
-- Inertia requests and form submissions are inert. No request is sent and no data is persisted.
-- `fixtures.js` replaces the authenticated session, database records, resource collections, feature records, and admin users.
-- `Map.vue` is replaced by `preview/MapPreview.vue` so Google Maps credentials are not required.
-- `LocationSearchInput.vue` is replaced by `preview/LocationSearchPreview.vue` so Google Places autocomplete is not required.
-- Spatie media-library attachment/collection components are replaced by inert placeholders because the commercial vendor package is not present in the clone.
+- Inertia requests and form submissions are inert. Nothing is sent or persisted.
+- `fixtures.js` replaces the session, database records, resource collections,
+  feature records and admin users.
+- `Map.vue` → `preview/MapPreview.vue` (no Google Maps credentials).
+- `LocationSearchInput.vue` → `preview/LocationSearchPreview.vue` (no Places).
+- `ApplicationLogo.vue` → `preview/ApplicationLogoPreview.vue` (new logo).
+- Spatie media-library components → inert placeholders; the commercial vendor
+  package is not present in the clone.
 
-Keep these substitutions visually minimal. If the real component can render without a service, prefer the real component. Do not add invented statistics, activity feeds, properties, navigation, or redesigned layouts merely to make the preview look fuller.
+Keep substitutions visually minimal. If a real component can render without a
+service, prefer the real component. Do not invent statistics, activity feeds,
+properties, navigation or layouts to make the preview look fuller.
 
-## Current progress
+## Navigation
 
-Completed:
+Navigation is hash-based. The `route()` helper maps named routes to hashes such
+as `#dashboard`, `#search`, `#listings`, `#property`, `#profile`.
 
-1. Reviewed the Laravel routes, controllers, Vue pages, layouts, shared components, translations, and resource schemas.
-2. Created the `client-preview` branch and connected the Render Blueprint.
-3. Replaced the original hand-written static prototype with the real Vue component build.
-4. Added the fixture and Inertia compatibility adapters described above.
-5. Added local application image assets to the static output.
-6. Updated the Render build command to `build-faithful-preview.sh`.
-7. Verified the locked-dependency build with `npm ci` and `vite v4.3.9`.
-8. Mounted all 21 mapped routes in a temporary headless DOM check. The check covered authentication, dashboard, search, listing pages, forms, profile, admin, API tokens, and legal pages.
-9. Pushed the source-faithful implementation in commit `9a96777c`.
-10. **Fixed locale switching** (commit `032fd3c3`): Added locale state in `preview.js` with localStorage persistence, updated `route()` helper to preserve hash with locale param, `router.get()` detects locale changes, and `loadPage()` rebuilds shared props + triggers re-render. LanguageSelector now works on all pages.
-11. **Added persona switching** (buyer/seller/agent/admin). An earlier attempt edited the real `AppLayout.vue` and added `Components/Navigation/UserTypeSelector.vue` to the application tree; it was reverted because it modified genuine application source and never worked (the component called `router.get()` without importing `router`, and `loadPage()` resolved the user from a hardcoded `baseUser` constant, so `user.type` could never change). Replaced with preview-only chrome:
-    - `preview/PersonaChooser.vue` — entry screen, shown when no persona is stored. It reproduces the application's own account-type screen: the frame from `Pages/Auth/Register.vue` and the cards from `Components/RegisterOptions.vue`, reusing the same markup, classes, icons and translation keys. It differs only in making the buyer card selectable (the real one is marked "Coming Soon") and adding an administrator card, both required so every perspective can be reviewed.
-    - `preview/PreviewToolbar.vue` — fixed switcher, rendered as a sibling of the page component so no application component is touched.
-    - `preview.js` — `PERSONAS`, `personaProfiles`, `baseUserForType()`, and `choosePersona()`/`clearPersona()`; persona persists in `localStorage.previewPersona`.
-12. **Fixed preview asset paths** in `build-faithful-preview.sh`. Vite rewrites absolute CSS `url()` references against `base: '/demo/'`, so `/images/*.png` was requested as `/demo/images/*.png` and 404ed (login, dashboard and layout backgrounds). Root-level public assets (`en.png`, `fr.png`, `favicon.png`) were also never copied, breaking the `LanguageSelector` flag. Both are now published.
+Five application components hardcode an absolute path instead of calling
+`route()` — `Sidebar.vue` (`/dashboard`), the Login and ForgotPassword links to
+`/register`, the Register link to `/login`, and `ListingCreate.vue`
+(`/download-template`). On a static host these leave the preview and 404.
 
-## Company rename (Immo-Enrichi → ImmoAllié)
+`preview/inertia.js` handles this generally rather than per link:
 
-The preview shows the new company name throughout, in text and in the logo. The
-wordmark is written ImmoAllié — one word, no hyphen, accented e — matching the
-logo artwork.
+- `resolvePreviewTarget()` maps known application paths onto their preview hash.
+- Unknown application paths are made inert, so the client cannot navigate out.
+- Hrefs already carrying a hash are left alone, so `RegisterOptions.vue`'s
+  `/demo/?type=agent#register` cards still work.
+- `preview.js` adds a capture-phase click guard for plain `<a href="/...">`
+  elements that never pass through `Link`.
 
-- Preview-owned files were edited directly: `preview.html`, `preview/fixtures.js`,
-  `preview/inertia.js`, and the marketing pages in `public_html`.
-- Two real components carry the name (`Layouts/AppLayout.vue` and
-  `Components/Footer.vue`). The application source is read-only on this branch,
-  so `vite.preview.config.js` rewrites the display name at build time via the
-  `previewRebrand` plugin. Delete that plugin once the rename lands in the
-  application itself.
-- Only the capitalised display spellings `Immo-Enrichi` and `Immo Enrichi` are
-  matched, so the Render service `immo-enrichi-client-preview` and the GitHub
-  remote are untouched. Do not rename those — renaming the service breaks the
-  deployment.
+External links are deliberately left alone. See Outstanding items.
+
+## Branding
+
+The company name is written **ImmoAllié** — one word, no hyphen, accented e,
+matching the logo artwork. Use that spelling everywhere.
+
+- Preview-owned files carry the name directly.
+- `Layouts/AppLayout.vue` and `Components/Footer.vue` also contain it, and are
+  read-only, so the `previewRebrand` plugin in `vite.preview.config.js` rewrites
+  it at build time. **Delete that plugin once the rename lands in the
+  application itself.**
+- Only capitalised display spellings are matched, so lowercase identifiers such
+  as `immo-enrichi-client-preview` are untouched.
 
 ### Logo
 
-New ImmoAllié logo assets are in place. `ApplicationLogo.vue` is application
-source, so `preview/ApplicationLogoPreview.vue` is aliased over it in
-`vite.preview.config.js`. The marketing pages inline the SVG directly.
-
-Three things to know about the supplied artwork:
+`preview/ApplicationLogoPreview.vue` is aliased over `ApplicationLogo.vue`. The
+marketing pages inline the same SVG. Three things to know:
 
 - **The wordmark is live `<text>` in Inter, not outlined paths.** The
-  application loads no webfont (Tailwind asks for Figtree, nothing loads it), so
-  `preview.html` now loads Inter from Google Fonts. The marketing pages already
-  did. If Inter fails to load the browser substitutes a fallback face and the
-  letterforms will not match the design; the viewBox padding leaves room so
-  nothing clips. Outlined paths would remove this dependency entirely.
+  application loads no webfont (Tailwind asks for Figtree; nothing loads it), so
+  `preview.html` loads Inter from Google Fonts. The marketing pages already did.
+  If Inter fails to load, the browser substitutes a fallback face and the
+  letterforms will not match the design; the viewBox padding means nothing
+  clips. Outlined paths would remove this dependency entirely.
 - **The marketing pages inline the SVG rather than using `<img src>`,** because
   an SVG referenced through `<img>` is an isolated document and cannot load the
   page's webfont.
 - **The viewBox was recentred**, from `0 0 1000 240` to `109 3 657 234`. The
-  supplied artwork sat off-centre: ink spanned x 159–716, leaving 159px of space
-  on the left and 284px on the right. Only the canvas changed; the artwork is
-  untouched. The resulting 2.81:1 ratio is close to the old logo's 2.88:1, so
+  supplied artwork sat off-centre — ink spanned x 159–716, leaving 159px of
+  space on the left and 284px on the right. Only the canvas changed; the artwork
+  is untouched. The resulting 2.81:1 ratio is close to the old logo's 2.88:1, so
   layouts are unaffected.
 
-The header logo carries an inline `max-width:287px` style because the stylesheet
-sizes `.home-logo img` and `.home-logo svg` differently and the old logo was an
+A light variant is used in the marketing footer. This fixed a pre-existing
+defect: the old logo was near-black artwork on a black footer, so it was
+effectively invisible.
+
+The header logo carries an inline `max-width:287px` because the stylesheet sizes
+`.home-logo img` and `.home-logo svg` differently and the old logo was an
 `<img>`; this preserves the previous rendered size.
 
-Unresolved: the logo wordmark reads "ImmoAllié" (no hyphen, accented e) while
-all body text reads "ImmoAllié". These should be reconciled.
+## Personas
 
-## Active personas
+The client reviews the site as each type of user. This is not cosmetic — the
+application genuinely branches on `user.type`:
 
-Only estate agent accounts are live at this stage, so `preview/personas.js` is
-the single source of truth:
+- `Sidebar.vue` hides "My Properties" from buyers, shows "Users" only to admins.
+- `Dashboard.vue` shows agent-only banners.
+- `ListingCreate.vue` and `ListingEdit.vue` gate sections, a tab and publish
+  controls on agent/admin.
+- `ListingIndex.vue` has seller-specific behaviour.
 
-- `ACTIVE_PERSONAS` — `agent` and `admin`. Selectable. Admin stays selectable so
-  the administrative screens can still be reviewed.
-- The rest (`buyer`, `seller`) render with the application's own "Coming Soon"
-  treatment and open `preview/PersonaUnavailableDialog.vue`, built from the real
-  `Components/DialogModal.vue` and `SecondaryButton.vue`. Selecting one does not
-  change the stored persona.
+`preview/personas.js` is the single source of truth:
 
-This applies on both the entry screen and the toolbar. A persona stored in
-`localStorage` that is no longer active falls back to the entry screen.
+- `PERSONAS` — every perspective the preview can render.
+- `ACTIVE_PERSONAS` — currently `agent` and `admin`. Only estate agent accounts
+  are live at this stage; admin stays selectable so the administrative screens
+  can still be reviewed.
+- `buyer` and `seller` render with the application's own "Coming Soon" treatment
+  and open `PersonaUnavailableDialog.vue`, built from the real `DialogModal.vue`
+  and `SecondaryButton.vue`. Selecting one does not change the stored persona.
 
-To activate a persona later, add it to `ACTIVE_PERSONAS`; nothing else changes.
+This applies identically on the entry screen and the toolbar. A persona left in
+`localStorage` that is no longer active falls back to the entry screen. To
+activate a persona later, add it to `ACTIVE_PERSONAS` — nothing else changes.
 
-## Persona switching
+`PersonaChooser.vue` reproduces the application's own account-type screen: the
+frame from `Pages/Auth/Register.vue` and the cards from
+`Components/RegisterOptions.vue`, reusing the same markup, classes, icons and
+translation keys. It differs only by adding an administrator card. Selecting a
+card sets the persona instead of starting registration.
 
-The real application branches on `user.type`, so the persona genuinely changes what the client sees:
+`PreviewToolbar.vue` is the only invented UI in the preview, because the
+application has no persona switcher to copy. Keep it small and obviously a demo
+control. Do not add demo-only controls to real application components.
 
-- `Components/Navigation/Sidebar.vue` hides "My Properties" from buyers and shows "Users" only to admins.
-- `Pages/Dashboard/Dashboard.vue` shows agent-only banners.
-- `Pages/Listing/ListingCreate.vue` and `ListingEdit.vue` gate sections, a tab, and publish controls on agent/admin.
-- `Pages/Listing/ListingIndex.vue` has seller-specific behaviour.
+## Current status
 
-Keep persona chrome in `resources/js/preview/`. Do not add demo-only controls to real application components.
+The preview is complete and deployed. Verified against the locked Render build
+(`npm ci`, `vite v4.3.9`) on a local static server:
 
-## Current known issue / work in progress
+- All mapped routes render for every persona with no console errors.
+- Sidebar and dashboard gating change correctly per persona.
+- Buyer and seller show the "Coming Soon" badge and dialog from both the entry
+  screen and the toolbar, without changing the stored persona.
+- Locale switching works on all pages, in both directions.
+- The logo renders at all eight placements and is optically centred; the
+  marketing header matches its previous 287×100 size and the footer logo is
+  white on black.
+- Pages serve as UTF-8 and the accented e renders with no mojibake.
+- No earlier brand spelling remains anywhere in `preview-dist`.
+- Previously 404ing assets return 200.
 
-None. Verified in a local static server: all four personas across all 21 mapped routes (84 combinations) render with no console errors, and the sidebar/dashboard gating changes correctly per persona.
+## Outstanding items
 
-## Validation commands
+Genuine gaps, in priority order:
+
+1. **The logo wordmark depends on Inter loading.** Ask the designer for a
+   version with the text converted to outlines. Whether Google Fonts loads on
+   the Render deployment was never confirmed from the development sandbox — it
+   is worth checking on the live URL.
+2. **`Sidebar.vue` links Support/FAQs to `https://www.platformstaging.co.uk/imf/fr#faqs`**
+   and `Footer.vue` links Privacy Policy and Mission statement to
+   `https://www.immobiliermatrixfrance.fr/` — the former brand's domain. A
+   client clicking any of these leaves the demo. They are in read-only source
+   and were deliberately left alone; neutralising them in the preview is a
+   content decision that needs sign-off.
+3. **Browser tabs read `ImmoAllié - ImmoAllié`** on the main application
+   screens, because `AppLayout.vue` passes the company name as the page title
+   and the Inertia `Head` appends it again. The real application behaves the
+   same way, so this was left as-is deliberately: "fixing" it would make the
+   preview less faithful than production.
+
+## Observations about the application codebase
+
+Found while working here. **Do not act on these** — the application is read-only
+from this branch. They are recorded for whoever owns `main`.
+
+- `Sidebar.vue:25` — hardcoded staging URL, ships to production as-is.
+- `ListingIndex.vue:112,114` — `console.log` left in.
+- `RegisterOptions.vue:11` — stray `']` inside a static class attribute;
+  `cursor-not-allowed` applied to every card rather than only disabled ones; the
+  `RadioGroup`/`v-model` is decorative, since navigation happens via `<Link>` and
+  `selectedOption` is never read, which hands screen readers a radio group that
+  does nothing; `v-slot="{ checked, active }"` destructured and unused; `title`
+  never rendered.
+- `RegisterOptions.vue` marks buyer "Coming Soon" but leaves **seller enabled**,
+  which contradicts only estate agent accounts being live.
+- Four committed `" - Copy"` files: `UserController - Copy.php`,
+  `CheckForActiveSubscription - Copy.php`, `Footer - Copy.vue`,
+  `UserIndex - Copy.vue`.
+- `bg-[url('/images/...')]` Tailwind arbitrary values break under any non-root
+  Vite base. Worked around in the build script; the durable fix is to reference
+  these through Vite so they are hashed and rewritten.
+
+## Validation
 
 From `public_html`:
 
@@ -185,18 +298,27 @@ git diff --check
 git status --short --branch
 ```
 
-The temporary headless runtime checker used during development lives outside the repository under the Codex visualization workspace. It must not be committed. Browser visual QA may be unavailable in the Windows desktop sandbox; if so, report that limitation rather than claiming a screenshot review occurred.
+Verifying behaviour needs a browser: build, serve `preview-dist` over HTTP (not
+`file://` — the hash routing and asset paths need a real origin), and exercise
+the pages. Screenshots may be unavailable in the Windows desktop sandbox; the
+DOM, console and network tools work. Hidden-tab timer throttling can stall long
+`setTimeout` loops — yield with `MessageChannel` instead. Report the limitation
+rather than claiming a visual review that did not happen.
 
 ## Project documentation
 
-`AGENTS.md` (this file) is the single source of truth for project information and
-progress. `CLAUDE.md` is only a pointer to it. Record new decisions, progress and
-known issues here.
+`AGENTS.md` (this file) is the single source of truth for project information
+and progress. `CLAUDE.md` is only a pointer to it. Record new decisions,
+progress and known issues here.
 
 ## Safety and scope
 
-- Never add production secrets, API keys, Composer credentials, database credentials, Stripe credentials, or live user data to this branch.
-- The source repository previously contained a committed-looking Spatie Satis credential in `auth.json`; treat it as compromised and do not copy or expose it.
+- Never add production secrets, API keys, Composer credentials, database
+  credentials, Stripe credentials, or live user data to this branch.
+- The repository previously contained a committed-looking Spatie Satis
+  credential in `auth.json`; treat it as compromised and never copy or expose
+  it.
 - Keep the preview `noindex` headers enabled.
-- Use `apply_patch` for source edits. If the Windows patch helper cannot access this nested clone, create a patch artifact in the writable Codex visualization directory and apply it with `git apply` from this clone.
-- Before pushing, run the locked Render build, inspect the staged diff, run `git diff --cached --check`, commit on `client-preview`, and push to `origin client-preview`.
+- Before pushing: run the locked Render build, confirm the read-only invariant
+  above, inspect the staged diff, run `git diff --cached --check`, commit on
+  `client-preview`, and push to `origin client-preview`. Pushing deploys.
