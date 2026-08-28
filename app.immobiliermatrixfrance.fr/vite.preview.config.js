@@ -29,6 +29,7 @@ export default defineConfig({
     plugins: [previewRebrand(), vue({template: {transformAssetUrls: {base: null, includeAbsolute: false}}})],
     resolve: {
         alias: {
+            '@/Components/ApplicationLogo.vue': fileURLToPath(new URL('./resources/js/preview/ApplicationLogoPreview.vue', import.meta.url)),
             '@/Components/Map.vue': fileURLToPath(new URL('./resources/js/preview/MapPreview.vue', import.meta.url)),
             '@/Pages/Search/partials/LocationSearchInput.vue': fileURLToPath(new URL('./resources/js/preview/LocationSearchPreview.vue', import.meta.url)),
             '@': fileURLToPath(new URL('./resources/js', import.meta.url)),

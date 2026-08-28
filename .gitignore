@@ -48,3 +48,6 @@ node/
 public_ftp/
 ssl/
 tmp/
+
+# Logo files dropped for the preview rebrand (not committed as-is)
+logo-drop/

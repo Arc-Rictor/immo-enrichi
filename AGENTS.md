@@ -97,11 +97,35 @@ The preview shows the new company name. Text is fully renamed; the logo is not.
   remote are untouched. Do not rename those — renaming the service breaks the
   deployment.
 
-**The logo still shows the old wordmark.** `Components/ApplicationLogo.vue`,
-`public/images/Immo-Enrichi_Logo1.svg` and `public_html/Immo-Erichi_Logo1.png`
-draw "Immo Enrichi" as vector paths and raster pixels, not text, so it cannot be
-renamed by editing source. A new logo asset is required. Until one is supplied,
-the header, the entry screen and the marketing pages display the old wordmark.
+### Logo
+
+New Immo-Allie logo assets are in place. `ApplicationLogo.vue` is application
+source, so `preview/ApplicationLogoPreview.vue` is aliased over it in
+`vite.preview.config.js`. The marketing pages inline the SVG directly.
+
+Three things to know about the supplied artwork:
+
+- **The wordmark is live `<text>` in Inter, not outlined paths.** The
+  application loads no webfont (Tailwind asks for Figtree, nothing loads it), so
+  `preview.html` now loads Inter from Google Fonts. The marketing pages already
+  did. If Inter fails to load the browser substitutes a fallback face and the
+  letterforms will not match the design; the viewBox padding leaves room so
+  nothing clips. Outlined paths would remove this dependency entirely.
+- **The marketing pages inline the SVG rather than using `<img src>`,** because
+  an SVG referenced through `<img>` is an isolated document and cannot load the
+  page's webfont.
+- **The viewBox was recentred**, from `0 0 1000 240` to `109 3 657 234`. The
+  supplied artwork sat off-centre: ink spanned x 159–716, leaving 159px of space
+  on the left and 284px on the right. Only the canvas changed; the artwork is
+  untouched. The resulting 2.81:1 ratio is close to the old logo's 2.88:1, so
+  layouts are unaffected.
+
+The header logo carries an inline `max-width:287px` style because the stylesheet
+sizes `.home-logo img` and `.home-logo svg` differently and the old logo was an
+`<img>`; this preserves the previous rendered size.
+
+Unresolved: the logo wordmark reads "ImmoAllié" (no hyphen, accented e) while
+all body text reads "Immo-Allie". These should be reconciled.
 
 ## Active personas
 
