@@ -4,15 +4,20 @@
     idiom (rounded-full pills, black/white) so it reads as a demo control rather
     than part of the product being reviewed. Rendered as a sibling of the page
     component, so no application component is modified.
+
+    Inactive personas stay visible but report that they are not available yet,
+    matching the entry screen.
 -->
 <template>
     <div class="fixed bottom-4 right-4 z-[9999] flex items-center gap-1 rounded-full border border-gray-200 bg-white px-2 py-2 shadow-lg">
         <button v-for="persona in personas" :key="persona"
                 type="button"
-                @click="$emit('change', persona)"
+                @click="select(persona)"
                 :class="[
                     'rounded-full px-3 py-1 text-sm transition',
-                    persona === current ? 'bg-black text-white' : 'bg-white text-gray-600 hover:bg-gray-100',
+                    persona === current ? 'bg-black text-white'
+                        : isActive(persona) ? 'bg-white text-gray-600 hover:bg-gray-100'
+                        : 'bg-white text-gray-300 cursor-not-allowed',
                 ]">
             {{ label(persona) }}
         </button>
@@ -27,15 +32,20 @@
 
 <script setup>
 import {ArrowPathIcon} from "@heroicons/vue/24/outline/index.js";
+import {ACTIVE_PERSONAS, PERSONAS} from './personas.js';
 
 const props = defineProps({
     current: {type: String, required: true},
     locale: {type: String, default: 'fr'},
 });
 
-defineEmits(['change', 'reset']);
+const emit = defineEmits(['change', 'reset', 'blocked']);
 
-const personas = ['buyer', 'seller', 'agent', 'admin'];
+const personas = PERSONAS;
+
+const isActive = type => ACTIVE_PERSONAS.includes(type);
+
+const select = persona => emit(isActive(persona) ? 'change' : 'blocked', persona);
 
 const strings = {
     fr: {buyer: 'Acheteur', seller: 'Vendeur', agent: 'Agent', admin: 'Admin', change: 'Changer de profil'},

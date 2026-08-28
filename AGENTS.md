@@ -81,6 +81,23 @@ Completed:
     - `preview.js` — `PERSONAS`, `personaProfiles`, `baseUserForType()`, and `choosePersona()`/`clearPersona()`; persona persists in `localStorage.previewPersona`.
 12. **Fixed preview asset paths** in `build-faithful-preview.sh`. Vite rewrites absolute CSS `url()` references against `base: '/demo/'`, so `/images/*.png` was requested as `/demo/images/*.png` and 404ed (login, dashboard and layout backgrounds). Root-level public assets (`en.png`, `fr.png`, `favicon.png`) were also never copied, breaking the `LanguageSelector` flag. Both are now published.
 
+## Active personas
+
+Only estate agent accounts are live at this stage, so `preview/personas.js` is
+the single source of truth:
+
+- `ACTIVE_PERSONAS` — `agent` and `admin`. Selectable. Admin stays selectable so
+  the administrative screens can still be reviewed.
+- The rest (`buyer`, `seller`) render with the application's own "Coming Soon"
+  treatment and open `preview/PersonaUnavailableDialog.vue`, built from the real
+  `Components/DialogModal.vue` and `SecondaryButton.vue`. Selecting one does not
+  change the stored persona.
+
+This applies on both the entry screen and the toolbar. A persona stored in
+`localStorage` that is no longer active falls back to the entry screen.
+
+To activate a persona later, add it to `ACTIVE_PERSONAS`; nothing else changes.
+
 ## Persona switching
 
 The real application branches on `user.type`, so the persona genuinely changes what the client sees:

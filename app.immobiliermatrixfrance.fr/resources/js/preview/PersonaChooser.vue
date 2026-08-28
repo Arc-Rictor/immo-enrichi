@@ -3,14 +3,14 @@
 
     This reproduces the application's own account-type screen: the frame comes
     from Pages/Auth/Register.vue and the option cards from
-    Components/RegisterOptions.vue, using the same markup, classes, icons and
-    translation keys. Nothing here is a new design.
+    Components/RegisterOptions.vue, using the same markup, classes, icons,
+    translation keys and "Coming Soon" disabled treatment. Nothing here is a new
+    design.
 
-    It differs from the real screen in exactly two ways, both required so the
-    client can review every perspective:
-      - the buyer card is selectable (the real one is marked "Coming Soon"),
-      - an administrator card is added.
-    Selecting a card sets the preview persona instead of starting registration.
+    It differs from the real screen only by adding an administrator card, so the
+    client can review that perspective. Selecting an active card sets the
+    preview persona instead of starting registration; selecting an inactive one
+    reports that the account type is not available yet.
 -->
 <template>
     <Head :title="__('Register')"/>
@@ -50,8 +50,16 @@
                     <div class="mt-20 grid grid-cols-1 content-center gap-y-6 sm:grid-cols-2 lg:grid-cols-4 sm:gap-x-8">
                         <button v-for="option in options" :key="option.type"
                                 type="button"
-                                @click="$emit('choose', option.type)"
-                                class="border-gray-200 relative cursor-pointer rounded-xl border bg-white p-4 shadow-sm transition hover:border-gray-500 focus:outline-none">
+                                @click="select(option)"
+                                :class="[
+                                    'border-gray-200 relative rounded-xl border bg-white p-4 shadow-sm transition focus:outline-none',
+                                    isActive(option.type)
+                                        ? 'cursor-pointer hover:border-gray-500'
+                                        : 'cursor-not-allowed opacity-60',
+                                ]">
+                            <span v-if="!isActive(option.type)" class="text-sm text-gray-500">
+                                {{ __('Coming Soon') }}
+                            </span>
                             <span class="flex flex-col px-8 py-6">
                                 <img v-if="option.icon"
                                      class="h-[49px] w-[49px] self-center mb-4"
@@ -75,8 +83,9 @@ import {UserGroupIcon} from "@heroicons/vue/24/outline/index.js";
 import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 import LanguageSelector from "@/Components/Navigation/LanguageSelector.vue";
 import {useTranslate} from "@/Composables/useTranslate.js";
+import {ACTIVE_PERSONAS} from './personas.js';
 
-defineEmits(['choose']);
+const emit = defineEmits(['choose', 'blocked']);
 
 const {__} = useTranslate();
 
@@ -87,4 +96,8 @@ const options = [
     {type: 'buyer', icon: '/images/buyer-button-icon.png', description: "I'm a buyer"},
     {type: 'admin', icon: null, description: "I'm an administrator"},
 ];
+
+const isActive = type => ACTIVE_PERSONAS.includes(type);
+
+const select = option => emit(isActive(option.type) ? 'choose' : 'blocked', option.type);
 </script>

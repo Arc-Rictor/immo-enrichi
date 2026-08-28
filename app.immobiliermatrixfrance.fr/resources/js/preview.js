@@ -6,6 +6,8 @@ import translations from '../lang/fr/fr.json';
 import {features, listing, listingCollection, listingInterest, propertyStats, secondListing, users} from './preview/fixtures.js';
 import PersonaChooser from './preview/PersonaChooser.vue';
 import PreviewToolbar from './preview/PreviewToolbar.vue';
+import PersonaUnavailableDialog from './preview/PersonaUnavailableDialog.vue';
+import {ACTIVE_PERSONAS, DEFAULT_PERSONA} from './preview/personas.js';
 
 import Login from './Pages/Auth/Login.vue';
 import Register from './Pages/Auth/Register.vue';
@@ -62,12 +64,18 @@ window.axios = window.axios || {
     delete: () => Promise.resolve({data: {}}),
 };
 
-export const PERSONAS = ['buyer', 'seller', 'agent', 'admin'];
-
-// The administrator card in PersonaChooser has no counterpart in the real
-// account-type screen, so its string is absent from resources/lang/fr/fr.json.
-// Supplied here rather than editing the application translation files.
-const previewTranslations = {"I'm an administrator": "Je suis un administrateur"};
+// Strings used by the preview's own chrome, absent from
+// resources/lang/fr/fr.json because they have no counterpart in the real
+// account-type screen. Supplied here rather than editing the application
+// translation files.
+const previewTranslations = {
+    "I'm an administrator": "Je suis un administrateur",
+    "Close": "Fermer",
+    "Buyer accounts are not available yet. Only estate agent accounts are active at this stage.":
+        "Les comptes acheteur ne sont pas encore disponibles. Seuls les comptes agent immobilier sont actifs à ce stade.",
+    "Seller accounts are not available yet. Only estate agent accounts are active at this stage.":
+        "Les comptes vendeur ne sont pas encore disponibles. Seuls les comptes agent immobilier sont actifs à ce stade.",
+};
 
 const personaProfiles = {
     buyer: {first_name: 'Test', last_name: 'Buyer', email: 'buyer@example.test'},
@@ -101,10 +109,10 @@ window.__setPreviewLocale = locale => {
 };
 
 const storedPersona = localStorage.getItem('previewPersona');
-let currentPersona = PERSONAS.includes(storedPersona) ? storedPersona : null;
+let currentPersona = ACTIVE_PERSONAS.includes(storedPersona) ? storedPersona : null;
 
 function setPersona(type) {
-    currentPersona = PERSONAS.includes(type) ? type : 'agent';
+    currentPersona = ACTIVE_PERSONAS.includes(type) ? type : DEFAULT_PERSONA;
     localStorage.setItem('previewPersona', currentPersona);
 }
 
@@ -151,7 +159,7 @@ const pages = {
     terms: {name: 'terms-of-service', component: TermsOfService},
 };
 
-const state = reactive({view: null, persona: currentPersona, locale: currentLocale});
+const state = reactive({view: null, persona: currentPersona, locale: currentLocale, blocked: null});
 
 function loadPage() {
     const hashLocale = window.location.hash.match(/locale=(en|fr)/)?.[1];
@@ -179,11 +187,26 @@ function clearPersona() {
     state.persona = null;
 }
 
+function blockPersona(type) {
+    state.blocked = type;
+}
+
 const preview = createApp({
     setup() {
         return () => {
+            const dialog = h(PersonaUnavailableDialog, {
+                persona: state.blocked,
+                onClose: () => (state.blocked = null),
+            });
             if (!state.persona) {
-                return h(PersonaChooser, {locale: state.locale, onChoose: choosePersona});
+                return [
+                    h(PersonaChooser, {
+                        locale: state.locale,
+                        onChoose: choosePersona,
+                        onBlocked: blockPersona,
+                    }),
+                    dialog,
+                ];
             }
             return [
                 state.view ? h(state.view.component, state.view.props) : null,
@@ -192,7 +215,9 @@ const preview = createApp({
                     locale: state.locale,
                     onChange: choosePersona,
                     onReset: clearPersona,
+                    onBlocked: blockPersona,
                 }),
+                dialog,
             ];
         };
     },
