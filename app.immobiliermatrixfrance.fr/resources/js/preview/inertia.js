@@ -23,7 +23,11 @@ function finish(options = {}) {
 
 export const router = {
     visit(url, options) { navigate(url); finish(options); },
-    get(url, data, options) { navigate(url); finish(options); },
+    get(url, data, options) {
+        const locale = String(url).match(/locale=(en|fr)/)?.[1];
+        if (locale) window.__setPreviewLocale?.(locale);
+        navigate(url); finish(options);
+    },
     post(url, data, options) { finish(options); },
     put(url, data, options) { finish(options); },
     patch(url, data, options) { finish(options); },

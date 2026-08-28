@@ -50,6 +50,7 @@ globalThis.route = window.route = (name, params) => {
     if (name === 'register' && params?.type) {
         return `${window.location.pathname}?type=${params.type}#register`;
     }
+    if (name === 'locale.update') return `#${currentHash()}?locale=${params}`;
     return `#${routeNames[name] || currentHash()}`;
 };
 
@@ -69,13 +70,20 @@ function currentHash() {
     return (window.location.hash.slice(1).split('?')[0] || 'login');
 }
 
+let currentLocale = localStorage.getItem('previewLocale') || 'fr';
+window.__setPreviewLocale = locale => {
+    currentLocale = locale === 'en' ? 'en' : 'fr';
+    localStorage.setItem('previewLocale', currentLocale);
+    document.documentElement.lang = currentLocale;
+};
+
 function shared(user = baseUser) {
     return {
         user,
         auth: {user},
         can_list: user.type !== 'buyer',
-        locale: 'fr',
-        language: translations,
+        locale: currentLocale,
+        language: currentLocale === 'en' ? {} : translations,
         features: {data: features},
         title: '',
         flash: {message: null},
@@ -115,6 +123,8 @@ const pages = {
 const state = reactive({view: null});
 
 function loadPage() {
+    const hashLocale = window.location.hash.match(/locale=(en|fr)/)?.[1];
+    if (hashLocale) window.__setPreviewLocale(hashLocale);
     const definition = pages[currentHash()] || pages.dashboard;
     currentRouteName = definition.name;
     const user = definition.user || baseUser;
