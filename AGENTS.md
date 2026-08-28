@@ -81,6 +81,28 @@ Completed:
     - `preview.js` — `PERSONAS`, `personaProfiles`, `baseUserForType()`, and `choosePersona()`/`clearPersona()`; persona persists in `localStorage.previewPersona`.
 12. **Fixed preview asset paths** in `build-faithful-preview.sh`. Vite rewrites absolute CSS `url()` references against `base: '/demo/'`, so `/images/*.png` was requested as `/demo/images/*.png` and 404ed (login, dashboard and layout backgrounds). Root-level public assets (`en.png`, `fr.png`, `favicon.png`) were also never copied, breaking the `LanguageSelector` flag. Both are now published.
 
+## Company rename (Immo-Enrichi → Immo-Allie)
+
+The preview shows the new company name. Text is fully renamed; the logo is not.
+
+- Preview-owned files were edited directly: `preview.html`, `preview/fixtures.js`,
+  `preview/inertia.js`, and the marketing pages in `public_html`.
+- Two real components carry the name (`Layouts/AppLayout.vue` and
+  `Components/Footer.vue`). The application source is read-only on this branch,
+  so `vite.preview.config.js` rewrites the display name at build time via the
+  `previewRebrand` plugin. Delete that plugin once the rename lands in the
+  application itself.
+- Only the capitalised display spellings `Immo-Enrichi` and `Immo Enrichi` are
+  matched, so the Render service `immo-enrichi-client-preview` and the GitHub
+  remote are untouched. Do not rename those — renaming the service breaks the
+  deployment.
+
+**The logo still shows the old wordmark.** `Components/ApplicationLogo.vue`,
+`public/images/Immo-Enrichi_Logo1.svg` and `public_html/Immo-Erichi_Logo1.png`
+draw "Immo Enrichi" as vector paths and raster pixels, not text, so it cannot be
+renamed by editing source. A new logo asset is required. Until one is supplied,
+the header, the entry screen and the marketing pages display the old wordmark.
+
 ## Active personas
 
 Only estate agent accounts are live at this stage, so `preview/personas.js` is

@@ -2,10 +2,31 @@ import {defineConfig} from 'vite';
 import vue from '@vitejs/plugin-vue';
 import {fileURLToPath, URL} from 'node:url';
 
+// The company has been renamed to Immo-Allie, but the application source is
+// read-only on this branch. Two real components carry the old display name
+// (Layouts/AppLayout.vue and Components/Footer.vue), so rewrite it at build
+// time rather than editing them. Delete this plugin once the rename lands in
+// the application itself.
+//
+// Only the capitalised display spellings are matched, so identifiers such as
+// the Render service name `immo-enrichi-client-preview` are untouched.
+const previewRebrand = () => ({
+    name: 'preview-rebrand',
+    enforce: 'pre',
+    transform(code, id) {
+        if (id.includes('node_modules') || !/\.(vue|js)$/.test(id.split('?')[0])) return null;
+        if (!code.includes('Immo-Enrichi') && !code.includes('Immo Enrichi')) return null;
+        return {
+            code: code.replace(/Immo-Enrichi/g, 'Immo-Allie').replace(/Immo Enrichi/g, 'Immo Allie'),
+            map: null,
+        };
+    },
+});
+
 export default defineConfig({
     base: '/demo/',
     publicDir: 'public',
-    plugins: [vue({template: {transformAssetUrls: {base: null, includeAbsolute: false}}})],
+    plugins: [previewRebrand(), vue({template: {transformAssetUrls: {base: null, includeAbsolute: false}}})],
     resolve: {
         alias: {
             '@/Components/Map.vue': fileURLToPath(new URL('./resources/js/preview/MapPreview.vue', import.meta.url)),

@@ -9,7 +9,7 @@ const owner = {
 };
 
 const agent = {
-    id: 12, name: 'Immo Enrichi Estate Agency', address_line_one: '10 Rue de la Paix',
+    id: 12, name: 'Immo Allie Estate Agency', address_line_one: '10 Rue de la Paix',
     address_line_two: '', city: 'Paris', postcode: '75002', telephone: '+33 1 23 45 67 89',
 };
 
@@ -90,6 +90,6 @@ export const users = {data: [
 export const listingInterest = [{
     id: 1,
     listing: {reference: listing.reference, address_line_one: listing.address_line_one, city: listing.city, postcode: listing.postcode},
-    agent: {name: 'Immo Enrichi Estate Agency'},
+    agent: {name: 'Immo Allie Estate Agency'},
     message: 'I would be interested in representing this property.',
 }];
