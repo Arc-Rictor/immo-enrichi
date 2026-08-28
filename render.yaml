@@ -4,7 +4,7 @@ services:
     name: immo-enrichi-client-preview
     branch: client-preview
     rootDir: public_html
-    buildCommand: sh build-preview.sh
+    buildCommand: sh build-faithful-preview.sh
     staticPublishPath: ./preview-dist
     autoDeployTrigger: commit
     routes:
