@@ -1,8 +1,8 @@
-# Immo-Enrichi client preview
+# ImmoAllié client preview
 
 ## Goal
 
-This branch provides a safe, review-only deployment of the Immo-Enrichi application for a client. The client must be able to visit the public marketing pages and then navigate through the application pages to review their layout, content, and wording. The preview does not need production functionality, authentication, a database, payments, email, uploaded media, analytics, or persistent data.
+This branch provides a safe, review-only deployment of the ImmoAllié application (the repository and Render service still carry the former Immo-Enrichi name) for a client. The client must be able to visit the public marketing pages and then navigate through the application pages to review their layout, content, and wording. The preview does not need production functionality, authentication, a database, payments, email, uploaded media, analytics, or persistent data.
 
 The preview must remain as faithful as possible to the existing Laravel/Vue codebase. Do not replace the genuine application pages with hand-written mock screens or redesigns. Use the existing Vue pages, layouts, components, Tailwind classes, translations, and image assets whenever possible. Only backend responses and integrations that cannot run on a static host should be substituted.
 
@@ -81,9 +81,11 @@ Completed:
     - `preview.js` — `PERSONAS`, `personaProfiles`, `baseUserForType()`, and `choosePersona()`/`clearPersona()`; persona persists in `localStorage.previewPersona`.
 12. **Fixed preview asset paths** in `build-faithful-preview.sh`. Vite rewrites absolute CSS `url()` references against `base: '/demo/'`, so `/images/*.png` was requested as `/demo/images/*.png` and 404ed (login, dashboard and layout backgrounds). Root-level public assets (`en.png`, `fr.png`, `favicon.png`) were also never copied, breaking the `LanguageSelector` flag. Both are now published.
 
-## Company rename (Immo-Enrichi → Immo-Allie)
+## Company rename (Immo-Enrichi → ImmoAllié)
 
-The preview shows the new company name. Text is fully renamed; the logo is not.
+The preview shows the new company name throughout, in text and in the logo. The
+wordmark is written ImmoAllié — one word, no hyphen, accented e — matching the
+logo artwork.
 
 - Preview-owned files were edited directly: `preview.html`, `preview/fixtures.js`,
   `preview/inertia.js`, and the marketing pages in `public_html`.
@@ -99,7 +101,7 @@ The preview shows the new company name. Text is fully renamed; the logo is not.
 
 ### Logo
 
-New Immo-Allie logo assets are in place. `ApplicationLogo.vue` is application
+New ImmoAllié logo assets are in place. `ApplicationLogo.vue` is application
 source, so `preview/ApplicationLogoPreview.vue` is aliased over it in
 `vite.preview.config.js`. The marketing pages inline the SVG directly.
 
@@ -125,7 +127,7 @@ sizes `.home-logo img` and `.home-logo svg` differently and the old logo was an
 `<img>`; this preserves the previous rendered size.
 
 Unresolved: the logo wordmark reads "ImmoAllié" (no hyphen, accented e) while
-all body text reads "Immo-Allie". These should be reconciled.
+all body text reads "ImmoAllié". These should be reconciled.
 
 ## Active personas
 

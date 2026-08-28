@@ -1,7 +1,7 @@
 <!--
     Preview-only. Substituted for Components/ApplicationLogo.vue via an alias in
     vite.preview.config.js, because the real component is application source and
-    read-only on this branch. Carries the new Immo-Allie mark.
+    read-only on this branch. Carries the new ImmoAllié mark.
 
     The supplied artwork sat off-centre in a 1000x240 canvas (ink spanned
     x 159-716, leaving a 284px gap on the right). Only the viewBox is adjusted
@@ -13,8 +13,8 @@
 -->
 <template>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="109 3 657 234" role="img" aria-labelledby="title desc">
-      <title id="title">Immo-Allié logo — black</title>
-      <desc id="desc">A modern Immo-Allié wordmark. A bold house with a chimney replaces the letter A, with the A carved into the house.</desc>
+      <title id="title">ImmoAllié logo — black</title>
+      <desc id="desc">A modern ImmoAllié wordmark. A bold house with a chimney replaces the letter A, with the A carved into the house.</desc>
       <defs>
         <mask id="house-a-cutout-black" maskUnits="userSpaceOnUse" x="410" y="35" width="180" height="160">
           <rect x="410" y="35" width="180" height="160" fill="white"/>

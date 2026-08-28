@@ -60,7 +60,7 @@ $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
 // Build email
 $to      = 'imf-info@mail.com';
-$subject = "[Immo-Allie] New Contact: $name";
+$subject = "[ImmoAllié] New Contact: $name";
 $body    = "Name: $name\n";
 $body   .= "Email: $email\n";
 if ($phone !== '') {

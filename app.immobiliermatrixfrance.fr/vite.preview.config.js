@@ -2,7 +2,7 @@ import {defineConfig} from 'vite';
 import vue from '@vitejs/plugin-vue';
 import {fileURLToPath, URL} from 'node:url';
 
-// The company has been renamed to Immo-Allie, but the application source is
+// The company has been renamed to ImmoAllié, but the application source is
 // read-only on this branch. Two real components carry the old display name
 // (Layouts/AppLayout.vue and Components/Footer.vue), so rewrite it at build
 // time rather than editing them. Delete this plugin once the rename lands in
@@ -17,7 +17,7 @@ const previewRebrand = () => ({
         if (id.includes('node_modules') || !/\.(vue|js)$/.test(id.split('?')[0])) return null;
         if (!code.includes('Immo-Enrichi') && !code.includes('Immo Enrichi')) return null;
         return {
-            code: code.replace(/Immo-Enrichi/g, 'Immo-Allie').replace(/Immo Enrichi/g, 'Immo Allie'),
+            code: code.replace(/Immo-Enrichi/g, 'ImmoAllié').replace(/Immo Enrichi/g, 'ImmoAllié'),
             map: null,
         };
     },

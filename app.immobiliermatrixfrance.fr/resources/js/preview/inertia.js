@@ -153,7 +153,7 @@ export const Head = defineComponent({
     name: 'InertiaHead',
     props: {title: String},
     setup(props) {
-        if (props.title) document.title = `${props.title} - Immo-Allie`;
+        if (props.title) document.title = `${props.title} - ImmoAllié`;
         return () => null;
     },
 });
